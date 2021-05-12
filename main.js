@@ -1,3 +1,4 @@
+//setup 3D
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 5;
@@ -8,15 +9,18 @@ renderer.setClearColor("#c088f0");
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+var light = new THREE.PointLight(0xFFFFFF, 1, 500);
+light.position.set(10, 0, 5);
+scene.add(light);
+
+//responsive
 window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix;
 })
 
-var raycaster = new THREE.Raycaster();
-var mouse = new THREE.Vector2();
-
+//object
 var geometry = new THREE.BoxGeometry(1, 2, 1);
 var material = new THREE.MeshLambertMaterial({
   color: 0xFFFFFF
@@ -26,7 +30,7 @@ mesh.position.x = 2;
 
 scene.add(mesh);
 
-
+//object
 var geometry = new THREE.BoxGeometry(1, 2, 1);
 var material = new THREE.MeshLambertMaterial({
   color: 0xFFFFFF
@@ -36,15 +40,11 @@ mesh.position.x = -2;
 
 scene.add(mesh);
 
-var light = new THREE.PointLight(0xFFFFFF, 1, 500);
-light.position.set(10, 0, 5);
-scene.add(light);
 
-var render = function() {
-  requestAnimationFrame(render);
-  // mesh.rotation.z +=0.05
-  renderer.render(scene, camera);
-}
+
+//mouse on object
+var raycaster = new THREE.Raycaster();
+var mouse = new THREE.Vector2();
 
 function onClick(event) {
   event.preventDefault();
@@ -58,30 +58,17 @@ function onClick(event) {
 
   for (var i = 0; i < intersects.length; i++) {
 
-    this.tl = new TimelineMax();
-
-    this.tl.to(intersects[i].object.rotation, 1, {
-      y: Math.PI * .5,
-      ease: Expo.easeOut
-    })
-    this.tl.to(intersects[i].object.position, .5, {
-      z: -3,
-      ease: Expo.easeOut
-    })
-    this.tl.to(intersects[i].object.rotation, 1, {
-      y: 0,
-      ease: Expo.easeOut
-    })
-    this.tl.to(intersects[i].object.position, .5, {
-      z: 0,
-      ease: Expo.easeOut
-    })
-  }
+//on Click on specific object what hould happen
 
 }
 
-render();
+//render refreshes in framerate
+var render = function() {
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
+}
 
+render();
 
 
 window.addEventListener('click', onClick);
