@@ -1,4 +1,4 @@
-var a = 0
+var a = 180
 
 //setup 3D
 
@@ -24,7 +24,7 @@ window.addEventListener('resize', () => {
 })
 
 //object
-var geometry = new THREE.BoxGeometry(0.01, 1, 2);
+var geometry = new THREE.BoxGeometry(-0.005, -1, 2);
 var white = new THREE.MeshLambertMaterial({
   color: 0xFFFFFF
 });
@@ -38,14 +38,46 @@ var yellow = new THREE.MeshLambertMaterial({
   color: 0xFFFFCC
 });
 
-var q1 = new THREE.Mesh(geometry, white);
 var parent = new THREE.Object3D();
-parent.add(q1);
-q1.position.x = 2;
 
-var q2 = new THREE.Mesh(geometry, yellow);
-parent.add(q2);
-q2.position.set(1, 1, -2);
+var q1_texture = new THREE.TextureLoader().load('/zz_Questions/Not_a_Question.jpg');
+q1_texture.repeat.set(0.5, 0.5);
+
+var q1_materialArray = [];
+
+q1_materialArray.push(new THREE.MeshBasicMaterial({
+    color: 0xFFFFCC
+}));
+q1_materialArray.push(new THREE.MeshBasicMaterial({map: q1_texture}));
+q1_materialArray.push(new THREE.MeshBasicMaterial({
+    color: 0xFFFFCC
+}));
+q1_materialArray.push(new THREE.MeshBasicMaterial({
+    color: 0xFFFFCC
+}));
+q1_materialArray.push(new THREE.MeshBasicMaterial({
+    color: 0xFFFFCC
+}));
+q1_materialArray.push(new THREE.MeshBasicMaterial({
+    color: 0xFFFFCC
+}));
+q1_materialArray.push(new THREE.MeshBasicMaterial({
+    color: 0xFFFFCC
+}));
+
+
+
+var q1_material = new THREE.MeshFaceMaterial(q1_materialArray)
+
+var q1_mesh = new THREE.Mesh(geometry, q1_material);
+parent.add(q1_mesh);
+q1_mesh.position.x = 2;
+
+
+
+var q2_mesh = new THREE.Mesh(geometry, yellow);
+parent.add(q2_mesh);
+q2_mesh.position.set(1, 2, -2);
 
 scene.add(parent);
 
@@ -78,8 +110,8 @@ function onClick(event) {
 //render refreshes in framerate
 var render = function() {
   requestAnimationFrame(render);
-  a +=1;
-  parent.rotation.y = Math.PI/180*a;
+  a += 1;
+  parent.rotation.y = Math.PI / 180 * a;
   renderer.render(scene, camera);
 }
 
