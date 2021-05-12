@@ -104,8 +104,17 @@ function onClick(event) {
   for (var i = 0; i < intersects.length; i++) {
 
     //on Click on specific object what hould happen
+    this.tl = new TimelineMax();
 
-  }
+    this.tl.to(intersects[i].object.rotation, 1.5, {
+      y: Math.PI * 2,
+      ease: Expo.easeOut
+    })
+    this.tl.to(intersects[i].object.rotation, 1.5, {
+      y: 0,
+      ease: Expo.easeOut
+    })
+    }
 }
 //render refreshes in framerate
 var render = function() {
