@@ -79,12 +79,12 @@ var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", fu
   		font: font,
   		size: 20,
   		height: 1,
-  		curveSegments: 20,
+  		curveSegments: 12,
   		bevelEnabled: true,
   		bevelThickness: 5,
   		bevelSize: 8,
   		bevelOffset: 0,
-  		bevelSegments: 10
+  		bevelSegments: 5
   	} );
 
   var q2_mesh = new THREE.Mesh(q2, violet)
