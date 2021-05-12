@@ -61,7 +61,7 @@ function onClick(event) {
 //on Click on specific object what hould happen
 
 }
-
+}
 //render refreshes in framerate
 var render = function() {
   requestAnimationFrame(render);
@@ -69,6 +69,5 @@ var render = function() {
 }
 
 render();
-
 
 window.addEventListener('click', onClick);
