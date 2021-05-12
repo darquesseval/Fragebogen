@@ -7,5 +7,17 @@ canvas {
   display: block;
 }
 
+.question {
+	position: absolute;
+  font-family: 'Raleway';
+  color: white;
+  font-size: 5vw;
+	top: 10px;
+	width: 100%;
+	text-align: center;
+	z-index: 50;
+	display:block;
+}
+
 /* mobile */
 @media all and (max-width:600px) {}

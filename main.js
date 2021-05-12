@@ -1,10 +1,10 @@
-var a = 180
+var a = 0
 
 //setup 3D
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 8;
+camera.position.z = 80;
 var renderer = new THREE.WebGLRenderer({
   antialias: true
 });
@@ -13,7 +13,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 var light = new THREE.PointLight(0xFFFFFF, 1, 500);
-light.position.set(0, 0, 5);
+light.position.set(0, 0, 60);
 scene.add(light);
 
 //responsive
@@ -24,7 +24,7 @@ window.addEventListener('resize', () => {
 })
 
 //object
-var geometry = new THREE.BoxGeometry(-0.005, -1, 2);
+var geometry = new THREE.BoxGeometry(-0.05, -10, 20);
 var white = new THREE.MeshLambertMaterial({
   color: 0xFFFFFF
 });
@@ -67,19 +67,35 @@ q1_materialArray.push(new THREE.MeshBasicMaterial({
 
 
 
-var q1_material = new THREE.MeshFaceMaterial(q1_materialArray)
+var q1_material = new THREE.MeshFaceMaterial(q1_materialArray);
 
 var q1_mesh = new THREE.Mesh(geometry, q1_material);
 parent.add(q1_mesh);
 q1_mesh.position.x = 2;
 
+// http://gero3.github.io/facetype.js/ –> ttf to json
+var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", function(font) {
+  var q2 = new THREE.TextGeometry("Haben Sie amoralische Einfälle?",  {
+  		font: font,
+  		size: 20,
+  		height: 1,
+  		curveSegments: 20,
+  		bevelEnabled: true,
+  		bevelThickness: 5,
+  		bevelSize: 8,
+  		bevelOffset: 0,
+  		bevelSegments: 10
+  	} );
+
+  var q2_mesh = new THREE.Mesh(q2, violet)
+  parent.add(q2_mesh);
+  q2_mesh.position.set(0,0,-20);
+
+  scene.add(parent);
+})
+// var font = new THREE.Font(fontjson);
 
 
-var q2_mesh = new THREE.Mesh(geometry, yellow);
-parent.add(q2_mesh);
-q2_mesh.position.set(1, 2, -2);
-
-scene.add(parent);
 
 // q1.position.x = 2;
 // var centerAxis = new THREE.Vector3(q1.position.x*-1, 0, 0);
