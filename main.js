@@ -102,12 +102,16 @@ var q2_mesh = new THREE.Mesh(q2, violet);
 
 //add to parent, edit position/rotation/etc. and add to scene
 parent.add(q1_mesh);
-q1_mesh.position.z = 30;
+q1_mesh.position.z = 50;
 // q1_mesh.rotateOnWorldAxis(center, 1);
 
 // q2_mesh.rotation.y = 1;
-parent.add(q2_mesh);
-q2_mesh.position.z = 10;
+q2_parent = new THREE.Object3D();
+q2_parent.add(q2_mesh);
+parent.add(q2_parent);
+q2_parent.rotation.y = 2;
+q2_mesh.position.z = 50;
+q2_mesh.position.y = 30;
 
 scene.add(parent);
 
