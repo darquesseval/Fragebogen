@@ -230,14 +230,20 @@ grandparent.position.y = 50;
   var m3_question = new Question;
   m3_question.text(m3, m3_mesh, m3_parent, "It is working?", m3_y, m3_r);
 
-scene.add(parent); 
+  var m4_question = new Question;
+  m4_question.text(m4, m4_mesh, m4_parent, "Damn?", m4_y, m4_r);
+
+
+  scene.add(grandparent);
 
 })
 
-// q1.position.x = 2;
-// var centerAxis = new THREE.Vector3(q1.position.x*-1, 0, 0);
-// q1.rotateOnAxis(centerAxis, 4);
-// q1.rotateY(2);
+
+
+// m1.position.x = 2;
+// var centerAxis = new THREE.Vector3(m1.position.x*-1, 0, 0);
+// m1.rotateOnAxis(centerAxis, 4);
+// m1.rotateY(2);
 
 
 //mouse on object
@@ -272,15 +278,12 @@ function onClick(event) {
 //render refreshes in framerate
 var render = function() {
   requestAnimationFrame(render);
-  /*a += 1;
-  parent.rotation.y = -Math.PI / 180 * a;
-  */
+  // a += 1;
+  // parent.rotation.y = -Math.PI / 180 * a;
   var currentTimeline = window.pageYOffset / 3000;
 
-  parent.rotation.x = currentTimeline * -0.5 + 0.5
-  parent.rotation.y = (currentTimeline * 0.9 + 0.1) * Math.PI * 2
-  
-  /*parent.rotation.set(rx, ry, 0);*/
+  grandparent.rotation.x = currentTimeline * -0.5 + 0.5
+  grandparent.rotation.y = (currentTimeline * 0.9 + 0.1) * Math.PI * 2
   renderer.render(scene, camera);
 }
 
