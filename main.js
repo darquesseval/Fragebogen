@@ -23,60 +23,69 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix;
 })
 
-
+// parent: everything turns at the same time at the same rate
 var parent = new THREE.Object3D();
 
 //material
-var white = new THREE.MeshLambertMaterial({
+var white = new THREE.MeshStandardMaterial({
   color: 0xFFFFFF
 });
-var violet = new THREE.MeshLambertMaterial({
+var violet = new THREE.MeshStandardMaterial({
   color: 0xC088F0
 });
-var blue = new THREE.MeshLambertMaterial({
+var blue = new THREE.MeshStandardMaterial({
   color: 0xCCCCFF
 });
-var yellow = new THREE.MeshLambertMaterial({
+var yellow = new THREE.MeshStandardMaterial({
   color: 0xFFFFCC
 });
 
-var q1_texture = new THREE.TextureLoader().load('/zz_Questions/Not_a_Question.jpg');
-q1_texture.repeat.set(0.5, 0.5);
+
+// for texture
+// var texture = new THREE.TextureLoader().load('/zz_Pictures/normal_map.jpg');
+// var material = new THREE.MeshStandardMaterial({
+//   normalMap: texture
+// });
 
 //for picture on one side
-var q1_materialArray = [];
-q1_materialArray.push(new THREE.MeshBasicMaterial({
-  color: 0xFFFFCC
-}));
-q1_materialArray.push(new THREE.MeshBasicMaterial({
-  map: q1_texture
-}));
-q1_materialArray.push(new THREE.MeshBasicMaterial({
-  color: 0xFFFFCC
-}));
-q1_materialArray.push(new THREE.MeshBasicMaterial({
-  color: 0xFFFFCC
-}));
-q1_materialArray.push(new THREE.MeshBasicMaterial({
-  color: 0xFFFFCC
-}));
-q1_materialArray.push(new THREE.MeshBasicMaterial({
-  color: 0xFFFFCC
-}));
-q1_materialArray.push(new THREE.MeshBasicMaterial({
-  color: 0xFFFFCC
-}));
-
-var q1_material = new THREE.MeshFaceMaterial(q1_materialArray);
+// var q1_materialArray = [];
+// q1_materialArray.push(new THREE.MeshBasicMaterial({
+//   color: 0xFFFFCC
+// }));
+// q1_materialArray.push(new THREE.MeshBasicMaterial({
+//   map: q1_texture
+// }));
+// q1_materialArray.push(new THREE.MeshBasicMaterial({
+//   color: 0xFFFFCC
+// }));
+// q1_materialArray.push(new THREE.MeshBasicMaterial({
+//   color: 0xFFFFCC
+// }));
+// q1_materialArray.push(new THREE.MeshBasicMaterial({
+//   color: 0xFFFFCC
+// }));
+// q1_materialArray.push(new THREE.MeshBasicMaterial({
+//   color: 0xFFFFCC
+// }));
+// q1_materialArray.push(new THREE.MeshBasicMaterial({
+//   color: 0xFFFFCC
+// }));
+//
+// var q1_material = new THREE.MeshFaceMaterial(q1_materialArray);
 
 //gemoetry
-var geometry = new THREE.BoxGeometry(-0.05, -10, 20);
+// var geometry = new THREE.BoxGeometry(-0.05, -10, 20);
+
+
 
 // http://gero3.github.io/facetype.js/ –> ttf to json
+// put everything in font function to apply it to
+var center = new THREE.Vector3( 0, 0, -30 );
 var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", function(font) {
+
 var q2 = new THREE.TextGeometry("Haben Sie amoralische Einfälle?", {
   font: font,
-  size: 5,
+  size: 1.5,
   height: 2,
   curveSegments: 15,
   bevelEnabled: true,
@@ -85,22 +94,24 @@ var q2 = new THREE.TextGeometry("Haben Sie amoralische Einfälle?", {
   bevelOffset: 0,
   bevelSegments: 3
 });
+q2.center();
 
 //mesh
-var q1_mesh = new THREE.Mesh(geometry, q1_material);
-var q2_mesh = new THREE.Mesh(q2, violet)
+var q1_mesh = new THREE.Mesh(q2, white);
+var q2_mesh = new THREE.Mesh(q2, violet);
 
 //add to parent, edit position/rotation/etc. and add to scene
 parent.add(q1_mesh);
-q1_mesh.position.x = 2;
+q1_mesh.position.z = 30;
+// q1_mesh.rotateOnWorldAxis(center, 1);
 
+// q2_mesh.rotation.y = 1;
 parent.add(q2_mesh);
-q2_mesh.position.set(0, 0, -20);
+q2_mesh.position.z = 10;
 
 scene.add(parent);
 
 })
-// var font = new THREE.Font(fontjson);
 
 
 
@@ -143,7 +154,7 @@ function onClick(event) {
 var render = function() {
   requestAnimationFrame(render);
   a += 1;
-  parent.rotation.y = Math.PI / 180 * a;
+  parent.rotation.y = -Math.PI / 180 * a;
   renderer.render(scene, camera);
 }
 
