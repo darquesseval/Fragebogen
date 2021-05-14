@@ -113,11 +113,9 @@ q2_parent.rotation.y = 2;
 q2_mesh.position.z = 50;
 q2_mesh.position.y = 30;
 
-scene.add(parent);
+scene.add(parent); 
 
 })
-
-
 
 // q1.position.x = 2;
 // var centerAxis = new THREE.Vector3(q1.position.x*-1, 0, 0);
@@ -157,8 +155,15 @@ function onClick(event) {
 //render refreshes in framerate
 var render = function() {
   requestAnimationFrame(render);
-  a += 1;
+  /*a += 1;
   parent.rotation.y = -Math.PI / 180 * a;
+  */
+  var currentTimeline = window.pageYOffset / 3000;
+
+  parent.rotation.x = currentTimeline * -0.5 + 0.5
+  parent.rotation.y = (currentTimeline * 0.9 + 0.1) * Math.PI * 2
+  
+  /*parent.rotation.set(rx, ry, 0);*/
   renderer.render(scene, camera);
 }
 
