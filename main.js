@@ -77,14 +77,14 @@ q1_mesh.position.x = 2;
 var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", function(font) {
   var q2 = new THREE.TextGeometry("Haben Sie amoralische Einfälle?",  {
   		font: font,
-  		size: 20,
-  		height: 1,
-  		curveSegments: 12,
+  		size: 5,
+  		height: 2,
+  		curveSegments: 15,
   		bevelEnabled: true,
-  		bevelThickness: 5,
-  		bevelSize: 8,
+  		bevelThickness: 0.1,
+  		bevelSize: 0.2,
   		bevelOffset: 0,
-  		bevelSegments: 5
+  		bevelSegments: 3
   	} );
 
   var q2_mesh = new THREE.Mesh(q2, violet)
