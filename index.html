@@ -22,7 +22,51 @@
       </ul>
     </div>
 
+    <!--Editor und Icons-->
+    <div class="tool-bar">
+      <ul class="tool-list">
+
+        <li class="tool">
+         <button
+          type="button"
+          data-command="bold"
+          class="tool--btn">
+          <i class=' fas fa-bold'></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button
+           type="button"
+           data-command="italic"
+           class="tool--btn">
+           <i class=' fas fa-italic'></i>
+           </button>
+         </li>
+         <li class="tool">
+          <button
+           type="button"
+           data-command="underline"
+           class="tool--btn">
+           <i class=' fas fa-underline'></i>
+           </button>
+         </li>
+         <li class="tool">
+          <button
+           type="button"
+           data-command="createlink"
+           class="tool--btn">
+           <i class=' fas fa-link'></i>
+           </button>
+         </li>
+
+      </ul>
+    </div>
+
+    <div class="output"
+    contenteditable="true"></div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+  <script src="https://kit.fontawesome.com/e3e836db74.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="./main.js"></script>
 

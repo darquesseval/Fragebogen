@@ -1,5 +1,108 @@
 var a = 0
 
+//coordinates of questions and just defining stuff
+//moral
+var m1_r = 0;
+var m1_y = 0;
+var m2_r = 1;
+var m2_y = -20;
+var m3_r = 2;
+var m3_y = -40;
+var m4_r = 3;
+var m4_y = -60;
+
+
+var m1;
+var m1_mesh;
+var m1_parent;
+
+var m2;
+var m2_mesh;
+var m2_parent;
+
+var m3;
+var m3_mesh;
+var m3_parent;
+
+var m4;
+var m4_mesh;
+var m4_parent;
+//humor
+var h1_r = 0;
+var h1_y = 0;
+var h2_r = 0;
+var h2_y = 0;
+var h3_r = 0;
+var h3_y = 0;
+var h4_r = 0;
+var h4_y = 0;
+
+var h1;
+var h1_mesh;
+var h1_parent;
+
+var h2;
+var h2_mesh;
+var h2_parent;
+
+var h3;
+var h3_mesh;
+var h3_parent;
+
+var h4;
+var h4_mesh;
+var h4_parent;
+//ehe
+var e1_r = 0;
+var e1_y = 0;
+var e2_r = 0;
+var e2_y = 0;
+var e3_r = 0;
+var e3_y = 0;
+var e4_r = 0;
+var e4_y = 0;
+
+var e1;
+var e1_mesh;
+var e1_parent;
+
+var e2;
+var e2_mesh;
+var e2_parent;
+
+var e3;
+var e3_mesh;
+var e3_parent;
+
+var e4;
+var e4_mesh;
+var e4_parent;
+//tod
+var t1_r = 0;
+var t1_y = 0;
+var t2_r = 0;
+var t2_y = 0;
+var t3_r = 0;
+var t3_y = 0;
+var t4_r = 0;
+var t4_y = 0;
+
+var t1;
+var t1_mesh;
+var t1_parent;
+
+var t2;
+var t2_mesh;
+var t2_parent;
+
+var t3;
+var t3_mesh;
+var t3_parent;
+
+var t4;
+var t4_mesh;
+var t4_parent;
+
 //setup 3D
 
 var scene = new THREE.Scene();
@@ -9,7 +112,7 @@ var renderer = new THREE.WebGLRenderer({
   antialias: true
 });
 renderer.setClearColor("#000000");
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth, window.innerHeight*3);
 document.body.appendChild(renderer.domElement);
 
 var light = new THREE.PointLight(0xFFFFFF, 1, 500);
@@ -24,7 +127,7 @@ window.addEventListener('resize', () => {
 })
 
 // parent: everything turns at the same time at the same rate
-var parent = new THREE.Object3D();
+var grandparent = new THREE.Object3D();
 
 //material
 var white = new THREE.MeshStandardMaterial({
@@ -48,30 +151,30 @@ var yellow = new THREE.MeshStandardMaterial({
 // });
 
 //for picture on one side
-// var q1_materialArray = [];
-// q1_materialArray.push(new THREE.MeshBasicMaterial({
+// var m1_materialArray = [];
+// m1_materialArray.push(new THREE.MeshBasicMaterial({
 //   color: 0xFFFFCC
 // }));
-// q1_materialArray.push(new THREE.MeshBasicMaterial({
-//   map: q1_texture
+// m1_materialArray.push(new THREE.MeshBasicMaterial({
+//   map: m1_texture
 // }));
-// q1_materialArray.push(new THREE.MeshBasicMaterial({
+// m1_materialArray.push(new THREE.MeshBasicMaterial({
 //   color: 0xFFFFCC
 // }));
-// q1_materialArray.push(new THREE.MeshBasicMaterial({
+// m1_materialArray.push(new THREE.MeshBasicMaterial({
 //   color: 0xFFFFCC
 // }));
-// q1_materialArray.push(new THREE.MeshBasicMaterial({
+// m1_materialArray.push(new THREE.MeshBasicMaterial({
 //   color: 0xFFFFCC
 // }));
-// q1_materialArray.push(new THREE.MeshBasicMaterial({
+// m1_materialArray.push(new THREE.MeshBasicMaterial({
 //   color: 0xFFFFCC
 // }));
-// q1_materialArray.push(new THREE.MeshBasicMaterial({
+// m1_materialArray.push(new THREE.MeshBasicMaterial({
 //   color: 0xFFFFCC
 // }));
 //
-// var q1_material = new THREE.MeshFaceMaterial(q1_materialArray);
+// var m1_material = new THREE.MeshFaceMaterial(m1_materialArray);
 
 //gemoetry
 // var geometry = new THREE.BoxGeometry(-0.05, -10, 20);
@@ -80,38 +183,52 @@ var yellow = new THREE.MeshStandardMaterial({
 
 // http://gero3.github.io/facetype.js/ –> ttf to json
 // put everything in font function to apply it to
-var center = new THREE.Vector3( 0, 0, -30 );
 var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", function(font) {
 
-var q2 = new THREE.TextGeometry("Haben Sie amoralische Einfälle?", {
-  font: font,
-  size: 1.5,
-  height: 2,
-  curveSegments: 15,
-  bevelEnabled: true,
-  bevelThickness: 0.1,
-  bevelSize: 0.2,
-  bevelOffset: 0,
-  bevelSegments: 3
-});
-q2.center();
+  class Question {
+    text(name, mesh, parent, input, y, rotation) {
+      this.name = name;
+      this.parent = parent;
+      this.input = input;
+      this.y = y;
+      this.rotation = rotation;
 
-//mesh
-var q1_mesh = new THREE.Mesh(q2, white);
-var q2_mesh = new THREE.Mesh(q2, violet);
+      this.name = new THREE.TextGeometry(this.input, {
+        font: font,
+        size: 1.5,
+        height: 1,
+        curveSegments: 15,
+        bevelEnabled: true,
+        bevelThickness: 0.1,
+        bevelSize: 0.1,
+        bevelOffset: 0,
+        bevelSegments: 1
+      });
+      //center that shit
+      this.name.center();
 
-//add to parent, edit position/rotation/etc. and add to scene
-parent.add(q1_mesh);
-q1_mesh.position.z = 50;
-// q1_mesh.rotateOnWorldAxis(center, 1);
+      this.mesh = new THREE.Mesh(this.name, white);
 
-// q2_mesh.rotation.y = 1;
-q2_parent = new THREE.Object3D();
-q2_parent.add(q2_mesh);
-parent.add(q2_parent);
-q2_parent.rotation.y = 2;
-q2_mesh.position.z = 50;
-q2_mesh.position.y = 30;
+      this.parent = new THREE.Object3D();
+      this.parent.add(this.mesh);
+      this.parent.rotation.y = this.rotation;
+      this.mesh.position.y = this.y;
+      this.mesh.position.z = 25;
+
+grandparent.position.y = 50;
+      grandparent.add(this.parent);
+    }
+  }
+
+  //TextGeometry
+  var m1_question = new Question;
+  m1_question.text(m1, m1_mesh, m1_parent, "Croisson?", m1_y, m1_r);
+
+  var m2_question = new Question;
+  m2_question.text(m2, m2_mesh, m2_parent, "Blabla?", m2_y, m2_r);
+
+  var m3_question = new Question;
+  m3_question.text(m3, m3_mesh, m3_parent, "It is working?", m3_y, m3_r);
 
 scene.add(parent); 
 
