@@ -2,14 +2,14 @@ var a = 0
 
 //coordinates of questions and just defining stuff
 //moral
-var m1_r = 0;
-var m1_y = 0;
+var m1_r = -1;
+var m1_y = 40;
 var m2_r = 1;
-var m2_y = -20;
-var m3_r = 2;
+var m2_y = 0;
+var m3_r = 3;
 var m3_y = -40;
-var m4_r = 3;
-var m4_y = -60;
+var m4_r = 5;
+var m4_y = -80;
 
 
 var m1;
@@ -107,16 +107,16 @@ var t4_parent;
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 80;
+camera.position.z = 150;
 var renderer = new THREE.WebGLRenderer({
   antialias: true
 });
 renderer.setClearColor("#000000");
-renderer.setSize(window.innerWidth, window.innerHeight*3);
+renderer.setSize(window.innerWidth, window.innerHeight * 4);
 document.body.appendChild(renderer.domElement);
 
 var light = new THREE.PointLight(0xFFFFFF, 1, 500);
-light.position.set(0, 0, 60);
+light.position.set(0, 0, 100);
 scene.add(light);
 
 //responsive
@@ -195,7 +195,7 @@ var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", fu
 
       this.name = new THREE.TextGeometry(this.input, {
         font: font,
-        size: 1.5,
+        size: 5,
         height: 1,
         curveSegments: 15,
         bevelEnabled: true,
@@ -213,9 +213,9 @@ var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", fu
       this.parent.add(this.mesh);
       this.parent.rotation.y = this.rotation;
       this.mesh.position.y = this.y;
-      this.mesh.position.z = 25;
+      this.mesh.position.z = 50;
 
-grandparent.position.y = 50;
+      grandparent.position.y = 40;
       grandparent.add(this.parent);
     }
   }
@@ -237,6 +237,7 @@ grandparent.position.y = 50;
   scene.add(grandparent);
 
 })
+
 
 
 
@@ -282,8 +283,14 @@ var render = function() {
   // parent.rotation.y = -Math.PI / 180 * a;
   var currentTimeline = window.pageYOffset / 3000;
 
-  grandparent.rotation.x = currentTimeline * -0.5 + 0.5
-  grandparent.rotation.y = (currentTimeline * 0.9 + 0.1) * Math.PI * 2
+  grandparent.rotation.x = currentTimeline * -0.7 + 0.5
+  grandparent.rotation.y = (currentTimeline * 2.4 + 0.1) * Math.PI * 2
+
+  if(currentTimeline <= 10){
+     document.querySelectorAll(".header-logo").innerHTML = "Yes";
+     console.log('now');
+  }
+
   renderer.render(scene, camera);
 }
 
