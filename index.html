@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">   <!--About-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hui</title>
+  <title>Max Frisch: Fragebogen</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
 
 </head>
@@ -24,9 +25,12 @@
     </div>
 
     <!--Editor und Icons-->
-    <div class="tool-bar" style="grid-column-start: 4; grid-column-end: 7; grid-row-start: 6; grid-row-end: 8;">
+    <div class="tool-bar" style="grid-column-start: 4; grid-column-end: 7; grid-row-start: 5; grid-row-end: 6;">
       <ul class="tool-list">
 
+        <!-- Button-->
+        <input type="button" id="button" value = "button" style= "color:white" onclick="setColor('button', '#101010')";/>
+        
         <li class="tool">
          <button
           type="button"
@@ -64,7 +68,7 @@
     </div>
 
     <div class="output"
-      contenteditable="true" style="grid-column-start: 4; grid-column-end: 7; grid-row-start: 6; grid-row-end: 8;"">
+      contenteditable="true" style="grid-column-start: 4; grid-column-end: 7; grid-row-start: 6; grid-row-end: 8; background-color: lightgrey;">
     </div>
   
 
