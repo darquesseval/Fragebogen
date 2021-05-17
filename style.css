@@ -11,6 +11,7 @@ body {
   grid-template-columns: repeat(12, 20vh);
   grid-template-rows: repeat(10, 10vh);
   grid-gap: 10px;
+  width: 100%;
 }
 
 /* Editor*/
@@ -20,12 +21,7 @@ body {
   box-sizing: border-box;
 }
 
-.toolbar {
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 6;
-  grid-row-end: 8;
-}
+.toolbar {}
 .tool-list {
   display: flex;
   flex-flow: row nowrap;
@@ -52,26 +48,27 @@ body {
 
 /*Header*/
 .header-inner{
-  height: 70px;
-  width: 100vw;
+  height: 10vh;
+  width: 100%;
   position: fixed;
   top: 0;
   background-color: none;
-  /*display: grid;
-  grid-template-columns: 20% 1fr 8%;
-  */
+  display: inline-grid;
 }
 .header-logo {
   color: black;
   text-decoration: none;
-  text-align: center;
   font-size: 36px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-self: center;
 }
 
 .header-navigation {
   list-style-type: none;
   color: black;
-  /*grid-column-start: 3;*/
+  grid-column-start: 10;
+  align-self: center;
 }
 
  .header-navigation:hover:after {
@@ -79,7 +76,7 @@ body {
  }
 
  .header-navigation:after {
-  color: white;
+  color: black;
   transition: 0.25s ease;
   content: "";
   display: block;
@@ -87,9 +84,8 @@ body {
   height: 2px;
   background-color: currentcolor;
   transform: scalex(0);
-  position: absolute;
-  bottom: -2px;
-  left: 0;
+  grid-column-start: 10;
+  grid-column-end: 10;
 }
 canvas {
   display: block;
