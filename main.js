@@ -104,31 +104,31 @@ var t4_mesh;
 var t4_parent;
 
 //Editor
-let output = document.getElementById('output');
-let buttons = document.getElementsByClassName('tool--btn');
-for (let btn of buttons) {
-	btn.addEventListener('click', () => {
-		let cmd = btn.dataset['command'];
-		if(cmd === 'createlink') {
-			let url = prompt("Enter the link here: ", "http:\/\/");
-			document.execCommand(cmd, false, url);
-		} else {
-			document.execCommand(cmd, false, null);
-		}
-	})
-}
+// let output = document.getElementById('output');
+// let buttons = document.getElementsByClassName('tool--btn');
+// for (let btn of buttons) {
+// 	btn.addEventListener('click', () => {
+// 		let cmd = btn.dataset['command'];
+// 		if(cmd === 'createlink') {
+// 			let url = prompt("Enter the link here: ", "http:\/\/");
+// 			document.execCommand(cmd, false, url);
+// 		} else {
+// 			document.execCommand(cmd, false, null);
+// 		}
+// 	})
+// }
 
-document.getElementById("change").onclick = changeColor;
+// document.getElementById("change").onclick = changeColor();
 
-function changeColor(btn, color) {
+function setColor(btn, color) {
   var count=1;
     var property = document.getElementById(btn);
     if (count == 0){
-        property.style.backgroundColor = "#FFFFFF"
-        count=1;        
+        property.style.backgroundColor = "#FFFFFF";
+        count=1;
     }
     else{
-        property.style.backgroundColor = "#7FFF00"
+        property.style.backgroundColor = "#7FFF00";
         count=0;
     }
 }
@@ -268,6 +268,7 @@ var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", fu
 })
 
 
+// renderer.scrollIntoView(true);
 
 
 // m1.position.x = 2;
