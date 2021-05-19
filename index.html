@@ -14,7 +14,6 @@
 
 <body>
 
-  <div class="container">
     <div class="header-inner">
       <div class="header-logo">
         Max Frisch: Fragebogen
@@ -24,9 +23,14 @@
       </ul>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+    <script src="https://kit.fontawesome.com/e3e836db74.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="./main.js"></script>
+
     <!--Editor und Icons-->
-    <div class="tool-bar" style="grid-column-start: 4; grid-column-end: 7; grid-row-start: 5; grid-row-end: 6;">
-      <ul class="tool-list">
+    <div class="tool-bar">
+      <ul class="tool-list" style="grid-column-start: 4; grid-column-end: 7; grid-row-start: 5; grid-row-end: 6;">
 
         <!-- Button-->
         <input type="button" id="button" value = "button" style= "color:white" onclick="setColor('button', '#101010')";/>
@@ -71,14 +75,9 @@
       contenteditable="true" style="grid-column-start: 4; grid-column-end: 7; grid-row-start: 6; grid-row-end: 8; background-color: lightgrey;">
     </div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
-    <script src="https://kit.fontawesome.com/e3e836db74.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-    <script src="./main.js"></script>
-
+    
     <!-- <div class="question">Haben Sie amoralische Einfälle?</div> -->
-  </div>
+
 </body>
 
 </html>
