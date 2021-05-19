@@ -26,7 +26,10 @@ body {
 }
 .toolbar {
   display: grid;
+  grid-template-columns: repeat(10, 10vw);
   grid-template-rows: repeat(10, 10vh);
+  border-color: rgb(34, 158, 17);
+  border-radius: 1px;
   grid-gap: 10px;
   width: 100%;
 }
@@ -39,7 +42,10 @@ body {
   margin: 1rem;
   overflow: hidden;
   border-radius: 8px;
-  grid-column-start: 4; grid-column-end: 7; grid-row-start: 5; grid-row-end: 6;
+  grid-column-start: 4; 
+  grid-column-end: 7; 
+  grid-row-start: 5; 
+  grid-row-end: 6;
 }
 
 .tool {}
@@ -55,7 +61,11 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px ;
   margin-top: 1rem;
   padding: 1rem;
-  background-color: rgb(255, 255, 255);
+  grid-column-start: 4; 
+  grid-column-end: 7; 
+  grid-row-start: 6; 
+  grid-row-end: 8; 
+  background-color: rgb(141, 141, 141);
 }
 
 /*Header*/
