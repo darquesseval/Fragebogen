@@ -141,7 +141,7 @@ var renderer = new THREE.WebGLRenderer({
   antialias: true
 });
 renderer.setClearColor("#000000");
-renderer.setSize(window.innerWidth, window.innerHeight * 4);
+renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 var light = new THREE.PointLight(0xFFFFFF, 1, 500);
@@ -174,39 +174,44 @@ var yellow = new THREE.MeshStandardMaterial({
 
 
 // for texture
-// var texture = new THREE.TextureLoader().load('/zz_Pictures/normal_map.jpg');
+var texture = new THREE.TextureLoader().load('/zz_Pictures/normal_map.jpg');
 // var material = new THREE.MeshStandardMaterial({
 //   normalMap: texture
 // });
 
-//for picture on one side
-// var m1_materialArray = [];
-// m1_materialArray.push(new THREE.MeshBasicMaterial({
-//   color: 0xFFFFCC
-// }));
-// m1_materialArray.push(new THREE.MeshBasicMaterial({
-//   map: m1_texture
-// }));
-// m1_materialArray.push(new THREE.MeshBasicMaterial({
-//   color: 0xFFFFCC
-// }));
-// m1_materialArray.push(new THREE.MeshBasicMaterial({
-//   color: 0xFFFFCC
-// }));
-// m1_materialArray.push(new THREE.MeshBasicMaterial({
-//   color: 0xFFFFCC
-// }));
-// m1_materialArray.push(new THREE.MeshBasicMaterial({
-//   color: 0xFFFFCC
-// }));
-// m1_materialArray.push(new THREE.MeshBasicMaterial({
-//   color: 0xFFFFCC
-// }));
-//
-// var m1_material = new THREE.MeshFaceMaterial(m1_materialArray);
+// for picture on one side
+var m1_materialArray = [];
+m1_materialArray.push(new THREE.MeshBasicMaterial({
+  color: 0xFFFFCC
+}));
+m1_materialArray.push(new THREE.MeshStandardMaterial({
+  normalMap: texture
+}));
+m1_materialArray.push(new THREE.MeshBasicMaterial({
+  color: 0xFFFFCC
+}));
+m1_materialArray.push(new THREE.MeshBasicMaterial({
+  color: 0xFFFFCC
+}));
+m1_materialArray.push(new THREE.MeshBasicMaterial({
+  color: 0xFFFFCC
+}));
+m1_materialArray.push(new THREE.MeshBasicMaterial({
+  color: 0xFFFFCC
+}));
+m1_materialArray.push(new THREE.MeshBasicMaterial({
+  color: 0xFFFFCC
+}));
 
-//gemoetry
-// var geometry = new THREE.BoxGeometry(-0.05, -10, 20);
+var m1_material = new THREE.MeshFaceMaterial(m1_materialArray);
+
+// gemoetry
+var geometry = new THREE.BoxGeometry(-0.05, -50, 80);
+
+var mesh_screen = new THREE.Mesh(geometry, m1_material);
+
+mesh_screen.rotation.y = -1;
+scene.add(mesh_screen);
 
 
 
@@ -260,7 +265,7 @@ var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", fu
   m3_question.text(m3, m3_mesh, m3_parent, "It is working?", m3_y, m3_r);
 
   var m4_question = new Question;
-  m4_question.text(m4, m4_mesh, m4_parent, "Damn?", m4_y, m4_r);
+  m4_question.text(m4, m4_mesh, m4_parent, "Was ertragen Sie nur mit Humor?", m4_y, m4_r);
 
 
   scene.add(grandparent);
@@ -289,22 +294,33 @@ function onClick(event) {
 
   raycaster.setFromCamera(mouse, camera);
 
-  var intersects = raycaster.intersectObjects(scene.children, true);
+  this.tl = new TimelineMax();
 
-  for (var i = 0; i < intersects.length; i++) {
-
-    //on Click on specific object what hould happen
-    this.tl = new TimelineMax();
-
-    this.tl.to(intersects[i].object.rotation, 1.5, {
+    this.tl.to(camera.object.rotation, 1.5, {
       y: Math.PI * 2,
       ease: Expo.easeOut
     })
-    this.tl.to(intersects[i].object.rotation, 1.5, {
+    this.tl.to(camera.object.rotation, 1.5, {
       y: 0,
       ease: Expo.easeOut
     })
-  }
+
+  // var intersects = raycaster.intersectObjects(scene.children, true);
+  //
+  // for (var i = 0; i < intersects.length; i++) {
+  //
+  //   //on Click on specific object what hould happen
+  //   this.tl = new TimelineMax();
+  //
+  //   this.tl.to(intersects[i].object.rotation, 1.5, {
+  //     y: Math.PI * 2,
+  //     ease: Expo.easeOut
+  //   })
+  //   this.tl.to(intersects[i].object.rotation, 1.5, {
+  //     y: 0,
+  //     ease: Expo.easeOut
+  //   })
+  // }
 }
 //render refreshes in framerate
 var render = function() {
