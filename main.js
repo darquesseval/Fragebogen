@@ -104,33 +104,32 @@ var t4_mesh;
 var t4_parent;
 
 //Editor
- let output = document.getElementById('output');
- let buttons = document.getElementsByClassName('tool--btn');
- for (let btn of buttons) {
- 	btn.addEventListener('click', () => {
- 		let cmd = btn.dataset['command'];
- 		if(cmd === 'createlink') {
- 			let url = prompt("Enter the link here: ", "http:\/\/");
- 			document.execCommand(cmd, false, url);
- 		} else {
- 			document.execCommand(cmd, false, null);
- 		}
- 	})
- }
+let output = document.getElementById('output');
+let buttons = document.getElementsByClassName('tool--btn');
+for (let btn of buttons) {
+  btn.addEventListener('click', () => {
+    let cmd = btn.dataset['command'];
+    if (cmd === 'createlink') {
+      let url = prompt("Enter the link here: ", "http:\/\/");
+      document.execCommand(cmd, false, url);
+    } else {
+      document.execCommand(cmd, false, null);
+    }
+  })
+}
 
 // document.getElementById("change").onclick = changeColor();
 
 function setColor(btn, color) {
-  var count=1;
-    var property = document.getElementById(btn);
-    if (count == 0){
-        property.style.backgroundColor = "#FFFFFF";
-        count=1;
-    }
-    else{
-        property.style.backgroundColor = "#7FFF00";
-        count=0;
-    }
+  var count = 1;
+  var property = document.getElementById(btn);
+  if (count == 0) {
+    property.style.backgroundColor = "#FFFFFF";
+    count = 1;
+  } else {
+    property.style.backgroundColor = "#7FFF00";
+    count = 0;
+  }
 }
 //setup 3D
 
@@ -162,16 +161,6 @@ var grandparent = new THREE.Object3D();
 var white = new THREE.MeshStandardMaterial({
   color: 0xFFFFFF
 });
-var violet = new THREE.MeshStandardMaterial({
-  color: 0xC088F0
-});
-var blue = new THREE.MeshStandardMaterial({
-  color: 0xCCCCFF
-});
-var yellow = new THREE.MeshStandardMaterial({
-  color: 0xFFFFCC
-});
-
 
 // for texture
 var texture = new THREE.TextureLoader().load('/zz_Pictures/normal_map.jpg');
@@ -272,6 +261,7 @@ var fontjson = new THREE.FontLoader().load("/zz_Fonts/Raleway_SemiBold.json", fu
 
 })
 
+var svg_answers = new THREE.LegacySVGLoader(THREE.DefaultLoadingManager).load('zz_Pictures/Antworten.svg')
 
 // renderer.scrollIntoView(true);
 
@@ -296,14 +286,14 @@ function onClick(event) {
 
   this.tl = new TimelineMax();
 
-    this.tl.to(camera.object.rotation, 1.5, {
-      y: Math.PI * 2,
-      ease: Expo.easeOut
-    })
-    this.tl.to(camera.object.rotation, 1.5, {
-      y: 0,
-      ease: Expo.easeOut
-    })
+  this.tl.to(camera.object.rotation, 1.5, {
+    y: Math.PI * 2,
+    ease: Expo.easeOut
+  })
+  this.tl.to(camera.object.rotation, 1.5, {
+    y: 0,
+    ease: Expo.easeOut
+  })
 
   // var intersects = raycaster.intersectObjects(scene.children, true);
   //
@@ -332,9 +322,9 @@ var render = function() {
   grandparent.rotation.x = currentTimeline * -0.7 + 0.5
   grandparent.rotation.y = (currentTimeline * 2.4 + 0.1) * Math.PI * 2
 
-  if(currentTimeline <= 10){
-     document.querySelectorAll(".header-logo").innerHTML = "Yes";
-     console.log('now');
+  if (currentTimeline <= 10) {
+    document.querySelectorAll(".header-logo").innerHTML = "Yes";
+    console.log('now');
   }
 
   renderer.render(scene, camera);
