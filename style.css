@@ -60,6 +60,64 @@ body {
   100% { height: 0%;}
 }
 
+/*endless text*/
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: 180px;
+}
+.text span {
+  font-size: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color:  rgb(126, 126, 126);
+  display: inline-block;
+  margin: 0 65px 0;
+  transition: all ease 0.5s;
+}
+
+.text span:nth-child(odd),
+.text span:nth-child(even):hover{
+  color: rgb(126, 126, 126);
+}
+
+.text span:nth-child(odd):hover{
+  color: black;
+}
+
+.content .text .line {
+  white-space: nowrap;
+  animation: infiniteText 10s linear infinite;
+  cursor: pointer;
+  animation-play-state: running;
+  margin-bottom: 20px;
+}
+
+@keyframes infiniteText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.content .text .line2 {
+  animation-direction: reverse;
+}
+.content .text .line2 span{
+  margin: 0 80px 0;
+}
+.content .text .line3 span{
+  margin: 0 35px 0;
+}
+.content .text .line:hover {
+  animation-play-state: paused;
+}
 /* Editor*/
 *,
 *:before,
