@@ -1,7 +1,3 @@
-
-
-
-
 //Editor
 let output = document.getElementById('output');
 let buttons = document.getElementsByClassName('tool--btn');
@@ -30,6 +26,18 @@ function setColor(btn, color) {
     count = 0;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////
