@@ -228,8 +228,6 @@ body {
 }
 
 .parentWall {
-  top:0;
-  position: absolute;
   perspective: 200px;
 }
 
@@ -238,7 +236,6 @@ body {
   background-color: black;
   font-size: 3em;
   font-family: 'futura';
-  top: 0;
   animation: leftWall 2s infinite linear;
 }
 
@@ -253,7 +250,14 @@ body {
   font-size: 3em;
   font-family: 'futura';
   transform: rotateY(-20deg);
-  top: 0;
+}
+
+span {
+  color: white;
+}
+
+.line_01:hover{
+  color: green;
 }
 
 
