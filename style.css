@@ -226,13 +226,14 @@ body {
 }
 
 .parentWall {
-  perspective: 200px;
+  perspective: 500px;
+  width: 50vw;
 }
 
 .leftWall {
   color: white;
   background-color: black;
-  font-size: 3em;
+  font-size: 2rem;
   font-family: 'futura';
   animation: leftWall 2s infinite linear;
 }
@@ -245,9 +246,9 @@ body {
 .rightWall {
   color: white;
   background-color: black;
-  font-size: 3em;
+  font-size: 2rem;
   font-family: 'futura';
-  transform: rotateY(-20deg);
+  transform: rotateY(-60deg);
 }
 
 span {
