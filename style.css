@@ -214,6 +214,7 @@ body {
 /*canvas {
   display: block;
 }*/
+
 .question {
   position: absolute;
   font-family: 'Raleway';
@@ -225,6 +226,37 @@ body {
   z-index: 50;
   display: block;
 }
+
+.parentWall {
+  top:0;
+  position: absolute;
+  perspective: 200px;
+}
+
+.leftWall {
+  color: white;
+  background-color: black;
+  font-size: 3em;
+  font-family: 'futura';
+  top: 0;
+  animation: leftWall 2s infinite linear;
+}
+
+@keyframes leftWall {
+  0% { transform: rotateY(0deg);}
+  100% { transform: rotateY(360deg);}
+}
+
+.rightWall {
+  color: white;
+  background-color: black;
+  font-size: 3em;
+  font-family: 'futura';
+  transform: rotateY(-20deg);
+  top: 0;
+}
+
+
 
 /* mobile */
 @media all and (max-width:600px) {}

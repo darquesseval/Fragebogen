@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">   <!--About-->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+  <!--About-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Max Frisch: Fragebogen</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
@@ -14,95 +15,91 @@
 
 <body>
 
-    <div class="header-inner">
-      <div class="header-logo">
-        Max Frisch: Fragebogen
-      </div>
-      <ul class="header-navigation">
-        About
-      </ul>
+  <div class="header-inner">
+    <div class="header-logo">
+      Max Frisch: Fragebogen
     </div>
+    <ul class="header-navigation">
+      About
+    </ul>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
-    <script src="https://kit.fontawesome.com/e3e836db74.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-    <script src="./main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+  <script src="https://kit.fontawesome.com/e3e836db74.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script src="./main.js"></script>
 
-    <!--Editor und Icons-->
-    <div class="tool-bar">
-      <ul class="tool-list">
+  <!--Editor und Icons-->
+  <div class="tool-bar">
+    <ul class="tool-list">
 
-        <!-- Button-->
-        <input type="button" id="button" value = "button" style= "color:white" onclick="setColor('button', '#101010')";/>
+      <!-- Button-->
+      <input type="button" id="button" value="button" style="color:white" onclick="setColor('button', '#101010')" ; />
 
-        <li class="tool">
-         <button
-          type="button"
-          data-command="bold"
-          class="tool--btn">
+      <li class="tool">
+        <button type="button" data-command="bold" class="tool--btn">
           <i class=' fas fa-bold'></i>
-          </button>
-        </li>
-        <li class="tool">
-          <button
-           type="button"
-           data-command="italic"
-           class="tool--btn">
-           <i class=' fas fa-italic'></i>
-           </button>
-         </li>
-         <li class="tool">
-          <button
-           type="button"
-           data-command="underline"
-           class="tool--btn">
-           <i class=' fas fa-underline'></i>
-           </button>
-         </li>
-         <li class="tool">
-          <button
-           type="button"
-           data-command="createlink"
-           class="tool--btn">
-           <i class=' fas fa-link'></i>
-           </button>
-         </li>
+        </button>
+      </li>
+      <li class="tool">
+        <button type="button" data-command="italic" class="tool--btn">
+          <i class=' fas fa-italic'></i>
+        </button>
+      </li>
+      <li class="tool">
+        <button type="button" data-command="underline" class="tool--btn">
+          <i class=' fas fa-underline'></i>
+        </button>
+      </li>
+      <li class="tool">
+        <button type="button" data-command="createlink" class="tool--btn">
+          <i class=' fas fa-link'></i>
+        </button>
+      </li>
 
-      </ul>
+    </ul>
 
-      <div class="output"
-        contenteditable="true">
-      </div>
-
+    <div class="output" contenteditable="true">
     </div>
 
-    <!--Endless Text-->
-    <div class="content">
-      <div class="text">
-        <div class="line1">
-          <span>TOD</span>
-          <span>TOD</span>
-          <span>TOD</span>
-        </div>
-        <div class="line2">
-          <span>MORAL</span>
-          <span>MORAL</span>
-          <span>MORAL</span>
-        </div>
-        <div class="line3">
-          <span>EHE</span>
-          <span>EHE</span>
-          <span>EHE</span>
-        </div>
-        <div class="line4">
-          <span>HUMOR</span>
-          <span>HUMOR</span>
-          <span>HUMOR</span>
-        </div>
+  </div>
+
+<div class="parentWall">
+  <div class="leftWall">
+    <span>I am actually just testing this out here<p>With multiple lines</span>
+  </div>
+  <div class="rightWall">
+    <span>and over to this side<p>just for fun</span>
+  </div>
+</div>
+
+  <!--Endless Text-->
+  <div class="content">
+    <div class="text">
+      <div class="line1">
+        <span>TOD</span>
+        <span>TOD</span>
+        <span>TOD</span>
+      </div>
+      <div class="line2">
+        <span>MORAL</span>
+        <span>MORAL</span>
+        <span>MORAL</span>
+      </div>
+      <div class="line3">
+        <span>EHE</span>
+        <span>EHE</span>
+        <span>EHE</span>
+      </div>
+      <div class="line4">
+        <span>HUMOR</span>
+        <span>HUMOR</span>
+        <span>HUMOR</span>
       </div>
     </div>
+  </div>
 
-<!--pre-loader
+  <!--pre-loader
   <div class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span>
   </div>
