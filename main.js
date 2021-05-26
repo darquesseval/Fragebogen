@@ -38,7 +38,7 @@ var loadingScreen = {
     new THREE.Mesh(geometry, material)
   )
 };
-  
+
         var loadingManager = null;
         var RESOURCES_LOADED = false;
         mesh.position.set(2,2,-2);
@@ -57,7 +57,7 @@ var loadingScreen = {
             loadingScreen.box.position.x -= 0.05;
 		        if( loadingScreen.box.position.x < -10 ) loadingScreen.box.position.x = 10;
 		        loadingScreen.box.position.y = Math.sin(loadingScreen.box.position.x);
-		
+
 		        renderer.render(loadingScreen.scene, loadingScreen.camera);
 		        return; // Stop the function here.
 	        }
@@ -68,9 +68,16 @@ var loadingScreen = {
             mesh.rotation.x += 0.01;
             mesh.rotation.y += 0.01;
             mesh.rotation.z += 0.01;
-            
+
         }
-      
+
+let moral_string_01 = "I have no idea if this will work, like ever";
+let moral_string_02 = "And then there would have to be more lines";
+let moral_string_03 = "And more lines with I think a whole lot more text I'd say.";
+let moral_string_04 = "Let's just carry on writing some more and more and even more text, because we really need it.";
+let moral_string_05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
+let moral_string_06 = "Und wie genau schreibt man eigentich sowieso";
+
 
 
 

@@ -226,30 +226,51 @@ body {
   display: block;
 }
 
-/*.parentWall {
+.walls {
+  display: flex;
+  color: white;
+  background-color: black;
+  font-size: 2rem;
+  font-family: 'futura';
+}
+
+.Moral {
   perspective: 500px;
-  width: 50vw;
+}
+
+.Ehe {
+  perspective: 500px;
+  transform: rotateY(90deg);
 }
 
 .leftWall {
-  color: white;
-  background-color: black;
-  font-size: 2rem;
-  font-family: 'futura';
-  animation: leftWall 2s infinite linear;
+  width: 50vw;
+  height: 50vw;
+  text-align: center;
+  transform: rotateY(40deg);
+  background-color: darkgrey;
+  /* animation: leftWall 2s infinite linear; */
 }
 
+/*
 @keyframes leftWall {
   0% { transform: rotateY(0deg);}
   100% { transform: rotateY(360deg);}
+} */
+.rightWall {
+  width: 50vw;
+  height: 50vw;
+  text-align: center;
+  transform: rotateY(-40deg);
+  background-color: darkgrey;
 }
 
-.rightWall {
-  color: white;
-  background-color: black;
-  font-size: 2rem;
-  font-family: 'futura';
-  transform: rotateY(-60deg);
+.centerWall {
+  width: 100vw;
+  height: 50vw;
+  text-align: center;
+  transform: translateZ(-8vw);
+  background-color: darkgrey;
 }
 
 span {
@@ -259,7 +280,7 @@ span {
 .line_01:hover{
   color: green;
 }
-*/
+
 
 
 /* mobile */
