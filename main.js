@@ -27,6 +27,19 @@ function setColor(btn, color) {
   }
 }
 
+let tod = document.querySelector(".line1");
+let content = document.querySelector(".content");
+
+document.getElementById('line1').onclick = function() {
+  this.classList.toggle('active')
+}
+
+//tod.addEventListener("click", function(){
+//  console.log('true')
+//  content.style.transform = 'rotateX(90deg)';
+//})
+
+
 
 //Loading Screen
 //var loadingScreen = {

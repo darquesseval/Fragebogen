@@ -224,15 +224,14 @@ body {
   display: block;
 }
 
-.content {
-  animation: walls 2s;
+.line1.active{
+  background-color: red;
 }
-
 .walls {
   color: white;
   font-size: 2rem;
   font-family: 'futura';
-  transform: rotateX(-90deg);
+  transform: rotateX(90deg);
 }
 
 .Moral {
@@ -243,7 +242,6 @@ body {
 
 .Ehe {
   perspective: 500px;
-  transform: rotateY(90deg);
   display: flex;
 }
 
@@ -251,14 +249,12 @@ body {
   width: 50vw;
   height: 50vw;
   text-align: center;
-  transform: rotateY(40deg);
 }
 
 .rightWall {
   width: 50vw;
   height: 50vw;
   text-align: center;
-  transform: rotateY(-40deg);
   background-color: rgb(33, 37, 41);
 }
 
