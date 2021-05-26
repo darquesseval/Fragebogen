@@ -32,6 +32,7 @@ function setColor(btn, color) {
 
   let scene = new THREE.Scene()
   let camera =  new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 0.1,1000)
+  camera.position.z = 5;
   let mesh =  new THREE.Mesh(
     new THREE.BoxGeometry(1, 1, 1),
     new THREE.MeshLambertMaterial({color: 0x00ff00}),
@@ -69,6 +70,8 @@ function setColor(btn, color) {
 
         }
 
+
+
 let moral_string_01 = "I have no idea if this will work, like ever";
 let moral_string_02 = "And then there would have to be more lines";
 let moral_string_03 = "And more lines with I think a whole lot more text I'd say.";
@@ -76,7 +79,7 @@ let moral_string_04 = "Let's just carry on writing some more and more and even m
 let moral_string_05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
 let moral_string_06 = "Und wie genau schreibt man eigentich sowieso";
 
-let moral_01 = document.getElementsByClassName(".moral_line_01");
+let moral_01 = document.querySelector(".moral_line_01");
 moral_01.innerHTML = moral_string_01;
 
 console.log(moral_01.innerHTML);
