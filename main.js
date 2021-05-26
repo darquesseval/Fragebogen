@@ -78,9 +78,10 @@ let moral_string_04 = "Let's just carry on writing some more and more and even m
 let moral_string_05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
 let moral_string_06 = "Und wie genau schreibt man eigentich sowieso";
 
+let moral_01 = document.querySelector(".moral_line_01");
+moral_01.innerHTML = moral_string_01;
 
-
-
+console.log(moral_01.innerHTML);
 
 
 
