@@ -10,9 +10,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Max Frisch: Fragebogen</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
+  
 </head>
 
 <body>
+  
+<!--pre-loader
+<div class="loader-wrapper">
+  <span class="loader"><span class="loader-inner"></span>
+</div>
+
+<script>
+  $(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+    });
+</script>
 
   <!--<div class="header-inner">
     <div class="header-logo">
@@ -21,7 +33,7 @@
     <ul class="header-navigation">
       About
     </ul>
-  </div>
+  </div>-->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
   <script src="https://kit.fontawesome.com/e3e836db74.js" crossorigin="anonymous"></script>
@@ -29,12 +41,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="./main.js"></script>
+  <script src="jquery-2.1.4.js"></script> <!--Für loading screen-->
 
-  <!--Editor und Icons
+  <!--Editor und Icons-->
   <div class="tool-bar">
     <ul class="tool-list">
 
-      <!-- Button
+      <!-- Button-->
       <input type="button" id="button" value="button" style="color:white" onclick="setColor('button', '#101010')" ; />
 
       <li class="tool">
@@ -63,7 +76,7 @@
     <div class="output" contenteditable="true">
     </div>
 
-  </div>-->
+  </div>
 
 <!-- Walls -->
   <div class="walls Moral">
@@ -111,19 +124,6 @@
     </div>
   </div>
 
-
-
-  <!--pre-loader
-  <div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span>
-  </div>
-
-  <script>
-    $(window).on("load",function(){
-      $(".loader-wrapper").fadeOut("slow");
-      });
-  </script>
--->
 </body>
 
 </html>
