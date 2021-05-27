@@ -311,11 +311,5 @@ html {
   }
 }
 
-/* .moral_line_01:hover{
-  color: green;
-} */
-
-
-
 /* mobile */
-@media all and (max-width:600px) {}
+/*@media all and (max-width:600px) {}
