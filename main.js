@@ -38,26 +38,30 @@ document.getElementById('line3').onclick = function() {
   content.classList.toggle('activeEhe')
 }
 
-let moral_string_01 = "I have no idea if this will work, like ever";
+let moral_01;
+
+let moral_string_01 = "I have no idea if this will work, like ever more text more text more text";
 let moral_string_02 = "And then there would have to be more lines";
 let moral_string_03 = "And more lines with I think a whole lot more text I'd say.";
 let moral_string_04 = "Let's just carry on writing some more and more and even more text, because we really need it.";
 let moral_string_05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
 let moral_string_06 = "Und wie genau schreibt man eigentich sowieso";
 
-class Antworten{
-  zeile(zeile,klasse,string){
-    this.zeile= zeile;
+class Antwort{
+  zeile(name,klasse,string){
+    this.name= name;
     this.klasse= klasse;
     this.string= string;
-    let this.zeile = document.querySelector(this.klasse);
-    this.zeile.innerHTML = this.string;
+    this.name = document.querySelector(this.klasse);
+    this.name.innerHTML = this.string;
   }
 }
 
-let zeile_01 = new Antworten;
+
+let zeile_01 = new Antwort;
 zeile_01.zeile(moral_01,".moral_line_01", moral_string_01);
-console.log(moral_01.innerHTML);
+
+
 
 //tod.addEventListener("click", function(){
 //  console.log('true')
