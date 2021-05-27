@@ -233,6 +233,13 @@ html {
 .line1.active{
   background-color: red;
 }
+
+.content {
+  perspective: 500px;
+  height: 100vh;
+  transition: all 1s;
+}
+
 .walls {
   color: white;
   font-size: 2rem;
@@ -241,13 +248,11 @@ html {
 }
 
 .Moral {
-  perspective: 500px;
   display: flex;
   background-color: rgb(33, 37, 41);
 }
 
 .Ehe {
-  perspective: 500px;
   display: flex;
 }
 
