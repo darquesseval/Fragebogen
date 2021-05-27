@@ -268,15 +268,18 @@ html {
 .Moral {
   transform: rotateX(-90deg) ;
   display: flex;
+  width: 100vw;
   background-color: rgb(33, 37, 41);
   transition: all 0.5s;
+  position: absolute;
 }
 
 .Ehe {
   display: flex;
+  width: 100vw;
   transform: rotateX(-90deg) rotateY(90deg);
   transition: all 0.5s;
-
+  position: absolute;
 }
 
 .leftWall {
