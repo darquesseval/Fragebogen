@@ -34,6 +34,10 @@ document.getElementById('line1').onclick = function() {
   content.classList.toggle('activeTod')
 }
 
+document.getElementById('line3').onclick = function() {
+  content.classList.toggle('activeEhe')
+}
+
 //tod.addEventListener("click", function(){
 //  console.log('true')
 //  content.style.transform = 'rotateX(90deg)';

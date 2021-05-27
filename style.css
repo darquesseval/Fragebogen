@@ -253,13 +253,20 @@ html {
   transform: rotateX(90deg);
 }
 
+.content.activeEhe .text{
+  transform: rotateX(90deg);
+}
+
 .content.activeTod .Moral{
   transform: none;
 }
 
+.content.activeEhe .Ehe{
+  transform: none;
+}
 
 .Moral {
-  transform: translateZ(10vw) rotateX(-90deg) ;
+  transform: rotateX(-90deg) ;
   display: flex;
   background-color: rgb(33, 37, 41);
   transition: all 0.5s;
@@ -267,6 +274,9 @@ html {
 
 .Ehe {
   display: flex;
+  transform: rotateX(-90deg) rotateY(90deg);
+  transition: all 0.5s;
+
 }
 
 .leftWall {
