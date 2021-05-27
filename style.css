@@ -137,25 +137,6 @@ html {
   font-family: 'Open Sans';
 }
 
-.content.activeTod .line1{
-  background-color: red;
-}
-
-.content.activeTod .text{
-  transform: rotateX(90deg);
-}
-
-.content.activeEhe .text{
-  transform: rotateX(90deg);
-}
-
-.content.activeTod .Moral{
-  transform: none;
-}
-
-.content.activeEhe .Ehe{
-  transform: none;
-}
 
 .Moral {
   transform: rotateX(-90deg) ;
@@ -204,6 +185,26 @@ html {
   to {
     transform: rotateX(90deg);
   }
+}
+
+.content.activeTod .line1{
+  background-color: red;
+}
+
+.content.activeTod .text{
+  transform: rotateX(90deg);
+}
+
+.content.activeEhe .text{
+  transform: rotateX(90deg);
+}
+
+.content.activeTod .Moral{
+  transform: none;
+}
+
+.content.activeEhe .Ehe{
+  transform: none;
 }
 
 #btn:active {
