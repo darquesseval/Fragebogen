@@ -43,28 +43,42 @@ document.getElementById('line4').onclick = function() {
   content.classList.toggle('activeHumor')
 }
 
-let moral_01;
+let mInput01 = "Hier etwas Platzhaltertext, um zu schauen, wie das scrollen so läuft.";
+let mInput02 = "Hier werden irgendswann Antworten stehen. Ganz viele. Wiel wir eine mega coole Website aufgebaut haben.";
+let mInput03 = "And more lines with I think a whole lot more text I'd say.";
+let mInput04 = "what about this";
+let mInput05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
+let mInput06 = "Und wie genau schreibt man eigentich sowieso";
 
-let moral_string_01 = "lefknagkngnsovngesnanevbnes lefknagkngnsovngesnanevbnes";
-let moral_string_02 = "nasnfandoifnaoienfnaowenfanweifnaoiwengoianwegonaeowignoaiewngiawen";
-let moral_string_03 = "And more lines with I think a whole lot more text I'd say.";
-let moral_string_04 = "what about this";
-let moral_string_05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
-let moral_string_06 = "Und wie genau schreibt man eigentich sowieso";
+let m01;
+let m02;
+let m03;
 
-class Antwort{
-  zeile(name,klasse,string){
-    this.name= name;
-    this.klasse= klasse;
-    this.string= string;
-    this.name = document.querySelector(this.klasse);
-    this.name.innerHTML = this.string;
+class Antwort {
+  input(klasseL, klasseM, klasseR, string) {
+    this.klasseL = klasseL;
+    this.klasseM = klasseM;
+    this.klasseR = klasseR;
+    this.string = string;
+    document.querySelector(this.klasseL).innerHTML = this.string;
+    document.querySelector(this.klasseM).innerHTML = this.string;
+    document.querySelector(this.klasseR).innerHTML = this.string;
   }
 }
 
 
-let zeile_01 = new Antwort;
-zeile_01.zeile(moral_01,".moral_line_01", moral_string_01);
+let mLine01 = new Antwort;
+mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", mInput01);
+
+let mLine02 = new Antwort;
+mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", mInput02);
+
+
+// let mLine02 = new Antwort;
+// mLine02.input(m02, ".mLine02", mInput02);
+//
+// let mLine03 = new Antwort;
+// mLine03.input(m03, ".mLine03", mInput03);
 
 
 
@@ -82,7 +96,7 @@ zeile_01.zeile(moral_01,".moral_line_01", moral_string_01);
 //  box: new THREE.Mesh(
 //    new THREE.BoxGeometry(1, 1, 1),
 //    new THREE.MeshLambertMaterial({color: 0x00ff00}),
-   // new THREE.Mesh(geometry, material)
+// new THREE.Mesh(geometry, material)
 //  )
 //};
 //
@@ -90,7 +104,7 @@ zeile_01.zeile(moral_01,".moral_line_01", moral_string_01);
 //        var RESOURCES_LOADED = false;
 //        mesh.position.set(2,2,-2);
 //
- //       scene.add(mesh);
+//       scene.add(mesh);
 //        var light = new THREE.PointLight(0xFFFFFF, 1, 500)
 //        light.position.set(10,0,25);
 //        scene.add(light);
@@ -99,16 +113,16 @@ zeile_01.zeile(moral_01,".moral_line_01", moral_string_01);
 
 //          // This block runs while resources are loading.
 // //         if( RESOURCES_LOADED == false ){
- //           requestAnimationFrame(animate);
+//           requestAnimationFrame(animate);
 //		        if( loadingScreen.box.position.x < -10 ) loadingScreen.box.position.x = 10;
 //		        loadingScreen.box.position.y = Math.sin(loadingScreen.box.position.x);
 //
 //
- //         requestAnimationFrame(animate);
+//         requestAnimationFrame(animate);
 
 //            //* Animationsbewegung
- //           mesh.rotation.x += 0.01;
- //           mesh.rotation.y += 0.01;
- //           mesh.rotation.z += 0.01;
+//           mesh.rotation.x += 0.01;
+//           mesh.rotation.y += 0.01;
+//           mesh.rotation.z += 0.01;
 //
- //       }
+//       }

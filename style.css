@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -18,7 +20,7 @@ body {
   top: 0;
   left: 0;
   background-color: #242f3f;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -39,28 +41,64 @@ body {
   background-color: #fff;
   animation: loader-inner 2s infinite ease-in;
 }
+
 @keyframes loader {
-  0% { transform: rotate(0deg);}
-  25% { transform: rotate(180deg);}
-  50% { transform: rotate(180deg);}
-  75% { transform: rotate(360deg);}
-  100% { transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
 @keyframes loader-inner {
-  0% { height: 0%;}
-  25% { height: 0%;}
-  50% { height: 100%;}
-  75% { height: 100%;}
-  100% { height: 0%;}
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
 }
 
 @keyframes infiniteText {
-  0%{ transform: translateX(0%); }
-  100%{ transform: translateX(-50%);}
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /*endless text*/
-.content .text {
+.text {
+  perspective: 500px;
   position: absolute;
   display: inline-block;
   width: 100%;
@@ -68,51 +106,57 @@ body {
   top: 0;
   overflow: hidden;
   font-family: 'Open Sans', sans-serif;
-  transition: all 0.5s;
+  transition: all 1s;
+  background-color: rgb(33, 37, 41);
 }
-.content .text span {
+
+.text span {
   font-size: 34vh;
   font-weight: 700;
   text-transform: uppercase;
-  color:  rgba(0, 0, 0, 0.425);
+  color: rgba(0, 0, 0, 0.425);
   display: inline-block;
   transition: all ease 0.5s;
   transform: translateY(-26%);
 }
 
-.content .text span:nth-child(odd),
-.content .text span:nth-child(even):hover{
+.text span:nth-child(odd),
+.text span:nth-child(even):hover {
   color: rgba(0, 0, 0, 0.39);
 }
 
-.content .text span:nth-child(odd):hover{
+.text span:nth-child(odd):hover {
   color: #Fff;
 }
 
-.content .text .line {
+.line {
   white-space: nowrap;
   cursor: pointer;
   animation-play-state: running;
   animation: infiniteText 20s linear infinite;
-  height: 25vh; /*Abstand*/
+  height: 25vh;
+  /*Abstand*/
 }
 
-.content .text .line2 {
+.line2 {
   animation-direction: reverse;
 }
-.content .text .line4 {
+
+.line4 {
   animation-direction: reverse;
 }
-.content .text .line2 span{
+
+.line2 span {
   margin: 0 80px 0;
 }
-.content .text .line3 span{
+
+.line3 span {
   margin: 0 35px 0;
 }
-.content .text .line span:hover {
+
+.line span:hover {
   animation-play-state: paused;
 }
-
 
 /* Editor*/
 *,
@@ -125,99 +169,148 @@ html {
   box-sizing: border-box;
 }
 
-
 .content {
   transition: all 1s;
 }
 
 .walls {
-  perspective: 500px;
   color: white;
   font-size: 2rem;
   font-family: 'Open Sans';
   position: relative;
 }
 
-
-.Moral {
-  transform: rotateX(-90deg) ;
+.Moral, .Ehe, .Humor, .Tod {
   display: flex;
   width: 100vw;
-  background-color: rgb(33, 37, 41);
-  transition: all 0.5s;
+  transition: all 1s;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 20vh;
   transform-style: preserve-3d;
 }
 
+.Moral {
+  perspective: 50vw;
+  transform: translateY(-30vh) rotateX(-90deg);
+}
+
 .Ehe {
-  display: flex;
-  width: 100vw;
-  transform: rotateX(-90deg) rotateY(90deg);
-  transition: all 0.5s;
-  position: absolute;
-  left: 0;
-  top: 0;
+  transform: translateY(-100vh) rotateX(-90deg);
+}
+
+.Tod {
+  transform: translateY(-100vh) rotateX(-90deg);
+}
+
+.Humor {
+  transform: translateY(-100vh) rotateX(-90deg);
+}
+
+.leftWall, .centerWall, .rightWall {
+  overflow: hidden;
+  white-space: nowrap;
+  height: 60vw;
+  text-align: center;
+  background-color: rgb(33, 37, 41);
+  background-color: pink;
 }
 
 .leftWall {
-  width: 50vw;
-  height: 50vw;
-  text-align: center;
+  width: 20vw;
   transform: rotateY(60deg);
 }
 
 .rightWall {
-  width: 50vw;
-  height: 50vw;
-  text-align: center;
-  background-color: rgb(33, 37, 41);
+  width: 20vw;
   transform: rotateY(-60deg);
 }
 
 .centerWall {
-  width: 100vw;
-  height: 50vw;
-  text-align: center;
-  transform: translateZ(-8vw);
-  background-color: rgb(33, 37, 41);
+  width: 40vw;
+  transform: translateZ(-8.5vw);
 }
 
-@keyframes walls{
-  from {
-    transform: rotateX(-90deg);
+@keyframes infiniteTextLeftWall {
+  0% {
+    transform: translateX(0vw);
   }
-  to {
-    transform: rotateX(90deg);
+
+  100% {
+    transform: translateX(-50vw);
   }
 }
 
-.content.activeTod .text{
+@keyframes infiniteTextCenterWall {
+  0% {
+    transform: translateX(-20vw);
+  }
+
+  100% {
+    transform: translateX(-70vw);
+  }
+}
+
+@keyframes infiniteTextRightWall {
+  0% {
+    transform: translateX(-60vw);
+  }
+
+  100% {
+    transform: translateX(-110vw);
+  }
+}
+
+.mLineL01, .mLineL02 {
+  text-align: left;
+  animation: infiniteTextLeftWall 60s linear infinite;
+}
+
+.mLineM01, .mLineM02 {
+  text-align: left;
+  animation: infiniteTextCenterWall 60s linear infinite;
+}
+
+.mLineR01, .mLineR02 {
+  text-align: left;
+  animation: infiniteTextRightWall 60s linear infinite;
+}
+
+.Moral div:nth-child(odd) {
+  text-align: ;
+  animation-direction: reverse;
+}
+
+.content.activeTod .text {
   transform: rotateX(90deg);
 }
 
-.content.activeMoral .text{
+.content.activeMoral .text {
+  transform: translateY(50vh) rotateX(90deg);
+}
+
+.content.activeEhe .text {
   transform: rotateX(90deg);
 }
 
-.content.activeEhe .text{
-  transform: rotateX(90deg);
-}
-.content.activeHumor .text{
+.content.activeHumor .text {
   transform: rotateX(90deg);
 }
 
-.content.activeTod .Tod{
+.content.activeTod .Tod {
   transform: none;
 }
-.content.activeMoral .Moral{
+
+.content.activeMoral .Moral {
+  transform: none;
+  transform: translateZ(-4vw);
+}
+
+.content.activeEhe .Ehe {
   transform: none;
 }
-.content.activeEhe .Ehe{
-  transform: none;
-}
-.content.activeHumor .Humor{
+
+.content.activeHumor .Humor {
   transform: none;
 }
 
