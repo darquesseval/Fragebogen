@@ -31,7 +31,7 @@ let tod = document.querySelector(".line1");
 let content = document.querySelector(".content");
 
 document.getElementById('line1').onclick = function() {
-  this.classList.toggle('active')
+  content.classList.toggle('activeTod')
 }
 
 //tod.addEventListener("click", function(){

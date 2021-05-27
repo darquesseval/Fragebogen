@@ -64,6 +64,7 @@ body {
   box-sizing: content-box;
   overflow: hidden;
   font-family: 'Open Sans', sans-serif;
+  transition: all 0.5s;
 }
 .content .text span {
   font-size: 18rem;
@@ -230,12 +231,8 @@ html {
   display: block;
 }
 
-.line1.active{
-  background-color: red;
-}
 
 .content {
-  height: 100vh;
   transition: all 1s;
 }
 
@@ -244,12 +241,26 @@ html {
   color: white;
   font-size: 2rem;
   font-family: 'futura';
+}
+
+.content.activeTod .line1{
+  background-color: red;
+}
+
+.content.activeTod .text{
   transform: rotateX(90deg);
 }
 
+.content.activeTod .Moral{
+  transform: rotateX(0deg);
+}
+
+
 .Moral {
+  transform: translateZ(10vw) rotateX(-90deg) ;
   display: flex;
   background-color: rgb(33, 37, 41);
+  transition: all 0.5s;
 }
 
 .Ehe {
@@ -260,6 +271,7 @@ html {
   width: 50vw;
   height: 50vw;
   text-align: center;
+  transform: rotateY(60deg);
 }
 
 .rightWall {
@@ -267,6 +279,7 @@ html {
   height: 50vw;
   text-align: center;
   background-color: rgb(33, 37, 41);
+  transform: rotateY(-60deg);
 }
 
 .centerWall {
