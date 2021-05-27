@@ -45,9 +45,19 @@ let moral_string_04 = "Let's just carry on writing some more and more and even m
 let moral_string_05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
 let moral_string_06 = "Und wie genau schreibt man eigentich sowieso";
 
-let moral_01 = document.querySelector(".moral_line_01");
-moral_01.innerHTML = moral_string_01;
+class Antworten{
+  zeile(zeile,klasse,string){
+    this.zeile= zeile;
+    this.klasse= klasse;
+    this.string= string;
+    let this.zeile = document.querySelector(this.klasse);
+    this.zeile.innerHTML = this.string;
+  }
+}
+  
 
+let zeile_01 = new Antworten;
+zeile_01.zeile(moral_01,".moral_line_01", moral_string_01);
 console.log(moral_01.innerHTML);
 
 //tod.addEventListener("click", function(){
