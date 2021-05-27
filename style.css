@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   top: 0;
@@ -5,6 +7,7 @@ body {
   width: 100vw;
   background-color: rgb(33, 37, 41);
   overflow: hidden;
+  padding: 0;
 }
 
 /*pre-loader*/
@@ -63,19 +66,18 @@ body {
   width: 100%;
   height: 100%;
   top: 0;
-  box-sizing: content-box;
   overflow: hidden;
   font-family: 'Open Sans', sans-serif;
   transition: all 0.5s;
 }
 .content .text span {
-  font-size: 18rem;
+  font-size: 20rem;
   font-weight: 700;
   text-transform: uppercase;
   color:  rgba(0, 0, 0, 0.425);
   display: inline-block;
   transition: all ease 0.5s;
-  box-sizing: content-box;
+  transform: translateY(-26%);
 }
 
 .content .text span:nth-child(odd),
@@ -92,8 +94,7 @@ body {
   cursor: pointer;
   animation-play-state: running;
   animation: infiniteText 20s linear infinite;
-  height: 24vh; /*Abstand*/
-  box-sizing: content-box;
+  height: 25vh; /*Abstand*/
 }
 
 .content .text .line2 {
@@ -124,51 +125,6 @@ html {
   box-sizing: border-box;
 }
 
-#btn:active {
-  color: rgb(160, 160, 160);
-}
-
-.tool-bar {
-  display: grid;
-  grid-template-columns: repeat(10, 10vw);
-  grid-template-rows: repeat(10, 10vh);
-  border-radius: 1px;
-  grid-gap: 10px;
-  width: 100%;
-}
-
-.tool-list {
-  display: flex;
-  flex-flow: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 1rem;
-  overflow: hidden;
-  border-radius: 8px;
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 5;
-  grid-row-end: 6;
-}
-
-.tool--btn {
-  display: block;
-  border: none;
-  padding: .5rem;
-  font-size: 10px;
-}
-
-.output {
-  height: 400px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px;
-  margin-top: 1rem;
-  padding: 1rem;
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 6;
-  grid-row-end: 8;
-  background-color: rgb(141, 141, 141);
-}
 
 .content {
   transition: all 1s;
@@ -248,6 +204,52 @@ html {
   to {
     transform: rotateX(90deg);
   }
+}
+
+#btn:active {
+  color: rgb(160, 160, 160);
+}
+
+.tool-bar {
+  display: grid;
+  grid-template-columns: repeat(10, 10vw);
+  grid-template-rows: repeat(10, 10vh);
+  border-radius: 1px;
+  grid-gap: 10px;
+  width: 100%;
+}
+
+.tool-list {
+  display: flex;
+  flex-flow: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.tool--btn {
+  display: block;
+  border: none;
+  padding: .5rem;
+  font-size: 10px;
+}
+
+.output {
+  height: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px;
+  margin-top: 1rem;
+  padding: 1rem;
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 6;
+  grid-row-end: 8;
+  background-color: rgb(141, 141, 141);
 }
 
 /* mobile */

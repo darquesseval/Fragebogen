@@ -54,7 +54,6 @@ class Antworten{
     this.zeile.innerHTML = this.string;
   }
 }
-  
 
 let zeile_01 = new Antworten;
 zeile_01.zeile(moral_01,".moral_line_01", moral_string_01);
