@@ -33,17 +33,22 @@ let content = document.querySelector(".content");
 document.getElementById('line1').onclick = function() {
   content.classList.toggle('activeTod')
 }
-
+document.getElementById('line2').onclick = function() {
+  content.classList.toggle('activeMoral')
+}
 document.getElementById('line3').onclick = function() {
   content.classList.toggle('activeEhe')
+}
+document.getElementById('line4').onclick = function() {
+  content.classList.toggle('activeHumor')
 }
 
 let moral_01;
 
-let moral_string_01 = "I have no idea if this will work, like ever more text more text more text";
-let moral_string_02 = "And then there would have to be more lines";
+let moral_string_01 = "lefknagkngnsovngesnanevbnes lefknagkngnsovngesnanevbnes";
+let moral_string_02 = "nasnfandoifnaoienfnaowenfanweifnaoiwengoianwegonaeowignoaiewngiawen";
 let moral_string_03 = "And more lines with I think a whole lot more text I'd say.";
-let moral_string_04 = "Let's just carry on writing some more and more and even more text, because we really need it.";
+let moral_string_04 = "what about this";
 let moral_string_05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
 let moral_string_06 = "Und wie genau schreibt man eigentich sowieso";
 

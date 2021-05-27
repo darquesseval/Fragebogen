@@ -193,23 +193,31 @@ html {
   }
 }
 
-.content.activeTod .line1{
-  background-color: red;
+.content.activeTod .text{
+  transform: rotateX(90deg);
 }
 
-.content.activeTod .text{
+.content.activeMoral .text{
   transform: rotateX(90deg);
 }
 
 .content.activeEhe .text{
   transform: rotateX(90deg);
 }
-
-.content.activeTod .Moral{
-  transform: none;
+.content.activeHumor .text{
+  transform: rotateX(90deg);
 }
 
+.content.activeTod .Tod{
+  transform: none;
+}
+.content.activeMoral .Moral{
+  transform: none;
+}
 .content.activeEhe .Ehe{
+  transform: none;
+}
+.content.activeHumor .Humor{
   transform: none;
 }
 
