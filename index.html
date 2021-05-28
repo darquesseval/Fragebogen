@@ -16,7 +16,7 @@
 
 <body>
 
-<!--pre-loader
+  <!--pre-loader
 <div class="loader-wrapper">
   <span class="loader"><span class="loader-inner"></span>
 </div>
@@ -42,89 +42,100 @@
   <!-- <script src="jquery-2.1.4.js"></script> Für loading screen-->
 
 
-<!--Endless Text-->
-<div class="content" id="content">
+  <!--Endless Text-->
+  <div class="content" id="content">
 
 
-      <!-- Walls -->
+    <!-- Walls -->
     <div class="walls" id="walls">
 
       <div class="Tod">
         <div class="leftWall">
-        <div class="tLine01"></div>
-      </div>
-      <div class="centerWall">
-        <div class="tLine01"></div>
-      </div>
-      <div class="rightWall">
-        <div class="tLine01"></div>
+          <div class="tLine01"></div>
+        </div>
+        <div class="centerWall">
+          <div class="tLine01"></div>
+        </div>
+        <div class="rightWall">
+          <div class="tLine01"></div>
         </div>
       </div>
 
       <div class="Moral">
-      <div class="leftWall">
-        <div class="Fragen">
-        <div class="m1FrageL">Haben Sie amoralische Einfälle?</div></div>
-        <div class="mLine mLineL01"></div>
-        <div class="mLine mLineL02"></div>
-      </div>
-      <div class="centerWall">
-        <div class="Fragen">
-        <div class="m1FrageM">Haben Sie amoralische Einfälle?</div></div>
-        <div class="mLine mLineM01"></div>
-        <div class="mLine mLineM02"></div>
-      </div>
+        <div class="leftWall">
+          <div class="Fragen" id="mFragen">
+            <div class="m1FrageL">Haben Sie amoralische Einfälle?</div>
+          </div>
+          <div class="mLine mLineL01"></div>
+          <div class="mLine mLineL02"></div>
+        </div>
+        <div class="centerWall">
+          <div class="Fragen">
+            <div class="m1FrageM">Haben Sie amoralische Einfälle?</div>
+          </div>
+          <div class="mLine mLineM01"></div>
+          <div class="mLine mLineM02"></div>
+        </div>
         <div class="rightWall">
           <div class="Fragen">
-          <div class="m1FrageR">Haben Sie amoralische Einfälle?</div></div>
-        <div class="mLine mLineR01"></div>
-        <div class="mLine mLineR02"></div>
+            <div class="m1FrageR">Haben Sie amoralische Einfälle?</div>
+          </div>
+          <div class="mLine mLineR01"></div>
+          <div class="mLine mLineR02"></div>
         </div>
+      </div>
+
+      <div class="floor" id="mFloor">
+        <div class="floortext">
+          answer
+        </div>
+      </div>
+
+
+      <div class="Ehe">
+        <div class="leftWall">
+          <div class="eLine01"></div>
+        </div>
+        <div class="centerWall">
+          <div class="eLine01"></div>
+        </div>
+        <div class="rightWall">
+          <div class="eLine01"></div>
+        </div>
+      </div>
+
+      <div class="Humor">
+        <div class="leftWall">
+          <div class="hLine01"></div>
+        </div>
+        <div class="centerWall">
+          <div class="hLine01"></div>
+        </div>
+        <div class="rightWall">
+          <div class="hLine01"></div>
+        </div>
+      </div>
+
     </div>
 
 
-    <div class="Ehe">
-      <div class="leftWall">
-      <div class="eLine01"></div>
-    </div>
-    <div class="centerWall">
-      <div class="eLine01"></div>
-    </div>
-    <div class="rightWall">
-      <div class="eLine01"></div>
+    <div class="text">
+      <div class="line line1" id="line1">
+        <span>TOD STERBEN TODESFALL ABSCHIED LEBENSENDE ABLEBEN TOD</span>
+      </div>
+      <div class="line line2" id="line2">
+        <span>MORAL HALTUNG LEBENSWEISE SITTE LEBENSART NORM BRAUCH</span>
+      </div>
+      <div class="line line3" id="line3">
+        <span>EHE HOCHZEIT PARTNER VEREINIGUNG HEIRAT TRAUUNG SEX BUND LIEBE EHE</span>
+      </div>
+      <div class="line line4" id="line4">
+        <span>HUMOR PARODIE MEME SHHEESSHH WITZ LACHEN SPASS SCHERZ</span>
       </div>
     </div>
-
-    <div class="Humor">
-      <div class="leftWall">
-      <div class="hLine01"></div>
-    </div>
-    <div class="centerWall">
-      <div class="hLine01"></div>
-    </div>
-    <div class="rightWall">
-      <div class="hLine01"></div>
-      </div>
-    </div>
-
   </div>
 
 
-  <div class="text">
-    <div class="line line1" id="line1">
-      <span>TOD STERBEN TODESFALL ABSCHIED LEBENSENDE ABLEBEN TOD</span>
-    </div>
-    <div class="line line2" id="line2">
-      <span>MORAL HALTUNG LEBENSWEISE SITTE LEBENSART NORM BRAUCH</span>
-    </div>
-    <div class="line line3" id="line3">
-      <span>EHE HOCHZEIT PARTNER VEREINIGUNG HEIRAT TRAUUNG SEX BUND LIEBE EHE</span>
-    </div>
-    <div class="line line4" id="line4">
-      <span>HUMOR PARODIE MEME SHHEESSHH WITZ LACHEN SPASS SCHERZ</span>
-    </div>
-  </div>
-</div>
 
 
 
@@ -133,16 +144,11 @@
 
 
 
-
-
-
-
-
-<!--Editor und Icons-->
+  <!--Editor und Icons-->
   <div class="tool-bar">
     <ul class="tool-list">
 
-       <!--Button-->
+      <!--Button-->
       <input type="button" id="button" value="button" style="color:white" onclick="setColor('button', '#101010')" ; />
 
       <li class="tool">

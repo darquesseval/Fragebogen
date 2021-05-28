@@ -27,7 +27,6 @@ function setColor(btn, color) {
   }
 }
 
-let tod = document.querySelector(".line1");
 let content = document.querySelector(".content");
 
 document.getElementById('line1').onclick = function() {
@@ -72,6 +71,28 @@ mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", mInput01);
 
 let mLine02 = new Antwort;
 mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", mInput02);
+
+
+
+let tod = document.querySelector(".Tod");
+let moral = document.querySelector(".Moral");
+let ehe = document.querySelector(".Ehe");
+let humor = document.querySelector(".Humor");
+
+// document.getElementById('tFragen').onclick = function() {
+//   tod.classList.toggle('activeAnswers')
+// }
+document.getElementById('mFloor').onclick = function() {
+  console.log('anything?')
+  moral.classList.toggle('activeAnswers')
+}
+// document.getElementById('eFragen').onclick = function() {
+//   ehe.classList.toggle('activeAnswers')
+// }
+// document.getElementById('hFragen').onclick = function() {
+//   humor.classList.toggle('activeAnswers')
+// }
+
 
 
 // let mLine02 = new Antwort;

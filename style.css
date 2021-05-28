@@ -118,7 +118,8 @@ body {
   display: inline-block;
   transition: all ease 0.5s;
   transform: translateY(-26%);
-  pointer-events: none; /*hilft wenn man verschiedene Div Klassen übereinander ist und auch beim Hover*/
+  pointer-events: none;
+  /*hilft wenn man verschiedene Div Klassen übereinander ist und auch beim Hover*/
 }
 
 /*.text span:nth-child(odd),
@@ -199,23 +200,28 @@ html {
   perspective: 50vw;
   transform: translateY(-30vh) rotateX(-90deg);
 }
+
 .m1FrageL {
   text-align: left;
   margin-left: 80px;
   transform: translateY(4.5vh);
 }
+
 .m1FrageR {
   text-align: right;
   transform: translateX(-84vw) translateY(4.5vh);
 }
+
 .m1FrageM {
   transform: translateX(-13vw) scale(0.95);
 }
+
 .Fragen {
   font-size: 6vw;
   position: absolute;
   top: 31vh;
 }
+
 .Ehe {
   transform: translateY(-100vh) rotateX(-90deg);
 }
@@ -252,55 +258,100 @@ html {
   align-self: center;
 }
 
-@keyframes infiniteTextLeftWall {
-  0% {
-    transform: translateX(0vw);
+  .floor {
+    perspective: 50vw;
   }
 
-  100% {
-    transform: translateX(-50vw);
-  }
-}
-
-@keyframes infiniteTextCenterWall {
-  0% {
-    transform: translateX(-20vw);
-  }
-
-  100% {
-    transform: translateX(-70vw);
-  }
-}
-
-@keyframes infiniteTextRightWall {
-  0% {
-    transform: translateX(-60vw);
+  .floortext {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15vw;
+    height: 22vw;
+    width: 85vw;
+    margin: auto;
+    transform: translateY(75vh) rotateX(110deg);
+    z-index: 5;
+    background-color: black;
+    color: white;
   }
 
-  100% {
-    transform: translateX(-110vw);
+  .floortext:hover {
+    color: #dd22dd;
   }
-}
+
+  @keyframes infiniteTextLeftWall {
+    0% {
+      transform: translateX(0vw);
+    }
+
+    100% {
+      transform: translateX(-50vw);
+    }
+  }
+
+  @keyframes infiniteTextCenterWall {
+    0% {
+      transform: translateX(-20vw);
+    }
+
+    100% {
+      transform: translateX(-70vw);
+    }
+  }
+
+  @keyframes infiniteTextRightWall {
+    0% {
+      transform: translateX(-60vw);
+    }
+
+    100% {
+      transform: translateX(-110vw);
+    }
+  }
+
+  .Moral.activeAnswers .Fragen {
+    transition: all 1s;
+    transform: translateY(-100vh) translateX(-50vw) rotateZ(-20deg);
+  }
+
+  .Moral.activeAnswers .mLine {
+    transform: none;
+  }
 
 .mLine {
-  opacity: 0;
+  transition-delay: 1s;
+  transition: all 1s;
+  transform: translateY(-100vh) translateX(-50vw) rotateZ(-20deg);
 }
-.mLineL01, .mLineL02 {
+
+.Moral.activeAnswers .mLineR01, .mLineR02, .mLineM01, .mLineM02, .mLineL01, .mLineL02 {
+  transition-delay: 1s;
+  transition: all 1s;
   text-align: left;
+  transform: translateY(-100vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.Moral.activeAnswers .mLineL01, .mLineL02 {
+  transition-delay: 1s;
+  transition: all 1s;
+  text-align: left;
+  animation-delay: 2s;
   animation: infiniteTextLeftWall 60s linear infinite;
 }
 
-.mLineM01, .mLineM02 {
+.Moral.activeAnswers .mLineM01, .mLineM02 {
   text-align: left;
+  animation-delay: 2s;
   animation: infiniteTextCenterWall 60s linear infinite;
 }
 
-.mLineR01, .mLineR02 {
+.Moral.activeAnswers .mLineR01, .mLineR02 {
   text-align: left;
+  animation-delay: 2s;
   animation: infiniteTextRightWall 60s linear infinite;
 }
 
-.Moral div:nth-child(odd) {
+.Moral.activeAnswers div:nth-child(odd) {
   animation-direction: reverse;
 }
 
