@@ -7,7 +7,7 @@ body {
   top: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(33, 37, 41);
+  background-color: black;
   overflow: hidden;
   padding: 0;
 }
@@ -198,10 +198,11 @@ html {
 .m1FrageL {
   text-align: left;
   margin-left: 80px;
+  transform: translateY(4.5vh);
 }
 .m1FrageR {
   text-align: right;
-  transform: translateX(-84vw)
+  transform: translateX(-84vw) translateY(4.5vh);
 }
 .m1FrageM {
   transform: translateX(-13vw) scale(0.95);
@@ -209,7 +210,6 @@ html {
 .Fragen {
   font-size: 6vw;
   position: absolute;
-  overflow: hidden;
   top: 31vh;
 }
 .Ehe {
@@ -244,7 +244,7 @@ html {
 
 .centerWall {
   transform: translateZ(-1.1vw);
-  height: 98vh;
+  height: 90vh;
   align-self: center;
 }
 
