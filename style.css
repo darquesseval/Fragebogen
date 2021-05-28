@@ -186,7 +186,7 @@ html {
   transition: all 1s;
   position: absolute;
   left: 0;
-  top: 20vh;
+  top: 0;
   transform-style: preserve-3d;
 }
 
@@ -210,7 +210,7 @@ html {
 .leftWall, .centerWall, .rightWall {
   overflow: hidden;
   white-space: nowrap;
-  height: 60vw;
+  height: 100vh;
   text-align: center;
   background-color: rgb(33, 37, 41);
   background-color: pink;
@@ -227,8 +227,9 @@ html {
 }
 
 .centerWall {
-  width: 40vw;
-  transform: translateZ(-8.5vw);
+  transform: translateZ(-0.5vw);
+  height: 89vh;
+  align-self: center;
 }
 
 @keyframes infiniteTextLeftWall {
@@ -277,7 +278,6 @@ html {
 }
 
 .Moral div:nth-child(odd) {
-  text-align: ;
   animation-direction: reverse;
 }
 
