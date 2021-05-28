@@ -114,36 +114,40 @@ body {
   font-size: 34vh;
   font-weight: 700;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.425);
+  /*color: rgba(0, 0, 0, 0.425);*/
   display: inline-block;
   transition: all ease 0.5s;
   transform: translateY(-26%);
+  pointer-events: none; /*hilft wenn man verschiedene Div Klassen übereinander ist und auch beim Hover*/
 }
 
-.text span:nth-child(odd),
+/*.text span:nth-child(odd),
 .text span:nth-child(even):hover {
   color: rgba(0, 0, 0, 0.39);
 }
 
-.text span:nth-child(odd):hover {
+/*.text span:nth-child(odd):hover {
   color: #Fff;
+}*/
+.line:hover {
+  color: white;
 }
 
 .line {
   white-space: nowrap;
   cursor: pointer;
   animation-play-state: running;
-  animation: infiniteText 20s linear infinite;
+  animation: infiniteText 2s alternate linear infinite;
   height: 25vh;
   /*Abstand*/
 }
 
 .line2 {
-  animation-direction: reverse;
+  animation-direction: alternate-reverse;
 }
 
 .line4 {
-  animation-direction: reverse;
+  animation-direction: alternate-reverse;
 }
 
 .line2 span {
