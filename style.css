@@ -392,6 +392,10 @@ html {
   color: rgb(160, 160, 160);
 }
 
+.Editor.activeEditor .tool-bar{
+  z-index: 6;
+  top: 0;
+}
 .tool-bar {
   display: grid;
   grid-template-columns: repeat(10, 10vw);
@@ -399,6 +403,10 @@ html {
   border-radius: 1px;
   grid-gap: 10px;
   width: 100%;
+  transition: all 1s;
+  position: absolute;
+  top: 100vh;
+  left: 0;
 }
 
 .tool-list {

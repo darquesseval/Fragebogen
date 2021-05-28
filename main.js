@@ -12,7 +12,6 @@ for (let btn of buttons) {
     }
   })
 }
-
 // document.getElementById("change").onclick = changeColor();
 
 function setColor(btn, color) {
@@ -78,14 +77,23 @@ let tod = document.querySelector(".Tod");
 let moral = document.querySelector(".Moral");
 let ehe = document.querySelector(".Ehe");
 let humor = document.querySelector(".Humor");
+let editor = document.querySelector(".Editor");
+
+document.getElementById('mFloor').onclick = function() {
+  editor.classList.toggle('activeEditor')/*öffnen des Editors*/
+}
+document.getElementById('button').onclick = function() {
+  editor.classList.toggle('activeEditor') /*schliessen des Editors*/
+  moral.classList.toggle('activeAnswers') /*transition*/
+}
 
 // document.getElementById('tFragen').onclick = function() {
 //   tod.classList.toggle('activeAnswers')
 // }
-document.getElementById('mFloor').onclick = function() {
-  console.log('anything?')
-  moral.classList.toggle('activeAnswers')
-}
+//document.getElementById('mFloor').onclick = function() {
+//  console.log('anything?')
+//  moral.classList.toggle('activeAnswers')
+//}
 // document.getElementById('eFragen').onclick = function() {
 //   ehe.classList.toggle('activeAnswers')
 // }
