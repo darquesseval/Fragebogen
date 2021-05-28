@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+@font-face { font-family: Avenir; src: url('/zz_Fonts/Avenir.ttc'); }
+
 body {
   margin: 0;
   top: 0;
@@ -106,21 +108,20 @@ body {
   top: 0;
   overflow: hidden;
   font-family: 'Avenir';
-  font-weight: bolder;
+  font-weight: 1000;
   transition: all 1s;
   background-color: rgb(33, 37, 41);
 }
 
 .text span {
-  font-size: 34vh;
+  font-size: 33vh;
   font-weight: 700;
   text-transform: uppercase;
   /*color: rgba(0, 0, 0, 0.425);*/
   display: inline-block;
   transition: all ease 0.5s;
-  transform: translateY(-26%);
+  transform: translateY(-20%);
   pointer-events: none;
-  /*hilft wenn man verschiedene Div Klassen übereinander ist und auch beim Hover*/
 }
 
 /*.text span:nth-child(odd),
@@ -139,7 +140,7 @@ body {
   white-space: nowrap;
   cursor: pointer;
   animation-play-state: running;
-  animation: infiniteText 2s alternate linear infinite;
+  animation: infiniteText 15s alternate linear infinite;
   height: 25vh;
   /*Abstand*/
 }
@@ -160,7 +161,7 @@ body {
   margin: 0 35px 0;
 }
 
-.line span:hover {
+.line:hover {
   animation-play-state: paused;
 }
 
