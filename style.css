@@ -105,7 +105,8 @@ body {
   height: 100%;
   top: 0;
   overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Avenir';
+  font-weight: bolder;
   transition: all 1s;
   background-color: rgb(33, 37, 41);
 }
@@ -181,7 +182,8 @@ html {
 .walls {
   color: white;
   font-size: 2rem;
-  font-family: 'Open Sans';
+  font-family: 'Avenir';
+  font-weight: bolder;
   position: relative;
 }
 
