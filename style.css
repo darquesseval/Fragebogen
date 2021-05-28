@@ -2,7 +2,10 @@
   box-sizing: border-box;
 }
 
-@font-face { font-family: "Avenir"; src: url('/zz_Fonts/avenir.ttf'); }
+@font-face {
+  font-family: "Avenir";
+  src: url('/zz_Fonts/avenir.ttf');
+}
 
 body {
   margin: 0;
@@ -109,7 +112,6 @@ body {
   overflow: hidden;
   font-family: 'Avenir';
   font-weight: 1000;
-  transition: all 1s;
   background-color: rgb(33, 37, 41);
 }
 
@@ -204,25 +206,24 @@ html {
   transform: translateY(-30vh) rotateX(-90deg);
 }
 
+img {
+  width: 120vw;
+}
+
 .m1FrageL {
-  text-align: left;
-  margin-left: 80px;
-  transform: translateY(4.5vh);
 }
 
 .m1FrageR {
   text-align: right;
-  transform: translateX(-84vw) translateY(4.5vh);
+  transform: translateX(-101vw);
 }
 
 .m1FrageM {
-  transform: translateX(-13vw) scale(0.95);
+  transform: translateX(-20vw) translateY(-2.5vw);
 }
 
 .Fragen {
-  font-size: 6vw;
-  position: absolute;
-  top: 31vh;
+transform: scale(0.85);
 }
 
 .Ehe {
@@ -257,100 +258,114 @@ html {
 
 .centerWall {
   transform: translateZ(-1.1vw);
-  height: 90vh;
+  margin-top: 2.8vw;
   align-self: center;
 }
 
-  .floor {
-    perspective: 50vw;
-  }
+.floor {
+  perspective: 50vw;
+  transform: translateY(-30vh) rotateX(-90deg);
+}
 
-  .floortext {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 15vw;
-    height: 22vw;
-    width: 85vw;
-    margin: auto;
-    transform: translateY(75vh) rotateX(110deg);
-    z-index: 5;
-    background-color: black;
-    color: white;
-  }
+.floortext {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15vw;
+  height: 22vw;
+  width: 85vw;
+  margin: auto;
+  transform: translateY(75vh) rotateX(110deg);
+  z-index: 5;
+  background-color: black;
+  color: white;
+}
 
-  .floortext:hover {
-    color: #dd22dd;
-  }
-
-  @keyframes infiniteTextLeftWall {
-    0% {
-      transform: translateX(0vw);
-    }
-
-    100% {
-      transform: translateX(-50vw);
-    }
-  }
-
-  @keyframes infiniteTextCenterWall {
-    0% {
-      transform: translateX(-20vw);
-    }
-
-    100% {
-      transform: translateX(-70vw);
-    }
-  }
-
-  @keyframes infiniteTextRightWall {
-    0% {
-      transform: translateX(-60vw);
-    }
-
-    100% {
-      transform: translateX(-110vw);
-    }
-  }
-
-  .Moral.activeAnswers .Fragen {
-    transition: all 1s;
-    transform: translateY(-100vh) translateX(-50vw) rotateZ(-20deg);
-  }
-
-  .Moral.activeAnswers .mLine {
-    transform: none;
-  }
+.floortext:hover {
+  color: #dd22dd;
+}
 
 .mLine {
-  transition-delay: 1s;
-  transition: all 1s;
   transform: translateY(-100vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.Moral.activeAnswers .mLineR01, .mLineR02, .mLineM01, .mLineM02, .mLineL01, .mLineL02 {
-  transition-delay: 1s;
-  transition: all 1s;
-  text-align: left;
-  transform: translateY(-100vh) translateX(-50vw) rotateZ(-20deg);
+@keyframes infiniteTextLeftWall {
+  0% {
+    transform: translateX(0vw);
+  }
+
+  100% {
+    transform: translateX(-50vw);
+  }
 }
 
-.Moral.activeAnswers .mLineL01, .mLineL02 {
+@keyframes infiniteTextCenterWall {
+  0% {
+    transform: translateX(-10vw);
+  }
+
+  100% {
+    transform: translateX(-70vw);
+  }
+}
+
+@keyframes infiniteTextRightWall {
+  0% {
+    transform: translateX(-70vw);
+  }
+
+  100% {
+    transform: translateX(-110vw);
+  }
+}
+
+.Moral.activeAnswers .Fragen {
+  transition: all 1s;
   transition-delay: 1s;
+  transform: translateY(-150vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.Moral.activeAnswers .mLine {
+  transition-delay: 2s;
+  transition: all 1s;
+  transform: none;
+}
+.mLineR01,
+.mLineR02,
+.mLineM01,
+.mLineM02,
+.mLineL01,
+ .mLineL02 {
+transform: translateY(-150vh) translateX(-50vw) rotateZ(-20deg);
+animation-play-state: paused;
+}
+
+.Moral.activeAnswers .mLineR01,
+.Moral.activeAnswers .mLineR02,
+.Moral.activeAnswers .mLineM01,
+.Moral.activeAnswers .mLineM02,
+.Moral.activeAnswers .mLineL01,
+.Moral.activeAnswers .mLineL02 {
+  transition-delay: 2s;
   transition: all 1s;
   text-align: left;
-  animation-delay: 2s;
+  transform: none;
+}
+
+.Moral.activeAnswers .mLineL01,.Moral.activeAnswers .mLineL02 {
+  text-align: left;
+  animation-play-state: running;
   animation: infiniteTextLeftWall 60s linear infinite;
 }
 
-.Moral.activeAnswers .mLineM01, .mLineM02 {
+.Moral.activeAnswers .mLineM01,.Moral.activeAnswers .mLineM02 {
   text-align: left;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation: infiniteTextCenterWall 60s linear infinite;
 }
 
-.Moral.activeAnswers .mLineR01, .mLineR02 {
+.Moral.activeAnswers .mLineR01,.Moral.activeAnswers .mLineR02 {
   text-align: left;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation: infiniteTextRightWall 60s linear infinite;
 }
 
@@ -358,47 +373,62 @@ html {
   animation-direction: reverse;
 }
 
-.content.activeTod .text {
-  transform: rotateX(90deg);
-}
-
-.content.activeMoral .text {
-  transform: translateY(50vh) rotateX(90deg);
-}
-
-.content.activeEhe .text {
-  transform: rotateX(90deg);
-}
-
-.content.activeHumor .text {
-  transform: rotateX(90deg);
-}
-
+/* activeTod */
 .content.activeTod .Tod {
   transform: none;
 }
 
+.content.activeTod .text {
+  transition: all 1s;
+  transform: rotateX(90deg);
+}
+
+/* activeMoral */
 .content.activeMoral .Moral {
   transform: none;
   transform: translateZ(-4vw);
 }
 
+.content.activeMoral .floor {
+  transition: all 1s;
+  transform: none;
+}
+
+.content.activeMoral .text {
+  transition: all 1s;
+  transform: rotateX(90deg) translateY(-50vh) translateZ(-50vh) ;
+}
+
+/* activeEhe */
 .content.activeEhe .Ehe {
   transform: none;
 }
 
+.content.activeEhe .text {
+  transition: all 1s;
+  transform: rotateX(90deg);
+}
+
+/* activeHumor */
 .content.activeHumor .Humor {
   transform: none;
 }
 
+.content.activeHumor .text {
+  transition: all 1s;
+  transform: rotateX(90deg);
+}
+
+/* Editor */
 #btn:active {
   color: rgb(160, 160, 160);
 }
 
-.Editor.activeEditor .tool-bar{
+.Editor.activeEditor .tool-bar {
   z-index: 6;
   top: 0;
 }
+
 .tool-bar {
   display: grid;
   grid-template-columns: repeat(10, 10vw);
@@ -433,7 +463,7 @@ html {
   font-size: 10px;
 }
 
-.output { 
+.output {
   /*schreiben*/
   height: 200px;
   grid-column-start: 4;

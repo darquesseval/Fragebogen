@@ -82,6 +82,7 @@ let editor = document.querySelector(".Editor");
 
 document.getElementById('mFloor').onclick = function() {
   editor.classList.toggle('activeEditor')/*öffnen des Editors*/
+  console.log(document.querySelector(".centerWall").style.width) 
 }
 document.getElementById('button').onclick = function() {
   editor.classList.toggle('activeEditor') /*schliessen des Editors*/
