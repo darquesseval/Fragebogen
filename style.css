@@ -188,13 +188,30 @@ html {
   left: 0;
   top: 0;
   transform-style: preserve-3d;
+  overflow: hidden;
 }
 
 .Moral {
   perspective: 50vw;
   transform: translateY(-30vh) rotateX(-90deg);
 }
-
+.m1FrageL {
+  text-align: left;
+  margin-left: 80px;
+}
+.m1FrageR {
+  text-align: right;
+  transform: translateX(-84vw)
+}
+.m1FrageM {
+  transform: translateX(-13vw) scale(0.95);
+}
+.Fragen {
+  font-size: 6vw;
+  position: absolute;
+  overflow: hidden;
+  top: 31vh;
+}
 .Ehe {
   transform: translateY(-100vh) rotateX(-90deg);
 }
@@ -213,7 +230,6 @@ html {
   height: 100vh;
   text-align: center;
   background-color: rgb(33, 37, 41);
-  background-color: pink;
 }
 
 .leftWall {
@@ -227,8 +243,8 @@ html {
 }
 
 .centerWall {
-  transform: translateZ(-0.5vw);
-  height: 89vh;
+  transform: translateZ(-1.1vw);
+  height: 98vh;
   align-self: center;
 }
 
@@ -262,6 +278,9 @@ html {
   }
 }
 
+.mLine {
+  opacity: 0;
+}
 .mLineL01, .mLineL02 {
   text-align: left;
   animation: infiniteTextLeftWall 60s linear infinite;
