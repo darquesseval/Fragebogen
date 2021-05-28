@@ -12,6 +12,7 @@ for (let btn of buttons) {
     }
   })
 }
+document.getElementById('button').onclick = "setColor('button', '#101010')";
 // document.getElementById("change").onclick = changeColor();
 
 function setColor(btn, color) {

@@ -417,7 +417,6 @@ html {
   flex-flow: wrap;
   list-style: none;
   padding: 0;
-  margin: 1rem;
   overflow: hidden;
   border-radius: 8px;
   grid-column-start: 4;
@@ -427,22 +426,23 @@ html {
 }
 
 .tool--btn {
+  /*Button*/
   display: block;
   border: none;
   padding: .5rem;
   font-size: 10px;
 }
 
-.output {
-  height: 400px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px;
-  margin-top: 1rem;
-  padding: 1rem;
+.output { 
+  /*schreiben*/
+  height: 200px;
   grid-column-start: 4;
   grid-column-end: 7;
   grid-row-start: 5;
-  grid-row-end: 7;
-  background-color: rgb(141, 141, 141);
+  grid-row-end: 6;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
 }
 
 /* mobile */
