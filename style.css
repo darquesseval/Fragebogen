@@ -422,8 +422,8 @@ html {
   border-radius: 8px;
   grid-column-start: 4;
   grid-column-end: 7;
-  grid-row-start: 5;
-  grid-row-end: 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 
 .tool--btn {
@@ -440,8 +440,8 @@ html {
   padding: 1rem;
   grid-column-start: 4;
   grid-column-end: 7;
-  grid-row-start: 6;
-  grid-row-end: 8;
+  grid-row-start: 5;
+  grid-row-end: 7;
   background-color: rgb(141, 141, 141);
 }
 
