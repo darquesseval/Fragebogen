@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-@font-face { font-family: Avenir; src: url('/zz_Fonts/Avenir.ttc'); }
+@font-face { font-family: "Avenir"; src: url('/zz_Fonts/avenir.ttf'); }
 
 body {
   margin: 0;
