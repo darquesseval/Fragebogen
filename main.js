@@ -1,4 +1,8 @@
-//Editor
+$(window).on("load",function(){
+  $(".loader-wrapper").fadeOut("slow");
+  });
+
+  //Editor
 let output = document.getElementById('output');
 let buttons = document.getElementsByClassName('tool--btn');
 for (let btn of buttons) {
@@ -82,7 +86,7 @@ let editor = document.querySelector(".Editor");
 
 document.getElementById('mFloor').onclick = function() {
   editor.classList.toggle('activeEditor')/*öffnen des Editors*/
-  console.log(document.querySelector(".centerWall").style.width) 
+  console.log(document.querySelector(".centerWall").style.width)
 }
 document.getElementById('button').onclick = function() {
   editor.classList.toggle('activeEditor') /*schliessen des Editors*/

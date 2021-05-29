@@ -101,13 +101,13 @@ body {
 }
 
 .text span {
-  font-size: 33vh;
+  font-size: 33.5vh;
   font-weight: 700;
   text-transform: uppercase;
   /*color: rgba(0, 0, 0, 0.425);*/
   display: inline-block;
   transition: all ease 0.5s;
-  transform: translateY(-20%);
+  transform: translateY(-11%);
   pointer-events: none;
 }
 
