@@ -19,7 +19,6 @@ body {
   padding: 0;
 }
 
-
 @keyframes infiniteText {
   0% {
     transform: translateX(0%);
@@ -40,16 +39,19 @@ body {
   overflow: hidden;
   animation: ease;
 }
+
 .txt {
   animation: ease-in;
 }
-.loader-wrapper .dynamic-txt{
+
+.loader-wrapper .dynamic-txt {
   margin-left: 34vw;
   height: 118px;
   line-height: 110px;
   overflow: hidden;
 }
-.dynamic-txt li{
+
+.dynamic-txt li {
   list-style: none;
   font-size: 10vh;
   font-weight: 400;
@@ -58,34 +60,41 @@ body {
   top: 0;
   animation: slide 9s steps(3) infinite;
 }
+
 @keyframes slide {
-  100%{
+  100% {
     top: -360px;
   }
 }
-.dynamic-txt li span{
+
+.dynamic-txt li span {
   position: relative;
   margin: 5px 0;
   line-height: 90px;
 }
-.dynamic-txt li span::after{
+
+.dynamic-txt li span::after {
   content: "";
   position: absolute;
   left: 0;
   height: 100%;
   width: 100%;
-  background: #242f3f; /*Blöcke*/
+  background: #242f3f;
+  /*Blöcke*/
   border-left: 2px solid #242f3f;
   animation: typing 3s steps(10) infinite;
 }
+
 @keyframes typing {
-  40%, 60%{
+  40%, 60% {
     left: calc(100% + 30px);
   }
-  100%{
+
+  100% {
     left: 0;
   }
 }
+
 /*endless text*/
 .text {
   perspective: 500px;
@@ -192,23 +201,24 @@ html {
 }
 
 img {
-  width: 120vw;
+  width: 107vw;
 }
 
-.m1FrageL {
+.m1FrageL img{
+
 }
 
 .m1FrageR {
   text-align: right;
-  transform: translateX(-101vw);
+  transform: translateX(-93.2vw);
 }
 
 .m1FrageM {
-  transform: translateX(-20vw) translateY(-2.5vw);
+  transform: translateX(-15.5vw) translateY(-2.4vw) scale(0.915);
 }
 
 .Fragen {
-transform: scale(0.85);
+  transform: translateY(-1vw);
 }
 
 .Ehe {
@@ -227,7 +237,7 @@ transform: scale(0.85);
   overflow: hidden;
   white-space: nowrap;
   height: 100vh;
-  text-align: center;
+  /* text-align: center; */
   background-color: rgb(33, 37, 41);
 }
 
@@ -243,7 +253,7 @@ transform: scale(0.85);
 
 .centerWall {
   transform: translateZ(-1.1vw);
-  margin-top: 2.8vw;
+  margin-top: 2.9vw;
   align-self: center;
 }
 
@@ -256,7 +266,7 @@ transform: scale(0.85);
   text-align: center;
   text-transform: uppercase;
   font-size: 15vw;
-  height: 22vw;
+  height: 23vw;
   width: 85vw;
   margin: auto;
   transform: translateY(75vh) rotateX(110deg);
@@ -314,14 +324,15 @@ transform: scale(0.85);
   transition: all 1s;
   transform: none;
 }
+
 .mLineR01,
 .mLineR02,
 .mLineM01,
 .mLineM02,
 .mLineL01,
- .mLineL02 {
-transform: translateY(-150vh) translateX(-50vw) rotateZ(-20deg);
-animation-play-state: paused;
+.mLineL02 {
+  transform: translateY(-150vh) translateX(-50vw) rotateZ(-20deg);
+  animation-play-state: paused;
 }
 
 .Moral.activeAnswers .mLineR01,
@@ -336,19 +347,19 @@ animation-play-state: paused;
   transform: none;
 }
 
-.Moral.activeAnswers .mLineL01,.Moral.activeAnswers .mLineL02 {
+.Moral.activeAnswers .mLineL01, .Moral.activeAnswers .mLineL02 {
   text-align: left;
   animation-play-state: running;
   animation: infiniteTextLeftWall 60s linear infinite;
 }
 
-.Moral.activeAnswers .mLineM01,.Moral.activeAnswers .mLineM02 {
+.Moral.activeAnswers .mLineM01, .Moral.activeAnswers .mLineM02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextCenterWall 60s linear infinite;
 }
 
-.Moral.activeAnswers .mLineR01,.Moral.activeAnswers .mLineR02 {
+.Moral.activeAnswers .mLineR01, .Moral.activeAnswers .mLineR02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextRightWall 60s linear infinite;
@@ -381,7 +392,7 @@ animation-play-state: paused;
 
 .content.activeMoral .text {
   transition: all 1s;
-  transform: rotateX(90deg) translateY(-50vh) translateZ(-50vh) ;
+  transform: rotateX(90deg) translateY(-50vh) translateZ(-50vh);
 }
 
 /* activeEhe */
@@ -456,6 +467,7 @@ animation-play-state: paused;
   grid-row-start: 5;
   grid-row-end: 6;
 }
+
 .submittedText {
   border-radius: 20px;
   border: none;
@@ -463,5 +475,6 @@ animation-play-state: paused;
   font-family: 'Avenir';
   font-size: 20px;
 }
+
 /* mobile */
 /*@media all and (max-width:600px) {}

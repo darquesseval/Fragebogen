@@ -85,13 +85,29 @@ let humor = document.querySelector(".Humor");
 let editor = document.querySelector(".Editor");
 
 document.getElementById('mFloor').onclick = function() {
-  editor.classList.toggle('activeEditor')/*öffnen des Editors*/
+  editor.classList.toggle('activeEditor');/*öffnen des Editors*/
   console.log(document.querySelector(".centerWall").style.width)
 }
 document.getElementById('button').onclick = function() {
-  editor.classList.toggle('activeEditor') /*schliessen des Editors*/
-  moral.classList.toggle('activeAnswers') /*transition*/
+  editor.classList.toggle('activeEditor'); /*schliessen des Editors*/
+  moral.classList.toggle('activeAnswers'); /*transition*/
 }
+
+let mlW = document.getElementById("mleftWall");
+let mrW = document.getElementById("mrightWall");
+let mcW = document.getElementById("mcenterWall");
+
+let deg = -2000/ window.innerWidth;
+mcW.style.transform = "translateZ(" + deg + "vw)";
+
+//responsive
+window.addEventListener('resize', () => {
+  let deg = -2000/ window.innerWidth;
+mcW.style.transform = "translateZ(" + deg + "vw)";
+console.log(deg);
+})
+
+
 
 // document.getElementById('tFragen').onclick = function() {
 //   tod.classList.toggle('activeAnswers')
