@@ -41,7 +41,6 @@ body {
   animation: ease;
 }
 .txt {
-  font-family: 'Avenir';
   animation: ease-in;
 }
 .loader-wrapper .dynamic-txt{
