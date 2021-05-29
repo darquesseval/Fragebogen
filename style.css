@@ -30,6 +30,63 @@ body {
   }
 }
 
+/*Loading Screen*/
+.loader-wrapper {
+  display: flex;
+  background-color: #242f3f;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+  animation: ease;
+}
+.txt {
+  font-family: 'Avenir';
+  animation: ease-in;
+}
+.loader-wrapper .dynamic-txt{
+  margin-left: 34vw;
+  height: 118px;
+  line-height: 110px;
+  overflow: hidden;
+}
+.dynamic-txt li{
+  list-style: none;
+  font-size: 10vh;
+  font-weight: 400;
+  color: blue;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(3) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txt li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txt li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #242f3f; /*Blöcke*/
+  border-left: 2px solid #242f3f;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
 /*endless text*/
 .text {
   perspective: 500px;
