@@ -5,6 +5,8 @@
 @font-face {
   font-family: "Avenir";
   src: url('/zz_Fonts/avenir.ttf');
+  font-family: "AvenirLTStd-Black";
+  src: url('/zz_Fonts/AvenirLTStd-Black.otf');
 }
 
 body {
@@ -36,7 +38,7 @@ body {
   height: 30px;
   position: relative;
   border: 4px solid #Fff;
-  animation: loader 2s infinite ease;
+  animation: loader 20s infinite ease;
 }
 
 .loader-inner {
@@ -44,7 +46,7 @@ body {
   display: inline-block;
   width: 100%;
   background-color: #fff;
-  animation: loader-inner 2s infinite ease-in;
+  animation: loader-inner 20s infinite ease-in;
 }
 
 @keyframes loader {
@@ -110,8 +112,8 @@ body {
   height: 100%;
   top: 0;
   overflow: hidden;
-  font-family: 'Avenir';
-  font-weight: 1000;
+  font-family: 'AvenirLTStd-Black';
+  font-weight: 100;
   background-color: rgb(33, 37, 41);
 }
 
@@ -453,27 +455,30 @@ animation-play-state: paused;
   grid-column-end: 7;
   grid-row-start: 4;
   grid-row-end: 5;
+  position: relative;
 }
 
+/*Button*/
 .tool--btn {
-  /*Button*/
   display: block;
   border: none;
   padding: .5rem;
   font-size: 10px;
 }
 
+/*schreiben*/
 .output {
-  /*schreiben*/
-  height: 200px;
   grid-column-start: 4;
   grid-column-end: 7;
   grid-row-start: 5;
   grid-row-end: 6;
-  background-color: white;
-  color: black;
-  border-radius: 25px;
 }
-
+.submittedText {
+  border-radius: 20px;
+  border: none;
+  resize: none;
+  font-family: 'Avenir';
+  font-size: 20px;
+}
 /* mobile */
 /*@media all and (max-width:600px) {}

@@ -104,6 +104,44 @@ var t4_mesh;
 var t4_parent;
 
 
+//Loading Screen
+//var loadingScreen = {
+//  scene: new THREE.Scene(),
+//  camera: new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 0.1,1000),position.z = 5,
+//  box: new THREE.Mesh(
+//    new THREE.BoxGeometry(1, 1, 1),
+//    new THREE.MeshLambertMaterial({color: 0x00ff00}),
+// new THREE.Mesh(geometry, material)
+//  )
+//};
+//
+//        var loadingManager = null;
+//        var RESOURCES_LOADED = false;
+//        mesh.position.set(2,2,-2);
+//
+//       scene.add(mesh);
+//        var light = new THREE.PointLight(0xFFFFFF, 1, 500)
+//        light.position.set(10,0,25);
+//        scene.add(light);
+//
+//        function animate(){
+
+//          // This block runs while resources are loading.
+// //         if( RESOURCES_LOADED == false ){
+//           requestAnimationFrame(animate);
+//		        if( loadingScreen.box.position.x < -10 ) loadingScreen.box.position.x = 10;
+//		        loadingScreen.box.position.y = Math.sin(loadingScreen.box.position.x);
+//
+//
+//         requestAnimationFrame(animate);
+
+//            //* Animationsbewegung
+//           mesh.rotation.x += 0.01;
+//           mesh.rotation.y += 0.01;
+//           mesh.rotation.z += 0.01;
+//
+//       }
+
 
 //Editor
 let output = document.getElementById('output');

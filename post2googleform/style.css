@@ -1,0 +1,34 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 2rem;
+  background-color: #8b8bec;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 1rem;
+  font-size: 4rem;
+}
+button {
+  font-size: 5rem;
+  padding:1rem;
+}
