@@ -320,7 +320,7 @@ img {
 .Moral.activeAnswers .Fragen {
   transition: all 1s;
   transition-delay: 1s;
-  transform: translateY(-150vh) translateX(-50vw) rotateZ(-20deg);
+  transform: translateY(-180vh) translateX(-50vw) rotateZ(-20deg);
 }
 
 .Moral.activeAnswers .mLine {
