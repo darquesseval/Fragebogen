@@ -182,7 +182,6 @@ html {
   font-size: 2rem;
   font-family: 'Avenir';
   font-weight: bolder;
-
 }
 
 .Moral, .Ehe, .Humor, .Tod {
@@ -222,7 +221,6 @@ img {
 }
 
 /* Nr1 */
-
 .m1FrageL {
   transform: none;
 }
@@ -237,7 +235,6 @@ img {
 
 .m2FrageL {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-
 }
 
 .m2FrageR {
@@ -247,7 +244,6 @@ img {
 .m2FrageM {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
-
 
 /* Nr2 */
 .Fragen.2 .m1FrageL {
@@ -262,7 +258,7 @@ img {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.Fragen.2 .m2FrageL{
+.Fragen.2 .m2FrageL {
   transform: none;
 }
 
@@ -279,6 +275,9 @@ img {
   white-space: nowrap;
   height: 111vw;
   background-color: rgb(33, 37, 41);
+  border-width: thin;
+  border-color: black;
+  border-style: solid;
 }
 
 .leftWall {
@@ -297,6 +296,7 @@ img {
   transform: translateZ(-1.1vw);
   width: 108vw;
   margin-top: -30vw;
+  z-index: -1;
 }
 
 .floor {
@@ -304,7 +304,7 @@ img {
   transform: translateY(-30vh) rotateX(-90deg);
 }
 
-.content.activeMoral .floor{
+.content.activeMoral .floor {
   transition: all 1.5s;
   transform: none;
 }
@@ -315,12 +315,15 @@ img {
   font-family: 'AvenirLTStd-Black';
   font-size: 11.5vw;
   height: 20vw;
-  width: 81vw;
+  width: 81.2vw;
   margin: auto;
   transform: translateY(75vh) translateZ(3vw) rotateX(100deg);
   z-index: 5;
-  background-color: black;
-  color: white;
+  background-color: rgb(33, 37, 41);
+  color: black;
+  border-width: thin;
+  border-color: black;
+  border-style: solid;
 }
 
 .floortext:hover {
@@ -368,10 +371,9 @@ img {
 }
 
 .Moral.activeAnswers .mLine {
-  transition-delay: 2s;
+  transition-delay: 2.5s;
   transition: all 1s;
   transform: translateY(-108vw);
-
 }
 
 .mLineR01,
@@ -391,7 +393,7 @@ img {
 .Moral.activeAnswers .mLineM02,
 .Moral.activeAnswers .mLineL01,
 .Moral.activeAnswers .mLineL02 {
-  transition-delay: 2s;
+  transition-delay: 2.5s;
   transition: all 1.5s;
   text-align: left;
   transform: none;
