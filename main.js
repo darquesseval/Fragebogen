@@ -94,29 +94,27 @@ document.getElementById('button').onclick = function() {
   moral.classList.toggle('activeAnswers'); /*transition Antworten werden angezeigt*/
 }
 
-let mlW = document.getElementById("mleftWall");
-let mrW = document.getElementById("mrightWall");
 let mcW = document.getElementById("mcenterWall");
 
-let deg = -2000/ window.innerWidth;
-mcW.style.transform = "translateZ(" + deg + "vw)";
+let val = -2000/ window.innerWidth;
+mcW.style.transform = "translateZ(" + val + "vw)";
 
 //responsive
 window.addEventListener('resize', () => {
   let deg = -2000/ window.innerWidth;
-mcW.style.transform = "translateZ(" + deg + "vw)";
-console.log(deg);
+mcW.style.transform = "translateZ(" + val + "vw)";
+console.log(val);
 })
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
-  // wenn button gedrückt dann post direkt ins google form
+  // wenn button gedrückt dann post direkt ins google form –> ist jetzt auf .tool weil es eine vorhandene klasse braucht
 
-  document.querySelector(".clickme").addEventListener("click", function () {
+  document.querySelector(".tool").addEventListener("click", function () {
       let text = document.querySelector(".submittedText").value; // text aus der textarea
       let formID = "17p_s4p9BHLjfljhbddS7kti0n0FVfFnPvzG3r_05EmU"; // formID vom google form dokument
       let url = 'https://docs.google.com/forms/d/'+formID+'/formResponse'; // url für den post request
-      // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form  
+      // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form
       let data = {
           'entry.329540547': text
       }
@@ -134,11 +132,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
           .then(data => console.log(data));
   })
 
-  /* 
+  /*
      ---------------------------------------------------------------
   */
 
-  /* Antworten from Spreadsheet holen 
+  /* Antworten from Spreadsheet holen
      das spreadsheet als csv sharen (publish to web) un den link unten ersetzen
   */
   let url2 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRl6yC1ApBKa7kxh1aW_G7oOHBREusfC-kiojH9TqWzOgj52QL-g6MxeRBhs-zvxM7G3l3qQy9Vvq9K/pub?key=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1E4yBm_nIi4ELKfCbawA3KBvrdZp69dW24ozW8hvj-zI&output=csv&gid=186008803&single=true";

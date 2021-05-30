@@ -174,7 +174,7 @@ html {
 }
 
 .content {
-  transition: all 1s;
+  transition: all 1.5s;
 }
 
 .walls {
@@ -182,13 +182,13 @@ html {
   font-size: 2rem;
   font-family: 'Avenir';
   font-weight: bolder;
-  position: relative;
+
 }
 
 .Moral, .Ehe, .Humor, .Tod {
   display: flex;
   width: 100vw;
-  transition: all 1s;
+  transition: all 1.5s;
   position: absolute;
   left: 0;
   top: 0;
@@ -199,27 +199,6 @@ html {
 .Moral {
   perspective: 50vw;
   transform: translateY(-30vh) rotateX(-90deg);
-}
-
-img {
-  width: 107vw;
-}
-
-.m1FrageL img{
-
-}
-
-.m1FrageR {
-  text-align: right;
-  transform: translateX(-93.2vw);
-}
-
-.m1FrageM {
-  transform: translateX(-15.5vw) translateY(-2.4vw) scale(0.915);
-}
-
-.Fragen {
-  transform: translateY(-1vw);
 }
 
 .Ehe {
@@ -234,31 +213,90 @@ img {
   transform: translateY(-100vh) rotateX(-90deg);
 }
 
+img {
+  width: 107vw;
+}
+
+.Fragen {
+  transform: translateY(28vw) translateX(-0.5vw);
+}
+
+/* Nr1 */
+
+.m1FrageL {
+  transform: none;
+}
+
+.m1FrageR {
+  transform: translateX(-93.3vw);
+}
+
+.m1FrageM {
+  transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
+}
+
+.m2FrageL {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+
+}
+
+.m2FrageR {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.m2FrageM {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+
+/* Nr2 */
+.Fragen.2 .m1FrageL {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.Fragen.2 .m1FrageR {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.Fragen.2 .m1FrageM {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.Fragen.2 .m2FrageL{
+  transform: none;
+}
+
+.Fragen.2 .m2FrageR {
+  transform: translateX(-93.3vw);
+}
+
+.Fragen.2 .m2FrageM {
+  transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
+}
+
 .leftWall, .centerWall, .rightWall {
   overflow: hidden;
   white-space: nowrap;
-  height: 110vh;
-  /* text-align: center; */
+  height: 111vw;
   background-color: rgb(33, 37, 41);
 }
 
 .leftWall {
   width: 20vw;
   transform: rotateY(60deg);
-  margin-top: -7vh;
+  margin-top: -30vw;
 }
 
 .rightWall {
   width: 20vw;
   transform: rotateY(-60deg);
-  margin-top: -7vh;
+  margin-top: -30vw;
 }
 
 .centerWall {
   transform: translateZ(-1.1vw);
-  margin-top: 4.9vh;
-  align-self: center;
-  margin-top: -1.5vh;
+  width: 108vw;
+  margin-top: -30vw;
 }
 
 .floor {
@@ -266,15 +304,20 @@ img {
   transform: translateY(-30vh) rotateX(-90deg);
 }
 
+.content.activeMoral .floor{
+  transition: all 1.5s;
+  transform: none;
+}
+
 .floortext {
   text-align: center;
   text-transform: uppercase;
   font-family: 'AvenirLTStd-Black';
-  font-size: 12vw;
-  height: 23vw;
-  width: 85vw;
+  font-size: 11.5vw;
+  height: 20vw;
+  width: 81vw;
   margin: auto;
-  transform: translateY(75vh) rotateX(110deg);
+  transform: translateY(75vh) translateZ(3vw) rotateX(100deg);
   z-index: 5;
   background-color: black;
   color: white;
@@ -327,7 +370,8 @@ img {
 .Moral.activeAnswers .mLine {
   transition-delay: 2s;
   transition: all 1s;
-  transform: none;
+  transform: translateY(-108vw);
+
 }
 
 .mLineR01,
@@ -338,6 +382,7 @@ img {
 .mLineL02 {
   transform: translateY(-150vh) translateX(-50vw) rotateZ(-20deg);
   animation-play-state: paused;
+  margin-top: -170vw;
 }
 
 .Moral.activeAnswers .mLineR01,
@@ -347,7 +392,7 @@ img {
 .Moral.activeAnswers .mLineL01,
 .Moral.activeAnswers .mLineL02 {
   transition-delay: 2s;
-  transition: all 1s;
+  transition: all 1.5s;
   text-align: left;
   transform: none;
 }
@@ -356,18 +401,21 @@ img {
   text-align: left;
   animation-play-state: running;
   animation: infiniteTextLeftWall 60s linear infinite;
+  margin-top: -70vw;
 }
 
 .Moral.activeAnswers .mLineM01, .Moral.activeAnswers .mLineM02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextCenterWall 60s linear infinite;
+  margin-top: -70vw;
 }
 
 .Moral.activeAnswers .mLineR01, .Moral.activeAnswers .mLineR02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextRightWall 60s linear infinite;
+  margin-top: -70vw;
 }
 
 .Moral.activeAnswers div:nth-child(odd) {
@@ -380,24 +428,23 @@ img {
 }
 
 .content.activeTod .text {
-  transition: all 1s;
+  transition: all 1.5s;
   transform: rotateX(90deg);
 }
 
 /* activeMoral */
 .content.activeMoral .Moral {
-  transform: none;
-  transform: translateZ(-4vw);
+  transform: translateZ(-4vw) translateX(0vw);
 }
 
 .content.activeMoral .floor {
-  transition: all 1s;
+  transition: all 1.5s;
   transform: none;
 }
 
 .content.activeMoral .text {
-  transition: all 1s;
-  transform: rotateX(90deg) translateY(-50vh) translateZ(-50vh);
+  transition: all 1.5s;
+  transform: translateY(100vh) rotateX(-90deg);
 }
 
 /* activeEhe */
@@ -406,7 +453,7 @@ img {
 }
 
 .content.activeEhe .text {
-  transition: all 1s;
+  transition: all 1.5s;
   transform: rotateX(90deg);
 }
 
@@ -416,7 +463,7 @@ img {
 }
 
 .content.activeHumor .text {
-  transition: all 1s;
+  transition: all 1.5s;
   transform: rotateX(90deg);
 }
 
@@ -437,7 +484,7 @@ img {
   border-radius: 1px;
   grid-gap: 10px;
   width: 100%;
-  transition: all 1s;
+  transition: all 1.5s;
   position: absolute;
   top: 100vh;
   left: 0;
