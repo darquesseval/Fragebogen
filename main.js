@@ -1,5 +1,6 @@
-$(window).on("load",function(){
-  $(".loader-wrapper").fadeOut("slow");
+$(window).ready(function(){
+  $(".loader-wrapper").fadeOut("1000");
+  console.log("document loaded!");
   });
 
   //Editor

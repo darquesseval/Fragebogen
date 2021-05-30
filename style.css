@@ -31,8 +31,9 @@ body {
 
 /*Loading Screen*/
 .loader-wrapper {
-  display: flex;
-  background-color: #242f3f;
+  display: block;
+  position: fixed;
+  background-color: #242f3f no-repeat center center;
   height: 100%;
   width: 100%;
   align-items: center;
