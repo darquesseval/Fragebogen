@@ -47,7 +47,7 @@ document.getElementById('line4').onclick = function() {
 }
 
 let mInput01 = "Hier etwas Platzhaltertext, um zu schauen, wie das scrollen so läuft.";
-let mInput02 = "Hier werden irgendswann Antworten stehen. Ganz viele. Wiel wir eine mega coole Website aufgebaut haben.";
+let mInput02 = "Hier werden irgendswann Antworten stehen. Ganz viele. Weil wir eine mega coole Website aufgebaut haben.";
 let mInput03 = "And more lines with I think a whole lot more text I'd say.";
 let mInput04 = "what about this";
 let mInput05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
@@ -90,7 +90,7 @@ document.getElementById('mFloor').onclick = function() {
 }
 document.getElementById('button').onclick = function() {
   editor.classList.toggle('activeEditor'); /*schliessen des Editors*/
-  moral.classList.toggle('activeAnswers'); /*transition*/
+  moral.classList.toggle('activeAnswers'); /*transition Antworten werden angezeigt*/
 }
 
 let mlW = document.getElementById("mleftWall");
