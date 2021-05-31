@@ -258,15 +258,15 @@ img {
 
 /* Nr1 Tod*/
 .t1FrageL {
-  transform: none;
+  transform: translateX(0.5vw) translateY(-7vh);
 }
 
 .t1FrageR {
-  transform: translateX(-93.3vw);
+  transform: translateX(-94.3vw) translateY(-7vh);
 }
 
 .t1FrageM {
-  transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
+  transform: translateX(-15.5vw) translateY(-4vh) scale(0.9);
 }
 
 .t2FrageL {
@@ -278,6 +278,56 @@ img {
 }
 
 .t2FrageM {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+/* Nr1 Ehe*/
+.e1FrageL {
+  transform: none;
+}
+
+.e1FrageR {
+  transform: translateX(-93.3vw);
+}
+
+.e1FrageM {
+  transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
+}
+
+.e2FrageL {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.e2FrageR {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.e2FrageM {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+/* Nr1 Humor*/
+.h1FrageL {
+  transform: none;
+}
+
+.h1FrageR {
+  transform: translateX(-93.3vw);
+}
+
+.h1FrageM {
+  transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
+}
+
+.h2FrageL {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.h2FrageR {
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+}
+
+.h2FrageM {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
