@@ -47,38 +47,6 @@ document.getElementById('line4').onclick = function() {
   content.classList.toggle('activeHumor')
 }
 
-let mInput01 = "Hier etwas Platzhaltertext, um zu schauen, wie das scrollen so läuft.";
-let mInput02 = "Hier werden irgendswann Antworten stehen. Ganz viele. Weil wir eine mega coole Website aufgebaut haben.";
-let mInput03 = "And more lines with I think a whole lot more text I'd say.";
-let mInput04 = "what about this";
-let mInput05 = "Wieso schreibe ich eigentlich alles auf Enlgisch, wenn es am Ende sowieso deutsch wird";
-let mInput06 = "Und wie genau schreibt man eigentich sowieso";
-
-let m01;
-let m02;
-let m03;
-
-class Antwort {
-  input(klasseL, klasseM, klasseR, string) {
-    this.klasseL = klasseL;
-    this.klasseM = klasseM;
-    this.klasseR = klasseR;
-    this.string = string;
-    document.querySelector(this.klasseL).innerHTML = this.string;
-    document.querySelector(this.klasseM).innerHTML = this.string;
-    document.querySelector(this.klasseR).innerHTML = this.string;
-  }
-}
-
-
-let mLine01 = new Antwort;
-mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", mInput01);
-
-let mLine02 = new Antwort;
-mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", mInput02);
-
-
-
 let tod = document.querySelector(".Tod");
 let moral = document.querySelector(".Moral");
 let ehe = document.querySelector(".Ehe");
@@ -106,12 +74,14 @@ mcW.style.transform = "translateZ(" + val + "vw)";
 console.log(val);
 })
 
+let string = ["is it working? more text more text more text", "try try try try try102938"]
+
 window.addEventListener('DOMContentLoaded', (event) => {
 
   // wenn button gedrückt dann post direkt ins google form –> ist jetzt auf .tool weil es eine vorhandene klasse braucht
 
-  document.querySelector(".tool").addEventListener("click", function () {
-      let text = document.querySelector(".output").value; // text aus der textarea
+  document.querySelector(".tool--speichern").addEventListener("click", function () { //.tool muss noch ersetzt werden
+      let text = document.querySelector(".submittedText").value; // text aus der textarea
       let formID = "17p_s4p9BHLjfljhbddS7kti0n0FVfFnPvzG3r_05EmU"; // formID vom google form dokument
       let url = 'https://docs.google.com/forms/d/'+formID+'/formResponse'; // url für den post request
       // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form
@@ -157,6 +127,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
       .catch(err => console.log(err))
 
 });
+
+let m01;
+let m02;
+let m03;
+
+class Antwort {
+  input(klasseL, klasseM, klasseR, string) {
+    this.klasseL = klasseL;
+    this.klasseM = klasseM;
+    this.klasseR = klasseR;
+    this.string = string;
+    document.querySelector(this.klasseL).innerHTML = this.string;
+    document.querySelector(this.klasseM).innerHTML = this.string;
+    document.querySelector(this.klasseR).innerHTML = this.string;
+  }
+}
+
+let mLine01 = new Antwort;
+mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", string[1]);
+
+let mLine02 = new Antwort;
+mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", string[2]);
 
 
 
