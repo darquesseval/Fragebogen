@@ -76,6 +76,8 @@ console.log(val);
 
 let string = ["is it working? more text more text more text", "try try try try try102938"]
 
+
+//Gordans Input vom Server
 window.addEventListener('DOMContentLoaded', (event) => {
 
   // wenn button gedrückt dann post direkt ins google form –> ist jetzt auf .tool weil es eine vorhandene klasse braucht

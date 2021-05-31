@@ -544,7 +544,7 @@ img {
 
 /* Editor */
 #btn:active {
-  color: rgb(160, 160, 160);
+  color: rgb(182, 47, 47);
 }
 
 .Editor.activeEditor .tool-bar {
@@ -578,6 +578,9 @@ img {
   grid-row-end: 6;
   position: relative;
 }
+.button:focus{
+  background-color: blue;
+}
 
 /*Button*/
 .tool--btn {
@@ -587,12 +590,18 @@ img {
   font-size: 10px;
 }
 .tool--speichern {
-  height: 2vh;
-  width: 2vw;
-  grid-column-start: 6;
-  grid-column-end: 7;
-  grid-row-start: 8;
-  grid-row-end: 9;
+  height: 4vh;
+  width: 6vw;
+  justify-self: end; /*horizontal*/
+  align-self: flex-end;
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  background-color: rgb(116, 116, 116);
+  border: none;
+  border-radius: 20px;
+  font-size: 1.8vh;
 }
 
 /*schreiben*/
