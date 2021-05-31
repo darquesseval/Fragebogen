@@ -88,7 +88,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
       let url = 'https://docs.google.com/forms/d/'+formID+'/formResponse'; // url für den post request
       // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form
       let data = {
-          'entry.2055826422': text
+          'entry.2055826422': text 
+          //entry code findet man im Inspector -> hilfreiches video https://www.youtube.com/watch?v=LCPY0JCN2SQ 
+          //und auch https://groups.google.com/g/tasker/c/NNFP9CgfWBo?pli=1
       }
       var queryString = Object.keys(data).map(key => key + '=' + data[key]).join('&'); // don't touch this!
 
