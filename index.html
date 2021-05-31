@@ -85,10 +85,11 @@
 
 <div class="Editor">
   <div class="tool-bar">
+    
+    <div class="output" contenteditable="true">
+      <textarea class="submittedText" rows="12" cols="95"></textarea>
+    </div>
     <ul class="tool-list">
-
-      <!--Button-->
-      <input type="button" id="button" value="speichern" style="color:rgb(0, 0, 0)" onclick="setColor('button', '#101010')" ; />
 
       <li class="tool">
         <button type="button" data-command="bold" class="tool--btn">
@@ -112,13 +113,14 @@
       </li>
 
     </ul>
-
-    <div class="output" contenteditable="true">
-      <textarea class="submittedText" rows="12" cols="95"></textarea>
-    </div>
-
-  </div>
+<!--Button-->
+<button type="button" id="button" value="speichern" class="tool--speichern" style="color:rgb(0, 0, 0)" onclick="setColor('button', '#101010')" ; />
+speichern 
+  </button>
+</div>
+  
       </div>
+
 
 
       <div class="Ehe">

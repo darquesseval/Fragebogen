@@ -193,23 +193,8 @@ html {
   top: 0;
   transform-style: preserve-3d;
   overflow: hidden;
-}
-
-.Moral {
   perspective: 50vw;
   transform: translateY(-30vh) rotateX(-90deg);
-}
-
-.Ehe {
-  transform: translateY(-100vh) rotateX(-90deg);
-}
-
-.Tod {
-  transform: translateY(-100vh) rotateX(-90deg);
-}
-
-.Humor {
-  transform: translateY(-100vh) rotateX(-90deg);
 }
 
 img {
@@ -501,8 +486,8 @@ img {
   border-radius: 8px;
   grid-column-start: 4;
   grid-column-end: 7;
-  grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
   position: relative;
 }
 
@@ -512,6 +497,14 @@ img {
   border: none;
   padding: .5rem;
   font-size: 10px;
+}
+.tool--speichern {
+  height: 2vh;
+  width: 2vw;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 8;
+  grid-row-end: 9;
 }
 
 /*schreiben*/
