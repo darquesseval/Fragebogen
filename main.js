@@ -111,7 +111,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   // wenn button gedrückt dann post direkt ins google form –> ist jetzt auf .tool weil es eine vorhandene klasse braucht
 
   document.querySelector(".tool").addEventListener("click", function () {
-      let text = document.querySelector(".submittedText").value; // text aus der textarea
+      let text = document.querySelector(".output").value; // text aus der textarea
       let formID = "17p_s4p9BHLjfljhbddS7kti0n0FVfFnPvzG3r_05EmU"; // formID vom google form dokument
       let url = 'https://docs.google.com/forms/d/'+formID+'/formResponse'; // url für den post request
       // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form
@@ -131,7 +131,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
           }).then(response => response)
           .then(data => console.log(data));
   })
-
   /*
      ---------------------------------------------------------------
   */
@@ -139,7 +138,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   /* Antworten from Spreadsheet holen
      das spreadsheet als csv sharen (publish to web) un den link unten ersetzen
   */
-  let url2 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRl6yC1ApBKa7kxh1aW_G7oOHBREusfC-kiojH9TqWzOgj52QL-g6MxeRBhs-zvxM7G3l3qQy9Vvq9K/pub?key=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1E4yBm_nIi4ELKfCbawA3KBvrdZp69dW24ozW8hvj-zI&output=csv&gid=186008803&single=true";
+  let url2 = "https://docs.google.com/spreadsheets/d/1UOeqADgY9YVOG0J6gQ5MwL3j5o-s2ndmQLTKGLJn7MY/edit?resourcekey#gid=218525999";
 
   const response = fetch(url2)
       .then(response => response.text())
@@ -152,7 +151,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
               let node = document.createElement("LI"); // Create a <li> node
               let textnode = document.createTextNode(antwort); // Create a text node
               node.appendChild(textnode);
-              document.querySelector(".antworten").append(node);
+              document.querySelector(".mLine").append(node);
           });
       })
       .catch(err => console.log(err))
