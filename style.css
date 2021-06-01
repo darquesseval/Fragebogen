@@ -437,13 +437,13 @@ img {
   }
 }
 
-.Moral.activeAnswers .Fragen {
+.content.activeAnswers .Fragen {
   transition: all 1s;
   transition-delay: 1s;
   transform: translateY(-180vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.Moral.activeAnswers .mLine {
+.content.activeAnswers .mLine {
   transition-delay: 2.5s;
   transition: all 1s;
   transform: translateY(-108vw);
@@ -460,40 +460,40 @@ img {
   margin-top: -170vw;
 }
 
-.Moral.activeAnswers .mLineR01,
-.Moral.activeAnswers .mLineR02,
-.Moral.activeAnswers .mLineM01,
-.Moral.activeAnswers .mLineM02,
-.Moral.activeAnswers .mLineL01,
-.Moral.activeAnswers .mLineL02 {
+.content.activeAnswers .mLineR01,
+.content.activeAnswers .mLineR02,
+.content.activeAnswers .mLineM01,
+.content.activeAnswers .mLineM02,
+.content.activeAnswers .mLineL01,
+.content.activeAnswers .mLineL02 {
   transition-delay: 2.5s;
   transition: all 1.5s;
   text-align: left;
   transform: none;
 }
 
-.Moral.activeAnswers .mLineL01, .Moral.activeAnswers .mLineL02 {
+.content.activeAnswers .mLineL01, .Moral.activeAnswers .mLineL02 {
   text-align: left;
   animation-play-state: running;
   animation: infiniteTextLeftWall 60s linear infinite;
   margin-top: -70vw;
 }
 
-.Moral.activeAnswers .mLineM01, .Moral.activeAnswers .mLineM02 {
+.content.activeAnswers .mLineM01, .Moral.activeAnswers .mLineM02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextCenterWall 60s linear infinite;
   margin-top: -70vw;
 }
 
-.Moral.activeAnswers .mLineR01, .Moral.activeAnswers .mLineR02 {
+.content.activeAnswers .mLineR01, .Moral.activeAnswers .mLineR02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextRightWall 60s linear infinite;
   margin-top: -70vw;
 }
 
-.Moral.activeAnswers div:nth-child(odd) {
+.content.activeAnswers div:nth-child(odd) {
   animation-direction: reverse;
 }
 
