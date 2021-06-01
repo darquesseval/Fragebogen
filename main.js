@@ -65,7 +65,10 @@ document.getElementById('Floor').onclick = function() {
 
 document.getElementById('button').onclick = function() {
   editor.classList.toggle('activeEditor'); /*schliessen des Editors*/
-  moral.classList.toggle('activeAnswers'); /*transition Antworten werden angezeigt*/
+  tod.classList.toggle('activeAnswers');
+  moral.classList.toggle('activeAnswers');
+  ehe.classList.toggle('activeAnswers');
+  humor.classList.toggle('activeAnswers'); /*transition Antworten werden angezeigt*/
   if (weiter == true) {
     weiter = false;
   } else if (weiter == false) {
