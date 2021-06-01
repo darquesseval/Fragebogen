@@ -1,11 +1,11 @@
-$(window).ready(function(){
+$(window).ready(function() {
   $(".loader-wrapper").fadeOut("1000");
   console.log("document loaded!");
-  });
+});
 
-  //Editor
+//Editor
 let output = document.getElementById('output');
-let buttons = document.getElementsByClassName('tool--btn');
+let buttons = document.getElementsByClassName('.tool--btn');
 for (let btn of buttons) {
   btn.addEventListener('click', () => {
     let cmd = btn.dataset['command'];
@@ -53,25 +53,44 @@ let ehe = document.querySelector(".Ehe");
 let humor = document.querySelector(".Humor");
 let editor = document.querySelector(".Editor");
 
-document.getElementById('mFloor').onclick = function() {
-  editor.classList.toggle('activeEditor');/*öffnen des Editors*/
+let weiter = false;
+var floorstate = "Antworten";
+
+document.getElementById("Floor").innerHTML = floorstate;
+
+document.getElementById('Floor').onclick = function() {
+  editor.classList.toggle('activeEditor'); /*öffnen des Editors*/
   console.log(document.querySelector(".centerWall").style.width)
 }
+
 document.getElementById('button').onclick = function() {
   editor.classList.toggle('activeEditor'); /*schliessen des Editors*/
   moral.classList.toggle('activeAnswers'); /*transition Antworten werden angezeigt*/
+  if (weiter == true) {
+    weiter = false;
+  } else if (weiter == false) {
+    weiter = true;
+  }
+  if (weiter == true) {
+    var floorstate = "Weiter";
+    document.getElementById("Floor").innerHTML = floorstate;
+  } else {
+    var floorstate = "Antworten";
+    document.getElementById("Floor").innerHTML = floorstate;
+  }
 }
+
 
 let mcW = document.getElementById("mcenterWall");
 
-let val = -2000/ window.innerWidth;
+let val = -2000 / window.innerWidth;
 mcW.style.transform = "translateZ(" + val + "vw)";
 
 //responsive
 window.addEventListener('resize', () => {
-  let deg = -2000/ window.innerWidth;
-mcW.style.transform = "translateZ(" + val + "vw)";
-console.log(val);
+  let deg = -2000 / window.innerWidth;
+  mcW.style.transform = "translateZ(" + val + "vw)";
+  console.log(val);
 })
 
 let string = ["is it working? more text more text more text", "try try try try try102938"]
@@ -82,28 +101,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   // wenn button gedrückt dann post direkt ins google form –> ist jetzt auf .tool weil es eine vorhandene klasse braucht
 
-  document.querySelector(".tool--speichern").addEventListener("click", function () { //.tool muss noch ersetzt werden
-      let text = document.querySelector(".submittedText").value; // text aus der textarea
-      let formID = "17p_s4p9BHLjfljhbddS7kti0n0FVfFnPvzG3r_05EmU"; // formID vom google form dokument
-      let url = 'https://docs.google.com/forms/d/'+formID+'/formResponse'; // url für den post request
-      // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form
-      let data = {
-          'entry.2055826422': text 
-          //entry code findet man im Inspector -> hilfreiches video https://www.youtube.com/watch?v=LCPY0JCN2SQ 
-          //und auch https://groups.google.com/g/tasker/c/NNFP9CgfWBo?pli=1
-      }
-      var queryString = Object.keys(data).map(key => key + '=' + data[key]).join('&'); // don't touch this!
+  document.querySelector(".tool--speichern").addEventListener("click", function() { //.tool muss noch ersetzt werden
+    let text = document.querySelector(".submittedText").value; // text aus der textarea
+    let formID = "17p_s4p9BHLjfljhbddS7kti0n0FVfFnPvzG3r_05EmU"; // formID vom google form dokument
+    let url = 'https://docs.google.com/forms/d/' + formID + '/formResponse'; // url für den post request
+    // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form
+    let data = {
+      'entry.2055826422': text
+      //entry code findet man im Inspector -> hilfreiches video https://www.youtube.com/watch?v=LCPY0JCN2SQ
+      //und auch https://groups.google.com/g/tasker/c/NNFP9CgfWBo?pli=1
+    }
+    var queryString = Object.keys(data).map(key => key + '=' + data[key]).join('&'); // don't touch this!
 
-      // making the post request to evil google servers  ...
-      fetch(url, {
-              method: 'POST',
-              mode: 'no-cors', // no-cors, *cors, same-origin
-              headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded',
-              },
-              body: queryString // body data type must match "Content-Type" header
-          }).then(response => response)
-          .then(data => console.log(data));
+    // making the post request to evil google servers  ...
+    fetch(url, {
+        method: 'POST',
+        mode: 'no-cors', // no-cors, *cors, same-origin
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: queryString // body data type must match "Content-Type" header
+      }).then(response => response)
+      .then(data => console.log(data));
   })
   /*
      ---------------------------------------------------------------
@@ -115,20 +134,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
   let url2 = "https://docs.google.com/spreadsheets/d/1UOeqADgY9YVOG0J6gQ5MwL3j5o-s2ndmQLTKGLJn7MY/edit?resourcekey#gid=218525999";
 
   const response = fetch(url2)
-      .then(response => response.text())
-      .then(v => Papa.parse(v))
-      .then(function (v) {
-          let antworten = v.data.filter((word,index) => index > 0);
-          console.log(antworten)
-          antworten.forEach(element => {
-              let antwort = element[1];
-              let node = document.createElement("LI"); // Create a <li> node
-              let textnode = document.createTextNode(antwort); // Create a text node
-              node.appendChild(textnode);
-              document.querySelector(".mLine").append(node);
-          });
-      })
-      .catch(err => console.log(err))
+    .then(response => response.text())
+    .then(v => Papa.parse(v))
+    .then(function(v) {
+      let antworten = v.data.filter((word, index) => index > 0);
+      console.log(antworten)
+      antworten.forEach(element => {
+        let antwort = element[1];
+        let node = document.createElement("LI"); // Create a <li> node
+        let textnode = document.createTextNode(antwort); // Create a text node
+        node.appendChild(textnode);
+        document.querySelector(".mLine").append(node);
+      });
+    })
+    .catch(err => console.log(err))
 
 });
 

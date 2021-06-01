@@ -502,9 +502,14 @@ img {
   transform: none;
 }
 
+.content.activeTod .floor {
+  transition: all 1.5s;
+  transform: none;
+}
+
 .content.activeTod .text {
   transition: all 1.5s;
-  transform: rotateX(90deg);
+  transform: translateY(100vh) rotateX(-90deg);
 }
 
 /* activeMoral */
@@ -527,9 +532,14 @@ img {
   transform: none;
 }
 
+.content.activeEhe .floor {
+  transition: all 1.5s;
+  transform: none;
+}
+
 .content.activeEhe .text {
   transition: all 1.5s;
-  transform: rotateX(90deg);
+  transform: translateY(100vh) rotateX(-90deg);
 }
 
 /* activeHumor */
@@ -537,9 +547,14 @@ img {
   transform: none;
 }
 
+.content.activeHumor .floor {
+  transition: all 1.5s;
+  transform: none;
+}
+
 .content.activeHumor .text {
   transition: all 1.5s;
-  transform: rotateX(90deg);
+  transform: translateY(100vh) rotateX(-90deg);
 }
 
 /* Editor */
