@@ -586,12 +586,14 @@ img {
   list-style: none;
   padding: 0;
   overflow: hidden;
-  border-radius: 8px;
   grid-column-start: 4;
-  grid-column-end: 7;
+  grid-column-end: 8;
   grid-row-start: 5;
   grid-row-end: 6;
   position: relative;
+  margin: 0;
+  height: 3vh;
+  background-color: rgb(201, 201, 201);
 }
 .button:focus{
   background-color: blue;
@@ -603,36 +605,35 @@ img {
   border: none;
   padding: .5rem;
   font-size: 10px;
+  background-color: rgb(201, 201, 201);
 }
 .tool--speichern {
-  height: 4vh;
-  width: 6vw;
   justify-self: end; /*horizontal*/
   align-self: flex-end;
   grid-column-start: 7;
   grid-column-end: 8;
-  grid-row-start: 7;
-  grid-row-end: 8;
-  background-color: rgb(116, 116, 116);
+  grid-row-start: 5;
+  grid-row-end: 6;
   border: none;
-  border-radius: 20px;
   font-size: 1.8vh;
 }
 
 /*schreiben*/
 .output {
   grid-column-start: 4;
-  grid-column-end: 7;
+  grid-column-end: 8;
   grid-row-start: 5;
-  grid-row-end: 6;
+  grid-row-end: 8;
 }
 
 .submittedText {
-  border-radius: 20px;
   border: none;
   resize: none;
   font-family: 'Avenir';
   font-size: 20px;
+  height: 29vh;
+  width: 41.5vw;
+  margin-top: 3vh;
 }
 
 /* mobile */
