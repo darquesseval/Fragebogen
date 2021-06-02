@@ -16,6 +16,7 @@ body {
   width: 100vw;
   overflow: hidden;
   padding: 0;
+  background-color:  rgb(33, 37, 41);
 }
 
 @keyframes infiniteText {
@@ -210,24 +211,24 @@ img {
 }
 
 .Fragen {
-  transform: translateY(28vw) translateX(-0.5vw);
+  transform: translateY(28vw) translateX(2.15vw);
 }
 
 /* Nr1 Moral*/
 .m1FrageL {
-  transform: none;
+  transform: scaleX(1.15);
 }
 
 .m1FrageR {
-  transform: translateX(-93.3vw);
+  transform: translateX(-103.2vw) scaleX(1.15);
 }
 
 .m1FrageM {
-  transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
+  transform: translateX(-22.25vw) translateY(4.92vw) scale(0.78);
 }
 
 .m2FrageL {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg) ;
 }
 
 .m2FrageR {
@@ -348,7 +349,7 @@ img {
 .leftWall, .centerWall, .rightWall {
   overflow: hidden;
   white-space: nowrap;
-  height: 111vw;
+  height: 125vw;
   background-color: rgb(33, 37, 41);
   border-width: thin;
   border-color: black;
@@ -356,20 +357,20 @@ img {
 }
 
 .leftWall {
-  width: 20vw;
-  transform: rotateY(60deg);
+  width: 35vw;
+  transform: rotateY(70deg);
   margin-top: -30vw;
 }
 
 .rightWall {
-  width: 20vw;
-  transform: rotateY(-60deg);
+  width: 35vw;
+  transform: rotateY(-70deg);
   margin-top: -30vw;
 }
 
 .centerWall {
-  transform: translateZ(-1.1vw);
-  width: 108vw;
+  transform: translateZ(3vw);
+  width: 90vw;
   margin-top: -30vw;
   z-index: -1;
 }
