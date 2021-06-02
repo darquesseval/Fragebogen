@@ -84,20 +84,19 @@ document.getElementById('Floor').onclick = function() {
     f2 = true;
     document.getElementById("Floor").innerHTML = floorstate;
     weiter = false;
-  }
-  else if (weiter == true && f2 == true) {
+  } else if (weiter == true && f2 == true) {
     content.classList.toggle('activeAnswers');
     content.classList.toggle('f2');
     var floorstate = "Home";
-    if( t == true) {
+    if (t == true) {
       content.classList.toggle('activeTod')
       t = false;
     } else if (m == true) {
-            content.classList.toggle('activeMoral')
-            m = false;
+      content.classList.toggle('activeMoral')
+      m = false;
     } else if (e == true) {
-            content.classList.toggle('activeEhe')
-            e = false;
+      content.classList.toggle('activeEhe')
+      e = false;
     } else if (h == true) {
       content.classList.toggle('activeHumor')
       h = false
@@ -105,7 +104,7 @@ document.getElementById('Floor').onclick = function() {
     f2 = false;
     document.getElementById("Floor").innerHTML = floorstate;
     weiter = false;
-  }else {
+  } else {
     editor.classList.toggle('activeEditor'); /*öffnen des Editors*/
   }
 }
@@ -121,11 +120,10 @@ document.getElementById('button').onclick = function() {
   if (weiter == true && f2 == true) {
     var floorstate = "Home";
     document.getElementById("Floor").innerHTML = floorstate;
-  }
-  else if (weiter == true && f2 == false) {
+  } else if (weiter == true && f2 == false) {
     var floorstate = "Weiter";
     document.getElementById("Floor").innerHTML = floorstate;
-  }else {
+  } else {
     var floorstate = "Antworten";
     document.getElementById("Floor").innerHTML = floorstate;
   }
@@ -144,18 +142,58 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let formID = "17p_s4p9BHLjfljhbddS7kti0n0FVfFnPvzG3r_05EmU"; // formID vom google form dokument
     let url = 'https://docs.google.com/forms/d/' + formID + '/formResponse'; // url für den post request
     // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form
-    let data = {
-      'entry.2055826422': text, //Ehe01
-      'entry.1106048141': text,//Ehe02
-      'entry.119882656': text, //Humor01
-      'entry.1158286029': text, //Humor02
-      'entry.1122356239': text, //Moral01
-      'entry.321666473': text, //Moral02
-      'entry.1611945410': text, //Tod01
-      'entry.1528171692': text //Tod02
-      //entry code findet man im Inspector -> hilfreiches video 6
-      //und auch https://groups.google.com/g/tasker/c/NNFP9CgfWBo?pli=1
+
+
+    if (t == true && f2 == false) {
+      var data = {
+        'entry.1611945410': text
+      }
+    } else if (t == true && f2 == true) {
+      var data = {
+        'entry.1528171692': text
+      }
+    } else if (m == true && f2 == false) {
+      var data = {
+        'entry.1122356239': text
+      }
+    } else if (m == true && f2 == true) {
+      var data = {
+        'entry.321666473': text
+      }
+    } else if (e == true && f2 == false) {
+      var data = {
+        'entry.2055826422': text
+      }
+    } else if (e == true && f2 == true) {
+      var data = {
+        'entry.1106048141': text
+      }
+    } else if (h == true && f2 == false) {
+      var data = {
+        'entry.119882656': text
+      }
+    } else if (h == true && f2 == true) {
+      var data = {
+        'entry.1528171692': text
+      }
+    } else {
+      var data = {
+        'entry.1528171692': text
+      }
     }
+
+    // let data = {
+    //   'entry.2055826422': text, //Ehe01
+    //   'entry.1106048141': text, //Ehe02
+    //   'entry.119882656': text, //Humor01
+    //   'entry.1158286029': text, //Humor02
+    //   'entry.1122356239': text, //Moral01
+    //   'entry.321666473': text, //Moral02
+    //   'entry.1611945410': text, //Tod01
+    //   'entry.1528171692': text //Tod02
+    //   //entry code findet man im Inspector -> hilfreiches video 6
+    //   //und auch https://groups.google.com/g/tasker/c/NNFP9CgfWBo?pli=1
+    // }
     var queryString = Object.keys(data).map(key => key + '=' + data[key]).join('&'); // don't touch this!
 
     // making the post request to evil google servers  ...
