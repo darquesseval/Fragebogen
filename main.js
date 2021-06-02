@@ -159,7 +159,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       }
     } else if (m == true && f2 == true) {
       var data = {
-        'entry.321666473': text
+        'entry.312666473': text
       }
     } else if (e == true && f2 == false) {
       var data = {
