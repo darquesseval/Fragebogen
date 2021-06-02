@@ -129,7 +129,16 @@ body {
 /*.text span:nth-child(odd):hover {
   color: #Fff;
 }*/
-.line:hover {
+.line1:hover {
+  color: white;
+}
+.line2:hover {
+  color: #00E5E8;
+}
+.line3:hover {
+  color: white;
+}
+.line4:hover {
   color: white;
 }
 
@@ -219,7 +228,6 @@ img {
 }
 
 .m2FrageL {
-  /*das isch doch die zweiti frog vo Moral?*/
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
@@ -608,12 +616,6 @@ img {
   background-color: rgb(201, 201, 201);
 }
 .tool--speichern {
-  justify-self: end; /*horizontal*/
-  align-self: flex-end;
-  grid-column-start: 7;
-  grid-column-end: 8;
-  grid-row-start: 5;
-  grid-row-end: 6;
   border: none;
   font-size: 1.8vh;
 }
