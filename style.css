@@ -14,7 +14,6 @@ body {
   top: 0;
   height: 100vh;
   width: 100vw;
-  background-color: black;
   overflow: hidden;
   padding: 0;
 }
@@ -130,16 +129,16 @@ body {
   color: #Fff;
 }*/
 .line1:hover {
-  color: white;
+  color: #F4ACB7;
 }
 .line2:hover {
   color: #00E5E8;
 }
 .line3:hover {
-  color: white;
+  color: #6039D1;
 }
 .line4:hover {
-  color: white;
+  color: #FEF445;
 }
 
 .line {
