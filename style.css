@@ -230,15 +230,15 @@ img {
 }
 
 /* question 2 */
-.m2FrageL, .t2FrageL, .e2FrageL,.h2FrageL, .content.f2 .m1FrageL, .content.f2 .t1FrageL, .content.f2 .e1FrageL, .content.f2 .h1FrageL, {
+.m2FrageL, .t2FrageL, .e2FrageL,.h2FrageL, .content.f2 .m1FrageL, .content.f2 .t1FrageL, .content.f2 .e1FrageL, .content.f2 .h1FrageL {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg) ;
 }
 
-.m2FrageR, .t2FrageR, .e2FrageR,.h2FrageR, .content.f2 .m1FrageR, .content.f2 .t1FrageR, .content.f2 .e1FrageR, .content.f2 .h1FrageR, {
+.m2FrageR, .t2FrageR, .e2FrageR,.h2FrageR, .content.f2 .m1FrageR, .content.f2 .t1FrageR, .content.f2 .e1FrageR, .content.f2 .h1FrageR {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.m2FrageM, .t2FrageM, .e2FrageM,.h2FrageM, .content.f2 .m1FrageM, .content.f2 .t1FrageM, .content.f2 .e1FrageM, .content.f2 .h1FrageM, {
+.m2FrageM, .t2FrageM, .e2FrageM,.h2FrageM, .content.f2 .m1FrageM, .content.f2 .t1FrageM, .content.f2 .e1FrageM, .content.f2 .h1FrageM {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
