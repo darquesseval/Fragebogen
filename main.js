@@ -87,19 +87,6 @@ document.getElementById('button').onclick = function() {
   }
 }
 
-
-let mcW = document.getElementById("mcenterWall");
-
-let val = -2000 / window.innerWidth;
-mcW.style.transform = "translateZ(" + val + "vw)";
-
-//responsive
-window.addEventListener('resize', () => {
-  let deg = -2000 / window.innerWidth;
-  mcW.style.transform = "translateZ(" + val + "vw)";
-  console.log(val);
-})
-
 let string = ["is it working? more text more text more text", "try try try try try102938"]
 
 
