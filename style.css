@@ -232,28 +232,35 @@ img {
 }
 
 /* Nr2 Moral*/
-.content.2 .m1FrageL {
+.content.f2 .m1FrageL {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.content.2 .m1FrageR {
+.content.f2 .m1FrageR {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.content.2 .m1FrageM {
+.content.f2 .m1FrageM {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.content.2 .m2FrageL {
+.content.f2 .m2FrageL {
+  transition: all 1s;
   transform: none;
 }
 
-.content.2 .m2FrageR {
+.content.f2 .m2FrageR {
+  transition: all 1s;
   transform: translateX(-93.3vw);
 }
 
-.content.2 .m2FrageM {
+.content.f2 .m2FrageM {
+  transition: all 1s;
   transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
+}
+
+.content.f2 .Fragen {
+  transform: translateY(-27vw);
 }
 
 /* Nr1 Tod*/

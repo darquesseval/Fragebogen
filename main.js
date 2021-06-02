@@ -61,7 +61,10 @@ document.getElementById("Floor").innerHTML = floorstate;
 document.getElementById('Floor').onclick = function() {
   if (weiter == true) {
     content.classList.toggle('activeAnswers');
-    content.classList.toggle('2');
+    content.classList.toggle('f2');
+    var floorstate = "Antworten";
+    document.getElementById("Floor").innerHTML = floorstate;
+    weiter == false;
   } else {
     editor.classList.toggle('activeEditor'); /*öffnen des Editors*/
   }
