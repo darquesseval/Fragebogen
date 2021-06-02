@@ -303,9 +303,9 @@ img {
   font-family: 'AvenirLTStd-Black';
   font-size: 9.5vw;
   height: 20vw;
-  width: 67.7vw;
+  width: 67.4vw;
   margin: auto;
-  transform: translateY(75vh) translateZ(2vw) rotateX(100deg);
+  transform: translateY(75vh) translateZ(2vw) rotateX(110deg);
   z-index: 5;
   background-color: rgb(33, 37, 41);
   color: black;
