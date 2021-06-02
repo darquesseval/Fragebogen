@@ -33,19 +33,10 @@ function setColor(btn, color) {
 }
 
 let content = document.querySelector(".content");
-
-document.getElementById('line1').onclick = function() {
-  content.classList.toggle('activeTod')
-}
-document.getElementById('line2').onclick = function() {
-  content.classList.toggle('activeMoral')
-}
-document.getElementById('line3').onclick = function() {
-  content.classList.toggle('activeEhe')
-}
-document.getElementById('line4').onclick = function() {
-  content.classList.toggle('activeHumor')
-}
+let m = false;
+let t = false;
+let e = false;
+let h = false;
 
 let tod = document.querySelector(".Tod");
 let moral = document.querySelector(".Moral");
@@ -55,17 +46,66 @@ let editor = document.querySelector(".Editor");
 
 let weiter = false;
 var floorstate = "Antworten";
+let f2 = false;
+
+document.getElementById('line1').onclick = function() {
+  content.classList.toggle('activeTod')
+  t = true;
+  var floorstate = "Antworten";
+  document.getElementById("Floor").innerHTML = floorstate;
+}
+document.getElementById('line2').onclick = function() {
+  content.classList.toggle('activeMoral')
+  m = true;
+  var floorstate = "Antworten";
+  document.getElementById("Floor").innerHTML = floorstate;
+}
+document.getElementById('line3').onclick = function() {
+  content.classList.toggle('activeEhe')
+  e = true;
+  var floorstate = "Antworten";
+  document.getElementById("Floor").innerHTML = floorstate;
+}
+document.getElementById('line4').onclick = function() {
+  content.classList.toggle('activeHumor')
+  h = true;
+  var floorstate = "Antworten";
+  document.getElementById("Floor").innerHTML = floorstate;
+}
+
 
 document.getElementById("Floor").innerHTML = floorstate;
 
 document.getElementById('Floor').onclick = function() {
-  if (weiter == true) {
+  if (weiter == true && f2 == false) {
     content.classList.toggle('activeAnswers');
     content.classList.toggle('f2');
     var floorstate = "Antworten";
+    f2 = true;
     document.getElementById("Floor").innerHTML = floorstate;
-    weiter == false;
-  } else {
+    weiter = false;
+  }
+  else if (weiter == true && f2 == true) {
+    content.classList.toggle('activeAnswers');
+    content.classList.toggle('f2');
+    var floorstate = "Home";
+    if( t == true) {
+      content.classList.toggle('activeTod')
+      t = false;
+    } else if (m == true) {
+            content.classList.toggle('activeMoral')
+            m = false;
+    } else if (e == true) {
+            content.classList.toggle('activeEhe')
+            e = false;
+    } else if (h == true) {
+      content.classList.toggle('activeHumor')
+      h = false
+    }
+    f2 = false;
+    document.getElementById("Floor").innerHTML = floorstate;
+    weiter = false;
+  }else {
     editor.classList.toggle('activeEditor'); /*öffnen des Editors*/
   }
 }
@@ -78,10 +118,14 @@ document.getElementById('button').onclick = function() {
   } else if (weiter == false) {
     weiter = true;
   }
-  if (weiter == true) {
+  if (weiter == true && f2 == true) {
+    var floorstate = "Home";
+    document.getElementById("Floor").innerHTML = floorstate;
+  }
+  else if (weiter == true && f2 == false) {
     var floorstate = "Weiter";
     document.getElementById("Floor").innerHTML = floorstate;
-  } else {
+  }else {
     var floorstate = "Antworten";
     document.getElementById("Floor").innerHTML = floorstate;
   }

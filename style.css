@@ -98,6 +98,7 @@ body {
 
 /*endless text*/
 .text {
+  transition: all 1.5s;
   perspective: 500px;
   position: absolute;
   display: inline-block;
@@ -212,18 +213,19 @@ img {
 
 .Fragen {
   transform: translateY(28vw) translateX(2.15vw);
+  transition: all 1s;
 }
 
 /* Nr1 Moral*/
-.m1FrageL {
+.m1FrageL, .t1FrageL, .e1FrageL, .h1FrageL, .content.f2 .m2FrageL, .content.f2 .t2FrageL, .content.f2 .e2FrageL, .content.f2 .h2FrageL {
   transform: scaleX(1.15);
 }
 
-.m1FrageR {
+.m1FrageR, .t1FrageR, .e1FrageR, .h1FrageR, .content.f2 .m2FrageR, .content.f2 .t2FrageR, .content.f2 .e2FrageR, .content.f2 .h2FrageR {
   transform: translateX(-103.2vw) scaleX(1.15);
 }
 
-.m1FrageM {
+.m1FrageM, .t1FrageM, .e1FrageM, .h1FrageM, .content.f2 .m2FrageM, .content.f2 .t2FrageM, .content.f2 .e2FrageM, .content.f2 .h2FrageM {
   transform: translateX(-22.25vw) translateY(4.92vw) scale(0.78);
 }
 
@@ -250,21 +252,6 @@ img {
 
 .content.f2 .m1FrageM {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-.content.f2 .m2FrageL {
-  transition: all 1s;
-  transform: none;
-}
-
-.content.f2 .m2FrageR {
-  transition: all 1s;
-  transform: translateX(-93.3vw);
-}
-
-.content.f2 .m2FrageM {
-  transition: all 1s;
-  transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
 }
 
 .content.f2 .Fragen {
@@ -429,6 +416,7 @@ img {
 
 .mLine {
   transform: translateY(-100vh) translateX(-50vw) rotateZ(-20deg);
+  transition: all 1s;
 }
 
 @keyframes infiniteTextLeftWall {
@@ -469,8 +457,7 @@ img {
 
 .content.activeAnswers .mLine {
   transition-delay: 2.5s;
-  transition: all 1s;
-  transform: translateY(-108vw);
+  transform: translateY(-108vw) translateX(30vw);
 }
 
 .mLineR01,
