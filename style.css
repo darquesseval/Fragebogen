@@ -229,108 +229,21 @@ img {
   transform: translateX(-22.25vw) translateY(4.92vw) scale(0.78);
 }
 
-.m2FrageL {
+/* question 2 */
+.m2FrageL, .t2FrageL, .e2FrageL,.h2FrageL, .content.f2 .m1FrageL, .content.f2 .t1FrageL, .content.f2 .e1FrageL, .content.f2 .h1FrageL, {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg) ;
 }
 
-.m2FrageR {
+.m2FrageR, .t2FrageR, .e2FrageR,.h2FrageR, .content.f2 .m1FrageR, .content.f2 .t1FrageR, .content.f2 .e1FrageR, .content.f2 .h1FrageR, {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.m2FrageM {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-/* Nr2 Moral*/
-.content.f2 .m1FrageL {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-.content.f2 .m1FrageR {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-.content.f2 .m1FrageM {
+.m2FrageM, .t2FrageM, .e2FrageM,.h2FrageM, .content.f2 .m1FrageM, .content.f2 .t1FrageM, .content.f2 .e1FrageM, .content.f2 .h1FrageM, {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
 .content.f2 .Fragen {
-  transform: translateY(-27vw);
-}
-
-/* Nr1 Tod*/
-.t1FrageL {
-  transform: translateX(0.5vw) translateY(-7vh);
-}
-
-.t1FrageR {
-  transform: translateX(-94.3vw) translateY(-7vh);
-}
-
-.t1FrageM {
-  transform: translateX(-15.5vw) translateY(-4vh) scale(0.9);
-}
-
-.t2FrageL {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-.t2FrageR {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-.t2FrageM {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-/* Nr1 Ehe*/
-.e1FrageL {
-  transform: none;
-}
-
-.e1FrageR {
-  transform: translateX(-93.3vw);
-}
-
-.e1FrageM {
-  transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
-}
-
-.e2FrageL {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-.e2FrageR {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-.e2FrageM {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-/* Nr1 Humor*/
-.h1FrageL {
-  transform: none;
-}
-
-.h1FrageR {
-  transform: translateX(-93.3vw);
-}
-
-.h1FrageM {
-  transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
-}
-
-.h2FrageL {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-.h2FrageR {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
-}
-
-.h2FrageM {
-  transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
+  transform: translateY(-26vw) translateX(2.15vw);
 }
 
 .leftWall, .centerWall, .rightWall {
