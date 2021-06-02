@@ -130,13 +130,13 @@ body {
   color: #Fff;
 }*/
 .line1:hover {
-  color: #F4ACB7;
+  color: #6039D1;
 }
 .line2:hover {
   color: #00E5E8;
 }
 .line3:hover {
-  color: #6039D1;
+  color: #F4ACB7;
 }
 .line4:hover {
   color: #FEF445;
@@ -414,8 +414,17 @@ img {
   border-style: solid;
 }
 
-.floortext:hover {
-  color: #dd22dd;
+.content.activeTod .floortext:hover {
+  color: #6039D1;
+}
+.content.activeMoral .floortext:hover {
+  color: #7AE6FE;
+}
+.content.activeEhe .floortext:hover {
+  color: #F4ACB7;
+}
+.content.activeHumor .floortext:hover {
+  color: #FEF445;
 }
 
 .mLine {
