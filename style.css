@@ -145,7 +145,7 @@ body {
   white-space: nowrap;
   cursor: pointer;
   animation-play-state: running;
-  animation: infiniteText 15s alternate linear infinite;
+  animation: infiniteText 14s alternate linear infinite;
   height: 25vh;
   /*Abstand*/
 }

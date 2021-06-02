@@ -114,7 +114,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let url = 'https://docs.google.com/forms/d/' + formID + '/formResponse'; // url für den post request
     // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form
     let data = {
-      'entry.2055826422': text
+      'entry.2055826422': text, //Ehe01
+      'entry.1106048141': text,//Ehe02
+      'entry.119882656': text, //Humor01
+      'entry.1158286029': text, //Humor02
+      'entry.1122356239': text, //Moral01
+      'entry.321666473': text, //Moral02
+      'entry.1611945410': text, //Tod01
+      'entry.1528171692': text //Tod02
       //entry code findet man im Inspector -> hilfreiches video 6
       //und auch https://groups.google.com/g/tasker/c/NNFP9CgfWBo?pli=1
     }
