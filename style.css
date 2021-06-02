@@ -232,27 +232,27 @@ img {
 }
 
 /* Nr2 Moral*/
-.Fragen.2 .m1FrageL {
+.content.2 .m1FrageL {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.Fragen.2 .m1FrageR {
+.content.2 .m1FrageR {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.Fragen.2 .m1FrageM {
+.content.2 .m1FrageM {
   transform: translateY(-400vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.Fragen.2 .m2FrageL {
+.content.2 .m2FrageL {
   transform: none;
 }
 
-.Fragen.2 .m2FrageR {
+.content.2 .m2FrageR {
   transform: translateX(-93.3vw);
 }
 
-.Fragen.2 .m2FrageM {
+.content.2 .m2FrageM {
   transform: translateX(-15.5vw) translateY(1.3vw) scale(0.915);
 }
 

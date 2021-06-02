@@ -59,8 +59,12 @@ var floorstate = "Antworten";
 document.getElementById("Floor").innerHTML = floorstate;
 
 document.getElementById('Floor').onclick = function() {
-  editor.classList.toggle('activeEditor'); /*öffnen des Editors*/
-  console.log(document.querySelector(".centerWall").style.width)
+  if (weiter == true) {
+    content.classList.toggle('activeAnswers');
+    content.classList.toggle('2');
+  } else {
+    editor.classList.toggle('activeEditor'); /*öffnen des Editors*/
+  }
 }
 
 document.getElementById('button').onclick = function() {
@@ -108,7 +112,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // entry.329540547 muss adaptiert werden! -> mehr infos hier: https://stackoverflow.com/questions/18073971/http-post-to-a-google-form
     let data = {
       'entry.2055826422': text
-      //entry code findet man im Inspector -> hilfreiches video https://www.youtube.com/watch?v=LCPY0JCN2SQ
+      //entry code findet man im Inspector -> hilfreiches video 6
       //und auch https://groups.google.com/g/tasker/c/NNFP9CgfWBo?pli=1
     }
     var queryString = Object.keys(data).map(key => key + '=' + data[key]).join('&'); // don't touch this!
@@ -144,7 +148,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let node = document.createElement("LI"); // Create a <li> node
         let textnode = document.createTextNode(antwort); // Create a text node
         node.appendChild(textnode);
-        document.querySelector(".mLine").append(node);
+        //document.querySelector(".mLine").append(node);
       });
     })
     .catch(err => console.log(err))
