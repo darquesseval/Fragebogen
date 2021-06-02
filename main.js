@@ -106,6 +106,7 @@ document.getElementById('Floor').onclick = function() {
     weiter = false;
   } else {
     editor.classList.toggle('activeEditor'); /*öffnen des Editors*/
+    document.querySelector(".submittedText").value= "";
   }
 }
 
