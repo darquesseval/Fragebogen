@@ -301,11 +301,11 @@ img {
   text-align: center;
   text-transform: uppercase;
   font-family: 'AvenirLTStd-Black';
-  font-size: 11.5vw;
+  font-size: 9.5vw;
   height: 20vw;
-  width: 81.2vw;
+  width: 67.7vw;
   margin: auto;
-  transform: translateY(75vh) translateZ(3vw) rotateX(100deg);
+  transform: translateY(75vh) translateZ(2vw) rotateX(100deg);
   z-index: 5;
   background-color: rgb(33, 37, 41);
   color: black;
