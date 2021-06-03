@@ -351,11 +351,11 @@ img {
 
 @keyframes infiniteTextRightWall {
   0% {
-    transform: translateX(-66vw);
+    transform: translateX(-65.8vw);
   }
 
   100% {
-    transform: translateX(-201vw);
+    transform: translateX(-200.8vw);
   }
 }
 
@@ -400,21 +400,21 @@ img {
 .content.activeAnswers .mLineL01, .content.activeAnswers .mLineL02 {
   text-align: left;
   animation-play-state: running;
-  animation: infiniteTextLeftWall 10s alternate linear infinite;
+  animation: infiniteTextLeftWall 80s alternate linear infinite;
   margin-top: -100vw;
 }
 
 .content.activeAnswers .mLineM01, .content.activeAnswers .mLineM02 {
   text-align: left;
   animation-delay: 3s;
-  animation: infiniteTextCenterWall 10s alternate linear infinite;
-  margin-top: -89.5vw;
+  animation: infiniteTextCenterWall 80s alternate linear infinite;
+  margin-top: -94.3vw;
 }
 
 .content.activeAnswers .mLineR01, .content.activeAnswers .mLineR02 {
   text-align: left;
   animation-delay: 3s;
-  animation: infiniteTextRightWall 10s alternate linear infinite;
+  animation: infiniteTextRightWall 80s alternate linear infinite;
   margin-top: -100vw;
 }
 

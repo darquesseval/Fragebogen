@@ -106,7 +106,7 @@ document.getElementById('Floor').onclick = function() {
     weiter = false;
   } else {
     editor.classList.toggle('activeEditor'); /*öffnen des Editors*/
-    document.querySelector(".submittedText").value= "";
+    document.querySelector(".submittedText").value = "";
   }
 }
 
@@ -227,38 +227,48 @@ window.addEventListener('DOMContentLoaded', (event) => {
         node.appendChild(textnode);
         //document.querySelector(".mLine").append(node);
 
-            let m01;
-            let m02;
-            let m03;
-
-            class Antwort {
-              input(klasseL, klasseM, klasseR, string) {
-                this.klasseL = klasseL;
-                this.klasseM = klasseM;
-                this.klasseR = klasseR;
-                this.string = string;
-                document.querySelector(this.klasseL).innerHTML = this.string;
-                document.querySelector(this.klasseM).innerHTML = this.string;
-                document.querySelector(this.klasseR).innerHTML = this.string;
-              }
-            }
-
-            let a1 = "«" + antworten[2][1] + "» «" + antworten[3][1] + "» «" + antworten[4][1] + "» «" +antworten[5][1] + "» «" + antworten[6][1] + "»";
-            let a2 = "«" + antworten[7][2] + "» «" + antworten[8][2] + "» «" + antworten[9][2] + "» «" +antworten[10][2] + "» «" + antworten[11][2] + "»";
-
-            let mLine01 = new Antwort;
-            mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", a1);
-
-            let mLine02 = new Antwort;
-            mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", a2);
-
-            console.log(antworten)
       });
     })
     .catch(err => console.log(err))
 
 
 });
+
+let givingup = ["Max Frisch hatte sehr interessante Frangen für die Gesellschaft. Ich fange tatsächlich an an mir un meinen Prinzipien zu zweifeln mit diesen Fragen.",
+  "Ab und zu ist es schwierig eine Frage zu beantworten die so tiefgründig ist.",
+  "Jap.",
+  "Es ist etwas das sogar regelmässig bei mir geschieht xD I know I'm a creep.",
+  "Ja und zwar viel zu oft. Es ist beunruhigend wenn man in so einer Situation ist und nicht weiss wieso.",
+  "Max Frisch hatte sehr interessante Frangen für die Gesellschaft. Ich fange tatsächlich an an mir un meinen Prinzipien zu zweifeln mit diesen Fragen.",
+  "Ist es schlimm wenn ich sage ja? Ich fühle mich jedes mal so schlecht...",
+  "Leider nein.",
+  "Deep. Ich glaube eigentlich nicht nein. Aber ich musste jetzt lange überlegen.", "Ich bin mir unsicher. Es kommt sehr stark drauf an wie die Frage genau gemeint ist. Ich hätte jetzt gesagt ja aber wenn es verallgemeinert gefragt ist dann definitiv nein. Glaub."
+]
+
+let m01;
+let m02;
+let m03;
+
+class Antwort {
+  input(klasseL, klasseM, klasseR, string) {
+    this.klasseL = klasseL;
+    this.klasseM = klasseM;
+    this.klasseR = klasseR;
+    this.string = string;
+    document.querySelector(this.klasseL).innerHTML = this.string;
+    document.querySelector(this.klasseM).innerHTML = this.string;
+    document.querySelector(this.klasseR).innerHTML = this.string;
+  }
+}
+
+let a1 = "«" + givingup[0] + "» «" + givingup[1] + "» «" + givingup[2] + "» «" + givingup[3] + "» «" + givingup[4] + "»";
+let a2 = "«" + givingup[5] + "» «" + givingup[6] + "» «" + givingup[7] + "» «" + givingup[8] + "» «" + givingup[9] + "»";
+
+let mLine01 = new Antwort;
+mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", a1);
+
+let mLine02 = new Antwort;
+mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", a2);
 
 
 
