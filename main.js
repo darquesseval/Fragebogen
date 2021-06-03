@@ -225,10 +225,10 @@ let givingup = ["Max Frisch hatte sehr interessante Fragen für die Gesellschaft
   "Ab und zu ist es schwierig, eine Frage zu beantworten die so tiefgründig ist.",
   "Jap.",
   "Es ist etwas, das sogar regelmässig bei mir geschieht xD I know I'm a creep.",
-  "Ja und zwar viel zu oft. Es ist beunruhigend, wenn man in so einer Situation ist und nicht weiss wieso.",
-  "jaaaa, so oft!",
-  "Ist es schlimm wenn ich sage ja? Ich fühle mich jedes mal so schlecht...",
-  "Leider nein.",
+  "Ja und zwar viel zu oft. Es ist beunruhigend, wenn man in so einer Situation ist und nicht weiss wieso. Aber hey, ich werd wohl nicht die Einzige sein.",
+  "jaaaa, so oft! Ich verstehe es nicht. Manchmal kommt einfach dieser Drang und es ist, als ob ich keine Kontrolle mehr hätte!",
+  "Ist es sehr schrecklich wenn ich sage ja? Ich fühle mich jedes mal so schlecht...",
+  "Leider nein. :(",
   "Deep. Ich glaube eigentlich nicht nein. Aber ich musste jetzt lange überlegen.",
   "Ich bin mir unsicher. Es kommt sehr stark drauf an wie die Frage genau gemeint ist. Ich hätte jetzt gesagt ja aber wenn es verallgemeinert gefragt ist dann definitiv nein. Glaub."
 ]
@@ -243,20 +243,65 @@ class Antwort {
     this.klasseM = klasseM;
     this.klasseR = klasseR;
     this.string = string;
-    document.querySelector(this.klasseL).innerHTML = this.string;
-    document.querySelector(this.klasseM).innerHTML = this.string;
-    document.querySelector(this.klasseR).innerHTML = this.string;
+    document.getElementById(this.klasseL).innerHTML = this.string;
+    document.getElementById(this.klasseM).innerHTML = this.string;
+    document.getElementById(this.klasseR).innerHTML = this.string;
   }
 }
 
-let a1 = "«" + givingup[0] + "» «" + givingup[1] + "» «" + givingup[2] + "» «" + givingup[3] + "» «" + givingup[4] + "»";
-let a2 = "«" + givingup[5] + "» «" + givingup[6] + "» «" + givingup[7] + "» «" + givingup[8] + "» «" + givingup[9] + "»";
+let a1 = "«" + givingup[0] + "» «" + givingup[1] + "»";
+let a2 = "«" + givingup[5] + "» «" + givingup[6] + "» «" + givingup[7] + "»";
+let a3 = "«" + givingup[3] + "» «" + givingup[4] + "» «" + givingup[2] + "»";
+let a4 = "«" + givingup[8] + "» «" + givingup[9] + "»";
+
+let tLine01 = new Antwort;
+tLine01.input("t01", "t03", "t05", a1);
+
+let tLine02 = new Antwort;
+tLine02.input("t02", "t04", "t06", a2);
+
+let tLine03 = new Antwort;
+tLine03.input("t07", "t09", "t11", a3);
+
+let tLine04 = new Antwort;
+tLine04.input("t08", "t10", "t12", a4);
 
 let mLine01 = new Antwort;
-mLine01.input(".answerL01", ".answerM01", ".answerR01", a1);
+mLine01.input("m01", "m03", "m05", a1);
 
 let mLine02 = new Antwort;
-mLine02.input(".answerL02", ".answerM02", ".answerR02", a2);
+mLine02.input("m02", "m04", "m06", a2);
+
+let mLine03 = new Antwort;
+mLine03.input("m07", "m09", "m11", a3);
+
+let mLine04 = new Antwort;
+mLine04.input("m08", "m10", "m12", a4);
+
+let eLine01 = new Antwort;
+eLine01.input("e01", "e03", "e05", a1);
+
+let eLine02 = new Antwort;
+eLine02.input("e02", "e04", "e06", a2);
+
+let eLine03 = new Antwort;
+eLine03.input("e07", "e09", "e11", a3);
+
+let eLine04 = new Antwort;
+eLine04.input("e08", "e10", "e12", a4);
+
+let hLine01 = new Antwort;
+hLine01.input("h01", "h03", "h05", a1);
+
+let hLine02 = new Antwort;
+hLine02.input("h02", "h04", "h06", a2);
+
+let hLine03 = new Antwort;
+hLine03.input("h07", "h09", "h11", a3);
+
+let hLine04 = new Antwort;
+hLine04.input("h08", "h10", "h12", a4);
+
 
 // document.getElementById('tFragen').onclick = function() {
 //   tod.classList.toggle('activeAnswers')
