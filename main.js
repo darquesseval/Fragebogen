@@ -106,7 +106,7 @@ document.getElementById('Floor').onclick = function() {
     weiter = false;
   } else {
     editor.classList.toggle('activeEditor'); /*öffnen des Editors*/
-    document.querySelector(".submittedText").value= "";
+    document.querySelector(".submittedText").value = "";
   }
 }
 
@@ -129,9 +129,6 @@ document.getElementById('button').onclick = function() {
     document.getElementById("Floor").innerHTML = floorstate;
   }
 }
-
-let string = ["is it working? more text more text more text", "try try try try try102938"]
-
 
 //Gordans Input vom Server
 window.addEventListener('DOMContentLoaded', (event) => {
@@ -183,18 +180,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
       }
     }
 
-    // let data = {
-    //   'entry.2055826422': text, //Ehe01
-    //   'entry.1106048141': text, //Ehe02
-    //   'entry.119882656': text, //Humor01
-    //   'entry.1158286029': text, //Humor02
-    //   'entry.1122356239': text, //Moral01
-    //   'entry.321666473': text, //Moral02
-    //   'entry.1611945410': text, //Tod01
-    //   'entry.1528171692': text //Tod02
-    //   //entry code findet man im Inspector -> hilfreiches video 6
-    //   //und auch https://groups.google.com/g/tasker/c/NNFP9CgfWBo?pli=1
-    // }
+      //entry code findet man im Inspector -> hilfreiches video 6
+      //und auch https://groups.google.com/g/tasker/c/NNFP9CgfWBo?pli=1
+
     var queryString = Object.keys(data).map(key => key + '=' + data[key]).join('&'); // don't touch this!
 
     // making the post request to evil google servers  ...
@@ -228,12 +216,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let node = document.createElement("LI"); // Create a <li> node
         let textnode = document.createTextNode(antwort); // Create a text node
         node.appendChild(textnode);
-        //document.querySelector(".mLine").append(node);
       });
     })
     .catch(err => console.log(err))
-
 });
+
+let givingup = ["Max Frisch hatte sehr interessante Fragen für die Gesellschaft. Ich fange tatsächlich an, an mir und meinen Prinzipien zu zweifeln, mit diesen Fragen.",
+  "Ab und zu ist es schwierig, eine Frage zu beantworten die so tiefgründig ist.",
+  "Jap.",
+  "Es ist etwas, das sogar regelmässig bei mir geschieht xD I know I'm a creep.",
+  "Ja und zwar viel zu oft. Es ist beunruhigend, wenn man in so einer Situation ist und nicht weiss wieso. Aber hey, ich werd wohl nicht die Einzige sein.",
+  "jaaaa, so oft! Ich verstehe es nicht. Manchmal kommt einfach dieser Drang und es ist, als ob ich keine Kontrolle mehr hätte!",
+  "Ist es sehr schrecklich wenn ich sage ja? Ich fühle mich jedes mal so schlecht...",
+  "Leider nein. :(",
+  "Deep. Ich glaube eigentlich nicht nein. Aber ich musste jetzt lange überlegen.",
+  "Ich bin mir unsicher. Es kommt sehr stark drauf an wie die Frage genau gemeint ist. Ich hätte jetzt gesagt ja aber wenn es verallgemeinert gefragt ist dann definitiv nein. Glaub."
+]
 
 let m01;
 let m02;
@@ -245,46 +243,61 @@ class Antwort {
     this.klasseM = klasseM;
     this.klasseR = klasseR;
     this.string = string;
-    document.querySelector(this.klasseL).innerHTML = this.string;
-    document.querySelector(this.klasseM).innerHTML = this.string;
-    document.querySelector(this.klasseR).innerHTML = this.string;
+    document.getElementById(this.klasseL).innerHTML = this.string;
+    document.getElementById(this.klasseM).innerHTML = this.string;
+    document.getElementById(this.klasseR).innerHTML = this.string;
   }
 }
 
+let a1 = "«" + givingup[0] + "» «" + givingup[1] + "»";
+let a2 = "«" + givingup[5] + "» «" + givingup[6] + "» «" + givingup[7] + "»";
+let a3 = "«" + givingup[3] + "» «" + givingup[4] + "» «" + givingup[2] + "»";
+let a4 = "«" + givingup[8] + "» «" + givingup[9] + "»";
+
+let tLine01 = new Antwort;
+tLine01.input("t01", "t03", "t05", a1);
+
+let tLine02 = new Antwort;
+tLine02.input("t02", "t04", "t06", a2);
+
+let tLine03 = new Antwort;
+tLine03.input("t07", "t09", "t11", a3);
+
+let tLine04 = new Antwort;
+tLine04.input("t08", "t10", "t12", a4);
+
 let mLine01 = new Antwort;
-mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", string[1]);
+mLine01.input("m01", "m03", "m05", a1);
 
 let mLine02 = new Antwort;
-mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", string[2]);
+mLine02.input("m02", "m04", "m06", a2);
 
+let mLine03 = new Antwort;
+mLine03.input("m07", "m09", "m11", a3);
 
+let mLine04 = new Antwort;
+mLine04.input("m08", "m10", "m12", a4);
 
+let eLine01 = new Antwort;
+eLine01.input("e01", "e03", "e05", a1);
 
-// document.getElementById('tFragen').onclick = function() {
-//   tod.classList.toggle('activeAnswers')
-// }
-//document.getElementById('mFloor').onclick = function() {
-//  console.log('anything?')
-//  moral.classList.toggle('activeAnswers')
-//}
-// document.getElementById('eFragen').onclick = function() {
-//   ehe.classList.toggle('activeAnswers')
-// }
-// document.getElementById('hFragen').onclick = function() {
-//   humor.classList.toggle('activeAnswers')
-// }
+let eLine02 = new Antwort;
+eLine02.input("e02", "e04", "e06", a2);
 
+let eLine03 = new Antwort;
+eLine03.input("e07", "e09", "e11", a3);
 
+let eLine04 = new Antwort;
+eLine04.input("e08", "e10", "e12", a4);
 
-// let mLine02 = new Antwort;
-// mLine02.input(m02, ".mLine02", mInput02);
-//
-// let mLine03 = new Antwort;
-// mLine03.input(m03, ".mLine03", mInput03);
+let hLine01 = new Antwort;
+hLine01.input("h01", "h03", "h05", a1);
 
+let hLine02 = new Antwort;
+hLine02.input("h02", "h04", "h06", a2);
 
+let hLine03 = new Antwort;
+hLine03.input("h07", "h09", "h11", a3);
 
-//tod.addEventListener("click", function(){
-//  console.log('true')
-//  content.style.transform = 'rotateX(90deg)';
-//})
+let hLine04 = new Antwort;
+hLine04.input("h08", "h10", "h12", a4);
