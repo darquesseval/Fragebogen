@@ -192,6 +192,7 @@ html {
   font-size: 2rem;
   font-family: 'Avenir';
   font-weight: bolder;
+  transition: all 1s;
 }
 
 .Moral, .Ehe, .Humor, .Tod {
@@ -218,7 +219,7 @@ img {
 
 /* Nr1 Moral*/
 .m1FrageL, .t1FrageL, .e1FrageL, .h1FrageL, .content.f2 .m2FrageL, .content.f2 .t2FrageL, .content.f2 .e2FrageL, .content.f2 .h2FrageL {
-  transform: scaleX(1.15);
+  transform: scaleX(1.15) translateX(0);
 }
 
 .m1FrageR, .t1FrageR, .e1FrageR, .h1FrageR, .content.f2 .m2FrageR, .content.f2 .t2FrageR, .content.f2 .e2FrageR, .content.f2 .h2FrageR {
@@ -327,14 +328,10 @@ img {
   color: #FEF445;
 }
 
-.mLine {
-  transform: translateY(-100vh) translateX(-50vw) rotateZ(-20deg);
-  transition: all 1s;
-}
 
 @keyframes infiniteTextLeftWall {
   0% {
-    transform: translateX(0vw);
+    transform: translateX(110vw);
   }
 
   100% {
@@ -344,7 +341,7 @@ img {
 
 @keyframes infiniteTextCenterWall {
   0% {
-    transform: translateX(-10vw);
+    transform: translateX(100vw);
   }
 
   100% {
@@ -354,7 +351,7 @@ img {
 
 @keyframes infiniteTextRightWall {
   0% {
-    transform: translateX(-70vw);
+    transform: translateX(30vw);
   }
 
   100% {
@@ -373,13 +370,17 @@ img {
   transform: translateY(-108vw) translateX(30vw);
 }
 
+.mLine {
+  transform: translateY(-150vh) translateX(-50vw) rotateZ(-20deg);
+  transition: all 1s;
+}
+
 .mLineR01,
 .mLineR02,
 .mLineM01,
 .mLineM02,
 .mLineL01,
 .mLineL02 {
-  transform: translateY(-150vh) translateX(-50vw) rotateZ(-20deg);
   animation-play-state: paused;
   margin-top: -170vw;
 }

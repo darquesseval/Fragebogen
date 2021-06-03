@@ -229,34 +229,36 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let textnode = document.createTextNode(antwort); // Create a text node
         node.appendChild(textnode);
         //document.querySelector(".mLine").append(node);
+
+            let m01;
+            let m02;
+            let m03;
+
+            class Antwort {
+              input(klasseL, klasseM, klasseR, string) {
+                this.klasseL = klasseL;
+                this.klasseM = klasseM;
+                this.klasseR = klasseR;
+                this.string = string;
+                document.querySelector(this.klasseL).innerHTML = this.string;
+                document.querySelector(this.klasseM).innerHTML = this.string;
+                document.querySelector(this.klasseR).innerHTML = this.string;
+              }
+            }
+
+            let mLine01 = new Antwort;
+            mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", antworten[2][2]);
+
+            let mLine02 = new Antwort;
+            mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", antworten[3][2]);
+
+            console.log(antworten)
       });
     })
     .catch(err => console.log(err))
 
+
 });
-
-let m01;
-let m02;
-let m03;
-
-class Antwort {
-  input(klasseL, klasseM, klasseR, string) {
-    this.klasseL = klasseL;
-    this.klasseM = klasseM;
-    this.klasseR = klasseR;
-    this.string = string;
-    document.querySelector(this.klasseL).innerHTML = this.string;
-    document.querySelector(this.klasseM).innerHTML = this.string;
-    document.querySelector(this.klasseR).innerHTML = this.string;
-  }
-}
-
-let mLine01 = new Antwort;
-mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", string[1]);
-
-let mLine02 = new Antwort;
-mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", string[2]);
-
 
 
 
