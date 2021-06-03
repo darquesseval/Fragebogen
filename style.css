@@ -385,7 +385,7 @@ img {
 .answerContainerM {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 3.2vw);
+  grid-template-rows: repeat(12, 3.13vw);
 }
 
 .answerR,
