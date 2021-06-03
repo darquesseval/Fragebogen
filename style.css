@@ -382,38 +382,39 @@ img {
   grid-template-rows: repeat(12, 4vw);
 }
 
+.answerContainerM {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 3.2vw);
+}
 
-
-.answerR01,
-.answerR02,
-.answerM01,
-.answerM02,
-.answerL01,
-.answerL02 {
+.answerR,
+.answerL,
+.answerM {
   animation-play-state: paused;
   margin-top: -170vw;
   font-size: 2vw;
   color: white;
 }
 
-.content.activeAnswers .answerR01,
-.content.activeAnswers .answerR02,
-.content.activeAnswers .answerM01,
-.content.activeAnswers .answerM02,
-.content.activeAnswers .answerL01,
-.content.activeAnswers .answerL02 {
+.content.activeAnswers .answerR,
+.content.activeAnswers .answerL,
+.content.activeAnswers .answerM {
   transition-delay: 2.5s;
   transition: all 1.5s;
 }
 
-.content.activeAnswers .answerL01 {
+.content.activeAnswers .answerContainer:nth-child(even){
+  animation-direction: alternate-reverse;
+}
+.content.activeAnswers .answerL {
   text-align: left;
   animation-play-state: running;
   animation: infiniteTextLeftWall 70s alternate linear infinite;
   margin-top: -127vw;
 }
 
-.content.activeAnswers .answerM01 {
+.content.activeAnswers .answerM {
   text-align: left;
   animation-delay: 3s;
   animation-play-state: running;
@@ -421,35 +422,11 @@ img {
   margin-top: -115.4vw;
 }
 
-.content.activeAnswers .answerR01 {
+.content.activeAnswers .answerR {
   text-align: left;
   animation-delay: 3s;
   animation-play-state: running;
   animation: infiniteTextRightWall 70s alternate linear infinite;
-  margin-top: -127vw;
-}
-
-.content.activeAnswers .answerL02 {
-  text-align: left;
-  animation-play-state: running;
-  animation: infiniteTextLeftWall 70s alternate-reverse linear infinite;
-  margin-top: -127vw;
-
-}
-
-.content.activeAnswers .answerM02 {
-  text-align: left;
-  animation-delay: 3s;
-  animation-play-state: running;
-  animation: infiniteTextCenterWall 70s alternate-reverse linear infinite;
-  margin-top: -115.4vw;
-}
-
-.content.activeAnswers .answerR02 {
-  text-align: left;
-  animation-delay: 3s;
-  animation-play-state: running;
-  animation: infiniteTextRightWall 70s alternate-reverse linear infinite;
   margin-top: -127vw;
 }
 
