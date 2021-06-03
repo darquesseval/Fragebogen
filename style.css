@@ -365,53 +365,53 @@ img {
   transform: translateY(-230vh) translateX(-50vw) rotateZ(-20deg);
 }
 
-.content.activeAnswers .mLine {
+.content.activeAnswers .generallyAnswers {
   transition-delay: 2.5s;
   transform: translateY(-108vw) translateX(30vw);
 }
 
-.mLine {
+.generallyAnswers {
   transform: translateY(-150vh) translateX(-50vw) rotateZ(-20deg);
   transition: all 1s;
 }
 
-.mLineR01,
-.mLineR02,
-.mLineM01,
-.mLineM02,
-.mLineL01,
-.mLineL02 {
+.answerR01,
+.answerR02,
+.answerM01,
+.answerM02,
+.answerL01,
+.answerL02 {
   animation-play-state: paused;
   margin-top: -170vw;
 }
 
-.content.activeAnswers .mLineR01,
-.content.activeAnswers .mLineR02,
-.content.activeAnswers .mLineM01,
-.content.activeAnswers .mLineM02,
-.content.activeAnswers .mLineL01,
-.content.activeAnswers .mLineL02 {
+.content.activeAnswers .answerR01,
+.content.activeAnswers .answerR02,
+.content.activeAnswers .answerM01,
+.content.activeAnswers .answerM02,
+.content.activeAnswers .answerL01,
+.content.activeAnswers .answerL02 {
   transition-delay: 2.5s;
   transition: all 1.5s;
   text-align: left;
   transform: none;
 }
 
-.content.activeAnswers .mLineL01, .content.activeAnswers .mLineL02 {
+.content.activeAnswers .answerL01, .content.activeAnswers .answerL02 {
   text-align: left;
   animation-play-state: running;
   animation: infiniteTextLeftWall 80s alternate linear infinite;
   margin-top: -100vw;
 }
 
-.content.activeAnswers .mLineM01, .content.activeAnswers .mLineM02 {
+.content.activeAnswers .answerM01, .content.activeAnswers .answerM02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextCenterWall 80s alternate linear infinite;
   margin-top: -94.3vw;
 }
 
-.content.activeAnswers .mLineR01, .content.activeAnswers .mLineR02 {
+.content.activeAnswers .answerR01, .content.activeAnswers .answerR02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextRightWall 80s alternate linear infinite;
