@@ -252,8 +252,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             let mLine02 = new Antwort;
             mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", a2);
 
-
-
             console.log(antworten)
       });
     })
