@@ -404,7 +404,10 @@ img {
   transition: all 1.5s;
 }
 
-.content.activeAnswers .answerContainer:nth-child(even){
+.content.activeAnswers .answerContainer div:nth-child(even){
+  animation-direction: alternate-reverse;
+}
+.content.activeAnswers .answerContainerM div:nth-child(even){
   animation-direction: alternate-reverse;
 }
 .content.activeAnswers .answerL {
