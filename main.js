@@ -130,9 +130,6 @@ document.getElementById('button').onclick = function() {
   }
 }
 
-let string = ["is it working? more text more text more text", "try try try try try102938"]
-
-
 //Gordans Input vom Server
 window.addEventListener('DOMContentLoaded', (event) => {
 
@@ -246,11 +243,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
               }
             }
 
+            let a1 = "«" + antworten[2][1] + "» «" + antworten[3][1] + "» «" + antworten[4][1] + "» «" +antworten[5][1] + "» «" + antworten[6][1] + "»";
+            let a2 = "«" + antworten[7][2] + "» «" + antworten[8][2] + "» «" + antworten[9][2] + "» «" +antworten[10][2] + "» «" + antworten[11][2] + "»";
+
             let mLine01 = new Antwort;
-            mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", antworten[2][2]);
+            mLine01.input(".mLineL01", ".mLineM01", ".mLineR01", a1);
 
             let mLine02 = new Antwort;
-            mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", antworten[3][2]);
+            mLine02.input(".mLineL02", ".mLineM02", ".mLineR02", a2);
+
+
 
             console.log(antworten)
       });

@@ -331,31 +331,31 @@ img {
 
 @keyframes infiniteTextLeftWall {
   0% {
-    transform: translateX(110vw);
+    transform: translateX(31.4vw);
   }
 
   100% {
-    transform: translateX(-50vw);
+    transform: translateX(-118.6vw);
   }
 }
 
 @keyframes infiniteTextCenterWall {
   0% {
-    transform: translateX(100vw);
+    transform: translateX(10vw);
   }
 
   100% {
-    transform: translateX(-70vw);
+    transform: translateX(-140vw);
   }
 }
 
 @keyframes infiniteTextRightWall {
   0% {
-    transform: translateX(30vw);
+    transform: translateX(-46vw);
   }
 
   100% {
-    transform: translateX(-110vw);
+    transform: translateX(-196vw);
   }
 }
 
@@ -397,25 +397,25 @@ img {
   transform: none;
 }
 
-.content.activeAnswers .mLineL01, .Moral.activeAnswers .mLineL02 {
+.content.activeAnswers .mLineL01, .content.activeAnswers .mLineL02 {
   text-align: left;
   animation-play-state: running;
   animation: infiniteTextLeftWall 60s linear infinite;
-  margin-top: -70vw;
+  margin-top: -100vw;
 }
 
-.content.activeAnswers .mLineM01, .Moral.activeAnswers .mLineM02 {
+.content.activeAnswers .mLineM01, .content.activeAnswers .mLineM02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextCenterWall 60s linear infinite;
-  margin-top: -70vw;
+  margin-top: -89.5vw;
 }
 
-.content.activeAnswers .mLineR01, .Moral.activeAnswers .mLineR02 {
+.content.activeAnswers .mLineR01, .content.activeAnswers .mLineR02 {
   text-align: left;
   animation-delay: 3s;
   animation: infiniteTextRightWall 60s linear infinite;
-  margin-top: -70vw;
+  margin-top: -100vw;
 }
 
 .content.activeAnswers div:nth-child(odd) {
