@@ -256,8 +256,17 @@ let a4 = "«" + givingup[8] + "» «" + givingup[9] + "»";
 let arrayA = [a1, a2, a3, a4];
 
 let lT1, lT2, lT3, lT4, lT5, lT6, lT7, lT8, lT9, lT10, lT11, lT12
-
 let arrayT = [lT1, lT2, lT3, lT4, lT5, lT6, lT7, lT8, lT9, lT10, lT11, lT12]
+
+let lH1, lH2, lH3, lH4, lH5, lH6, lH7, lH8, lH9, lH10, lH11, lH12
+let arrayT = [lH1, lH2, lH3, lH4, lH5, lH6, lH7, lH8, lH9, lH10, lH11, lH12]
+
+let lE1, lE2, lE3, lE4, lE5, lE6, lE7, lE8, lE9, lE10, lE11, lE12
+let arrayT = [lE1, lE2, lE3, lE4, lE5, lE6, lE7, lE8, lE9, lE10, lE11, lE12]
+
+let lM1, lM2, lM3, lM4, lM5, lM6, lM7, lM8, lM9, lM10, lM11, lM12
+let arrayT = [lM1, lM2, lM3, lM4, lM5, lM6, lM7, lM8, lM9, lM10, lM11, lM12]
+
 let input01
 let input02
 let input03
@@ -273,9 +282,12 @@ for(let q = 1; q <13; q++) {
 
 arrayT[p] = new Antwort;
 arrayT[p].input(input01, input02, input03, arrayA[u]);
-// arrayM[p].input(input01, input02, input03, arrayA[t]);
-// arrayE[p].input(input01, input02, input03, arrayA[t]);
-// arrayH[p].input(input01, input02, input03, arrayA[t]);
+arrayM[p] = new Antwort;
+arrayM[p].input(input01, input02, input03, arrayA[u]);
+arrayE[p] = new Antwort;
+arrayE[p].input(input01, input02, input03, arrayA[u]);
+arrayH[p] = new Antwort;
+arrayH[p].input(input01, input02, input03, arrayA[u]);
 
   p++
   r++
