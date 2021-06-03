@@ -244,7 +244,7 @@ img {
 }
 
 .content.f2 .Fragen {
-  transform: translateY(-26vw) translateX(2.15vw);
+  transform: translateY(-57vw) translateX(2.15vw);
 }
 
 .leftWall, .centerWall, .rightWall {
@@ -362,7 +362,7 @@ img {
 .content.activeAnswers .Fragen {
   transition: all 1s;
   transition-delay: 1s;
-  transform: translateY(-180vh) translateX(-50vw) rotateZ(-20deg);
+  transform: translateY(-230vh) translateX(-50vw) rotateZ(-20deg);
 }
 
 .content.activeAnswers .mLine {
