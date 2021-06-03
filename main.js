@@ -282,10 +282,19 @@ for(let q = 1; q <13; q++) {
 
 arrayT[p] = new Antwort;
 arrayT[p].input(input01, input02, input03, arrayA[u]);
+  input01 = "m" + q;
+  input02 = "m" + r;
+  input03 = "m" + s;
 arrayM[p] = new Antwort;
 arrayM[p].input(input01, input02, input03, arrayA[u]);
+  input01 = "e" + q;
+  input02 = "e" + r;
+  input03 = "e" + s;
 arrayE[p] = new Antwort;
 arrayE[p].input(input01, input02, input03, arrayA[u]);
+  input01 = "h" + q;
+  input02 = "h" + r;
+  input03 = "h" + s;
 arrayH[p] = new Antwort;
 arrayH[p].input(input01, input02, input03, arrayA[u]);
 
