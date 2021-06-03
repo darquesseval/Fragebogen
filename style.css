@@ -213,7 +213,7 @@ img {
 }
 
 .Fragen {
-  transform: translateY(28vw) translateX(2.15vw);
+  transform: translateY(18vw) translateX(2.15vw);
   transition: all 1s;
 }
 
