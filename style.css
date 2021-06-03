@@ -16,7 +16,7 @@ body {
   width: 100vw;
   overflow: hidden;
   padding: 0;
-  background-color:  rgb(33, 37, 41);
+  background-color:  #242f3f;
 }
 
 @keyframes infiniteText {
@@ -556,7 +556,8 @@ img {
   font-size: 1.8vh;
   background-color: #494949;
   color: #ffffff;
-  margin-left: 35vw;
+  margin-left: 34.5vw;
+  width: 2vw;
 }
 /*schreiben*/
 .output {
@@ -571,7 +572,7 @@ img {
   resize: none;
   font-family: 'Avenir';
   font-size: 20px;
-  height: 29vh;
+  height: 23vh;
   width: 41.5vw;
   margin-top: 3vh;
   border-bottom-left-radius: 25px;
