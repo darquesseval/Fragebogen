@@ -379,13 +379,15 @@ img {
 .answerContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 4vw);
+  grid-template-rows: repeat(12, 6.6vw);
+  margin-top: -9vw;
 }
 
 .answerContainerM {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 3.13vw);
+  grid-template-rows: repeat(12, 5.13vw);
+  margin-top: -7.2vw;
 }
 
 .answerR,
@@ -393,8 +395,9 @@ img {
 .answerM {
   animation-play-state: paused;
   margin-top: -170vw;
-  font-size: 2vw;
+  font-size: 4vw;
   color: white;
+  font-weight: bolder;
 }
 
 .content.activeAnswers .answerR,
