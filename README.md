@@ -4,10 +4,7 @@ Website:
 https://laughing-nightingale-36d8a9.netlify.app
 
 Miro Board:
-https://miro.com/app/board/o9J_lGZhWMM=/
-
-Figma Board:
-https://www.figma.com/file/23CgitomM8YFzKieCa8QLT/Digiplus?node-id=0%3A1
+https://miro.com/app/board/o9J_lGZhWMM=/?share_link_id=828160780637
 
 Inspiration Sites:
 https://theyearofgreta.com/
